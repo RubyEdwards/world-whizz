@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "seed": "node dbs-prep/playground-1.mongodb.js"
+    "seed": "mongoimport --config='./dbs-prep/config.yaml' --db='world-whiz' --collection='countries' --file='./dbs-prep/doc-struc.json' --jsonArray"
   },
   "devDependencies": {
     "mongo-seeding": "^4.0.1",
