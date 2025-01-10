@@ -2,387 +2,496 @@
   {
     "countryname": "Iceland",
     "countrycode": "IC",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1920px-Flag_of_Iceland.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1920px-Flag_of_Iceland.svg.png",
     "countryinfo": {
       "greeting": "Halló",
       "capital": "Reykjavík",
-      "currency": "Icelandic króna",
-      "population": "399,189 (2024)",
-      "funfact": ["Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.", "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!", "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats", "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.", "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat."]
+      "currency": "Icelandic Króna",
+      "population": "393,600 (2023)",
+      "funfact": [
+        "Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.",
+        "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!",
+        "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats",
+        "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.",
+        "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat."
+      ]
     },
     "quiz": [
       {
         "question": "What is Iceland’s most famous geothermal spa?",
         "answers": [
-          "A. Blue Lagoon",
-          "B. Golden Circle",
-          "C. Thingvellir",
-          "D. Geysir"
+          "Blue Lagoon",
+          "Golden Circle",
+          "Thingvellir",
+          "Geysir"
         ],
         "correctAnswer": "Blue Lagoon"
       },
       {
         "question": "Iceland is known for not having which type of animal in the wild?",
-        "answers": ["A. Foxes", "B. Snakes", "C. Wolves", "D. Bears"],
+        "answers": ["Foxes", "Snakes", "Wolves", "Bears"],
         "correctAnswer": "Snakes"
       },
       {
         "question": "Which Icelandic volcano caused major air travel disruptions in 2010?",
         "answers": [
-          "A. Katla",
-          "B. Eyjafjallajökull",
-          "C. Hekla",
-          "D. Grimsvötn"
+          "Katla",
+          "Eyjafjallajökull",
+          "Hekla",
+          "Grimsvötn"
         ],
         "correctAnswer": "Eyjafjallajökull"
       },
       {
         "question": "What is the national sport of Iceland?",
-        "answers": ["A. Football", "B. Handball", "C. Ice Hockey", "D. Skiing"],
+        "answers": ["Football", "Handball", "Ice Hockey", "Skiing"],
         "correctAnswer": "Handball"
       },
       {
         "question": "What type of energy is Iceland primarily powered by?",
-        "answers": ["A. Solar", "B. Wind", "C. Geothermal", "D. Hydroelectric"],
+        "answers": ["Solar", "Wind", "Geothermal", "Hydroelectric"],
         "correctAnswer": "Geothermal"
       }
     ]
-  },{
+  },
+  {
     "countryname": "Ireland",
     "countrycode": "IR",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1920px-Flag_of_Ireland.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1920px-Flag_of_Ireland.svg.png",
     "countryinfo": {
       "greeting": "Dia duit",
       "capital": "Dublin",
       "currency": "Euro",
-      "population": "5,380,300 (2023)",
-      "funfact": ["Halloween originated in Ireland, from the ancient Celtic festival of Samhain that marked the beginning of winter.", "There are no snakes in Ireland - it was too cold for them until the end of the last ice age, after which Ireland was separated from other landmasses.", "Ireland has the oldest intact operational lighthouse in the world, Hook Lighthouse, built in 1172.", "There is a festival called the Puck Fair in Ireland where a wild goat is caught and made king for 3 days.", "At 2,500km in length, Ireland's Wild Atlantic Way coastal route is the longest in the world."]
+      "population": "5.262 million (2023)",
+      "funfact": [
+        "Halloween originated in Ireland, from the ancient Celtic festival of Samhain that marked the beginning of winter.",
+        "There are no snakes in Ireland - it was too cold for them until the end of the last ice age, after which Ireland was separated from other landmasses.",
+        "Ireland has the oldest intact operational lighthouse in the world, Hook Lighthouse, built in 1172.",
+        "There is a festival called the Puck Fair in Ireland where a wild goat is caught and made king for 3 days.",
+        "At 2,500km in length, Ireland's Wild Atlantic Way coastal route is the longest in the world."
+      ]
     },
     "quiz": [
       {
         "question": "Which Irish holiday is celebrated worldwide on March 17th?",
-        "answers": ["A. St. Patrick’s Day",
- "B. Easter Monday",
- "C. Samhain",
- "D. Bloomsday"],
+        "answers": [
+          "St. Patrick’s Day",
+          "Easter Monday",
+          "Samhain",
+          "Bloomsday"
+        ],
         "correctAnswer": "St. Patrick’s Day"
-      }, {
-          "question": "Which Irish author wrote \"Ulysses\"",
-          "answers": ["A. James Joyce",
- "B. Oscar Wilde",
- "C. W.B. Yeats",
- "D. George Bernard Shaw"],
-          "correctAnswer": "James Joyce"
-        }, {
-          "question": "What is the traditional Irish dance style known as?",
-          "answers": ["A. Flamenco",
- "B. Riverdance",
- "C. Ceili dancing",
- "D. Highland dancing"],
-          "correctAnswer": "Ceili dancing"
-        }, {
-          "question": "What is the name of the famous stone at Blarney Castle?",
-          "answers": ["A. Stone of Destiny",
- "B. Blarney Stone",
- "C. Scone Stone",
- "D. Emerald Stone"],
-          "correctAnswer": "Blarney Stone"
-        }, {
-          "question": "Ireland is known as the \"Emerald Isle\" due to what?",
-          "answers": ["A. Its lush green landscapes",
- "B. Its gemstone mines",
- "C. Its emerald exports",
- "D. Its national flag color"
-],
-          "correctAnswer": "Its lush green landscapes"
-        }
+      },
+      {
+        "question": "Which Irish author wrote \"Ulysses\"",
+        "answers": [
+          "James Joyce",
+          "Oscar Wilde",
+          "W.Yeats",
+          "George Bernard Shaw"
+        ],
+        "correctAnswer": "James Joyce"
+      },
+      {
+        "question": "What is the traditional Irish dance style known as?",
+        "answers": [
+          "Flamenco",
+          "Riverdance",
+          "Ceili dancing",
+          "Highland dancing"
+        ],
+        "correctAnswer": "Ceili dancing"
+      },
+      {
+        "question": "What is the name of the famous stone at Blarney Castle?",
+        "answers": [
+          "Stone of Destiny",
+          "Blarney Stone",
+          "Scone Stone",
+          "Emerald Stone"
+        ],
+        "correctAnswer": "Blarney Stone"
+      },
+      {
+        "question": "Ireland is known as the \"Emerald Isle\" due to what?",
+        "answers": [
+          "Its lush green landscapes",
+          "Its gemstone mines",
+          "Its emerald exports",
+          "Its national flag color"
+        ],
+        "correctAnswer": "Its lush green landscapes"
+      }
     ]
-  },{ 
+  },
+  {
     "countryname": "Italy",
     "countrycode": "IT",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png",
     "countryinfo": {
-        "greeting": "Ciao",
-        "capital": "Rome",
-        "currency": "Euro",
-        "population": "58,968,501 (2024)",
-    "funfact": ["Cats have rights in Italy - anyone convicted of killing a cat could face a €10,000 fine and up to 3 years in prison", "The Italian Police Force uses Lamborghinis.", "The average Italian consumes 25kg of pasta per year.", "The University of Bologna, founded in 1088, is the oldest university still in operation today.", "The first spectacles were made in Italy in the late 1200s."]},
-    "quiz": [{
+      "greeting": "Ciao",
+      "capital": "Rome",
+      "currency": "Euro",
+      "population": "58.76 million (2023)",
+      "funfact": [
+        "Cats have rights in Italy - anyone convicted of killing a cat could face a €10,000 fine and up to 3 years in prison.",
+        "The Italian Police Force uses Lamborghinis.",
+        "The average Italian consumes 25kg of pasta per year.",
+        "The University of Bologna, founded in 1088, is the oldest university still in operation today.",
+        "The first spectacles were made in Italy in the late 1200s."
+      ]
+    },
+    "quiz": [
+      {
         "question": "What is the name of the famous Roman amphitheatre in Italy?",
-        "answers": ["A. Pantheon",
- "B. Colosseum",
- "C. Roman Forum",
- "D. Circus Maximus"],
+        "answers": [
+          "Pantheon",
+          "Colosseum",
+          "Roman Forum",
+          "Circus Maximus"
+        ],
         "correctAnswer": "Colosseum"
-    }, {
+      },
+      {
         "question": "Italy is the birthplace of which famous Renaissance artist who painted the Sistine Chapel ceiling?",
-        "answers": ["A. Leonardo da Vinci",
- "B. Michelangelo",
- "C. Raphael",
- "D. Botticelli"],
+        "answers": [
+          "Leonardo da Vinci",
+          "Michelangelo",
+          "Raphael",
+          "Botticelli"
+        ],
         "correctAnswer": "Michelangelo"
-    },{
+      },
+      {
         "question": "Which Italian city is famous for its canals?",
-        "answers": ["A. Milan",
- "B. Venice",
- "C. Florence",
- "D. Rome"],
+        "answers": ["Milan", "Venice", "Florence", "Rome"],
         "correctAnswer": "Venice"
-    }, {
+      },
+      {
         "question": "What is Italy’s highest mountain?",
-        "answers": ["A. Mont Blanc",
- "B. Mount Etna",
- "C. Gran Paradiso",
- "D. Matterhorn"],
+        "answers": [
+          "Mont Blanc",
+          "Mount Etna",
+          "Gran Paradiso",
+          "Matterhorn"
+        ],
         "correctAnswer": "Mont Blanc"
-    }, {
+      },
+      {
         "question": "What is the name of the Italian dish made of rice, often cooked with saffron?",
-        "answers": ["A. Risotto",
- "B. Polenta",
- "C. Ravioli",
- "D. Gnocchi"],
+        "answers": ["Risotto", "Polenta", "Ravioli", "Gnocchi"],
         "correctAnswer": "Risotto"
-    }]
-},{ 
-  "countryname": "Liechtenstein",
-  "countrycode": "LI",
-  "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1920px-Flag_of_Liechtenstein.svg.png",
-  "countryinfo": {
-        "greeting": "Hallo",
-        "capital": "Vaduz",
-        "currency": "Swiss franc",
-        "population": "40,015 (2023)",
-  "funfact": ["Liechtenstein is one of the smallest countries in the world, covering just 160km², but it has one of the highest GDPs per capita globally.", "Liechtenstein abolished its army in 1868 due to cost concerns. Today, the country relies on Switzerland for defense if needed.", "Liechtenstein is one of only two double-landlocked countries in the world: it is landlocked and surrounded entirely by other landlocked countries (Switzerland and Austria).", "Once a year, Liechtenstein allows companies or individuals to \"rent\" the entire country for private events, complete with a symbolic key to the nation.", "Liechtenstein's prince has significant political influence, including the ability to veto laws and dissolve parliament."]},
-  "quiz": [{
-      "question": "Liechtenstein is one of the smallest countries in the world. Which two countries border it?",
-      "answers": ["A. Switzerland and Austria",
- "B. Germany and Austria",
- "C. Switzerland and Germany",
- "D. Austria and France"],
-      "correctAnswer": "Switzerland and Austria"
-  }, {
-      "question": "What type of government does Liechtenstein have?",
-      "answers": ["A. Parliamentary Republic",
- "B. Constitutional Monarchy",
- "C. Absolute Monarchy",
- "D. Federal Republic"],
-      "correctAnswer": "Constitutional Monarchy"
-  },{
-      "question": "Liechtenstein is known for its strong economy based on which sector?",
-      "answers": ["A. Agriculture",
- "B. Tourism",
- "C. Financial services",
- "D. Manufacturing"],
-      "correctAnswer": "Financial services"
-  }, {
-      "question": "Liechtenstein is part of which economic agreement, despite not being in the European Union?",
-      "answers": ["A. European Economic Area (EEA)",
- "B. Schengen Agreement",
- "C. NAFTA",
- "D. Eurozone"],
-      "correctAnswer": "European Economic Area (EEA)"
-  }, {
-      "question": "What is the official language of Liechtenstein?",
-      "answers": ["A. French",
- "B. Italian",
- "C. German",
- "D. English"],
-      "correctAnswer": "German"
-  }]
-},{
-  "countryname": "Luxembourg",
-  "countrycode": "LU",
-  "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1920px-Flag_of_Luxembourg.svg.png",
-  "countryinfo": {
-    "greeting": "Hallo",
-    "capital": "Luxembourg",
-    "currency": "Euro",
-    "population": "672,050 (2024)",
-    "funfact": ["Luxembourg has won the Eurovision Song Contest 5 times as of 2024.", "The national dish of Luxembourg is smoked pork and broad beans.", "The Luxembourg underground tunnel system from the 17th and 18th centuries contains an area of over 17km", "Public transport is free in Luxembourg, including trains, trams and buses.", "Luxembourg City has been listed twice as the European Capital of Culture"]
+      }
+    ]
   },
-  "quiz": [
-    {
-      "question": "Luxembourg is one of the founding members of which organization?",
-      "answers": ["A. European Union",
- "B. NATO",
- "C. United Nations",
- "D. G7"],
-      "correctAnswer": "European Union"
-    }, {
+  {
+    "countryname": "Liechtenstein",
+    "countrycode": "LI",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1920px-Flag_of_Liechtenstein.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Vaduz",
+      "currency": "Swiss franc",
+      "population": "39,584 (2023)",
+      "funfact": [
+        "Liechtenstein is one of the smallest countries in the world, covering just 160km², but it has one of the highest GDPs per capita globally.",
+        "Liechtenstein abolished its army in 1868 due to cost concerns. Today, the country relies on Switzerland for defense if needed.",
+        "Liechtenstein is one of only two double-landlocked countries in the world: it is landlocked and surrounded entirely by other landlocked countries (Switzerland and Austria).",
+        "Once a year, Liechtenstein allows companies or individuals to \"rent\" the entire country for private events, complete with a symbolic key to the nation.",
+        "Liechtenstein's prince has significant political influence, including the ability to veto laws and dissolve parliament."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Liechtenstein is one of the smallest countries in the worlWhich two countries border it?",
+        "answers": [
+          "Switzerland and Austria",
+          "Germany and Austria",
+          "Switzerland and Germany",
+          "Austria and France"
+        ],
+        "correctAnswer": "Switzerland and Austria"
+      },
+      {
+        "question": "What type of government does Liechtenstein have?",
+        "answers": [
+          "Parliamentary Republic",
+          "Constitutional Monarchy",
+          "Absolute Monarchy",
+          "Federal Republic"
+        ],
+        "correctAnswer": "Constitutional Monarchy"
+      },
+      {
+        "question": "Liechtenstein is known for its strong economy based on which sector?",
+        "answers": [
+          "Agriculture",
+          "Tourism",
+          "Financial services",
+          "Manufacturing"
+        ],
+        "correctAnswer": "Financial services"
+      },
+      {
+        "question": "Liechtenstein is part of which economic agreement, despite not being in the European Union?",
+        "answers": [
+          "European Economic Area (EEA)",
+          "Schengen Agreement",
+          "NAFTA",
+          "Eurozone"
+        ],
+        "correctAnswer": "European Economic Area (EEA)"
+      },
+      {
+        "question": "What is the official language of Liechtenstein?",
+        "answers": ["French", "Italian", "German", "English"],
+        "correctAnswer": "German"
+      }
+    ]
+  },
+  {
+    "countryname": "Luxembourg",
+    "countrycode": "LU",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1920px-Flag_of_Luxembourg.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Luxembourg",
+      "currency": "Euro",
+      "population": "668,606 (2023)",
+      "funfact": [
+        "Luxembourg has won the Eurovision Song Contest 5 times as of 2024.",
+        "The national dish of Luxembourg is smoked pork and broad beans.",
+        "The Luxembourg underground tunnel system from the 17th and 18th centuries contains an area of over 17km",
+        "Public transport is free in Luxembourg, including trains, trams and buses.",
+        "Luxembourg City has been listed twice as the European Capital of Culture"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Luxembourg is one of the founding members of which organization?",
+        "answers": [
+          "European Union",
+          "NATO",
+          "United Nations",
+          "G7"
+        ],
+        "correctAnswer": "European Union"
+      },
+      {
         "question": "Luxembourg is known for having three official languages. Which of these is NOT one of them?",
-        "answers": ["A. French",
- "B. Luxembourgish",
- "C. German",
- "D. Dutch"],
+        "answers": ["French", "Luxembourgish", "German", "Dutch"],
         "correctAnswer": "Dutch"
-      }, {
+      },
+      {
         "question": "What is Luxembourg’s nickname due to its size?",
-        "answers": ["A. Heart of Europe",
- "B. Gibraltar of the North",
- "C. The Emerald Duchy",
- "D. Land of a Thousand Hills"],
+        "answers": [
+          "Heart of Europe",
+          "Gibraltar of the North",
+          "The Emerald Duchy",
+          "Land of a Thousand Hills"
+        ],
         "correctAnswer": "Gibraltar of the North"
-      }, {
+      },
+      {
         "question": "Which industry is historically significant in Luxembourg's economy?",
-        "answers": ["A. Coal mining",
- "B. Steel production",
- "C. Wine making",
- "D. Textile manufacturing"],
+        "answers": [
+          "Coal mining",
+          "Steel production",
+          "Wine making",
+          "Textile manufacturing"
+        ],
         "correctAnswer": "Steel production"
-      }, {
+      },
+      {
         "question": "Luxembourg is known for which unique financial feature?",
-        "answers": ["A. Low tax rates",
- "B. Cryptocurrency hubs",
- "C. Export of diamonds",
- "D. Largest stock market"],
+        "answers": [
+          "Low tax rates",
+          "Cryptocurrency hubs",
+          "Export of diamonds",
+          "Largest stock market"
+        ],
         "correctAnswer": "string"
       }
-  ]},{
+    ]
+  },
+  {
     "countryname": "Malta",
     "countrycode": "MA",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/1920px-Flag_of_Malta.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/7/73/Flag_of_Maltvg/1920px-Flag_of_Maltvg.png",
     "countryinfo": {
       "greeting": "Caw",
       "capital": "Valletta",
       "currency": "Euro",
-      "population": "542,051 (2021)",
-      "funfact": ["There are no natural lakes or rivers in Malta so they have to filter their drinking water straight from the sea.", "Valletta, the capital of Malta, was the first ever planned city in Europe, back in 1565, and was built in only 15 years.", "The national dish of Malta is \"Stuffat tal-Fenek\", a type of rabbit stew.", "Malta is not one island but an archipelago.", "Malta is one of only 4 European countries where people drive on the left hand side of the road."]
+      "population": "553,214 (2023)",
+      "funfact": [
+        "There are no natural lakes or rivers in Malta so they have to filter their drinking water straight from the sea.",
+        "Valletta, the capital of Malta, was the first ever planned city in Europe, back in 1565, and was built in only 15 years.",
+        "The national dish of Malta is \"Stuffat tal-Fenek\", a type of rabbit stew.",
+        "Malta is not one island but an archipelago.",
+        "Malta is one of only 4 European countries where people drive on the left hand side of the road."
+      ]
     },
     "quiz": [
       {
         "question": "What unique tradition is Malta known for during its summer months?",
-        "answers": ["A. Firework festivals in every village",
-"B. Ice sculpture contests",
-"C. Underground cave concerts",
-"D. Hot air balloon rides over the islands"],
+        "answers": [
+          "Firework festivals in every village",
+          "Ice sculpture contests",
+          "Underground cave concerts",
+          "Hot air balloon rides over the islands"
+        ],
         "correctAnswer": "Firework festivals in every village"
-      }, {
-          "question": "Which ancient structures in Malta are older than the Pyramids of Egypt?",
-          "answers": ["A. Hal Saflieni Hypogeum",
- "B. Megalithic Temples",
- "C. Tarxien Temples",
- "D. All of the above"],
-          "correctAnswer": "All of the above"
-        }, {
-          "question": "What is Malta's largest island?",
-          "answers": ["A. Gozo",
- "B. Comino",
- "C. Malta",
- "D. St. Paul’s Island"],
-          "correctAnswer": "Malta"
-        }, {
-          "question": "What is the traditional Maltese boat called?",
-          "answers": ["A. Luzzu",
- "B. Gondola",
- "C. Dinghy",
- "D. Skiff"],
-          "correctAnswer": "Luzzu"
-        }, {
-          "question": "Malta is known for its role in which war?",
-          "answers": ["A. World War I",
- "B. World War II",
- "C. Crimean War",
- "D. Napoleonic Wars"],
-          "correctAnswer": "World War II"
-        }
+      },
+      {
+        "question": "Which ancient structures in Malta are older than the Pyramids of Egypt?",
+        "answers": [
+          "Hal Saflieni Hypogeum",
+          "Megalithic Temples",
+          "Tarxien Temples",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "question": "What is Malta's largest island?",
+        "answers": ["Gozo", "Comino", "Malta", "St. Paul’s Island"],
+        "correctAnswer": "Malta"
+      },
+      {
+        "question": "What is the traditional Maltese boat called?",
+        "answers": ["Luzzu", "Gondola", "Dinghy", "Skiff"],
+        "correctAnswer": "Luzzu"
+      },
+      {
+        "question": "Malta is known for its role in which war?",
+        "answers": [
+          "World War I",
+          "World War II",
+          "Crimean War",
+          "Napoleonic Wars"
+        ],
+        "correctAnswer": "World War II"
+      }
     ]
-  }, {
+  },
+  {
     "countryname": "Monaco",
     "countrycode": "MO",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png",
     "countryinfo": {
       "greeting": "Bonjour",
       "capital": "Monaco",
       "currency": "Euro",
-      "population": "38,367 (2023)",
-      "funfact": ["Monaco has around one police officer for every 70 residents.", "Monaco has the highest life expectancy in the world (86.37 years in 2023).", "The most popular sports in Monaco are football, sailing, yachting and tennis.", "One in three people in Monaco is a millionaire.", "Monaco does not allow its own citizens to enter its casinos."]
+      "population": "36,297 (2023)",
+      "funfact": [
+        "Monaco has around one police officer for every 70 residents.",
+        "Monaco has the highest life expectancy in the world (86.37 years in 2023).",
+        "The most popular sports in Monaco are football, sailing, yachting and tennis.",
+        "One in three people in Monaco is a millionaire.",
+        "Monaco does not allow its own citizens to enter its casinos."
+      ]
     },
     "quiz": [
       {
-        "question": "Monaco is the second smallest country in the world. Which is the smallest?",
-        "answers": ["A. Liechtenstein",
- "B. San Marino",
- "C. Vatican City",
- "D. Malta"],
+        "question": "Monaco is the second smallest country in the worlWhich is the smallest?",
+        "answers": [
+          "Liechtenstein",
+          "San Marino",
+          "Vatican City",
+          "Malta"
+        ],
         "correctAnswer": "Vatican City"
-      }, {
-          "question": "What is the name of the famous casino in Monaco?",
-          "answers": ["A. Monte Carlo Casino",
- "B. Bellagio",
- "C. Venetian",
- "D. Caesars Palace"],
-          "correctAnswer": "Monte Carlo Casino"
-        }, {
-          "question": "Which event is Monaco famous for hosting annually?",
-          "answers": ["A. Tennis Grand Slam",
- "B. Formula 1 Grand Prix",
- "C. Cannes Film Festival",
- "D. Monaco Art Fair"],
-          "correctAnswer": "Formula 1 Grand Prix"
-        }, {
-          "question": "Monaco is located on which body of water?",
-          "answers": ["A. Atlantic Ocean",
- "B. Mediterranean Sea",
- "C. Adriatic Sea",
- "D. Aegean Sea"],
-          "correctAnswer": "Mediterranean Sea"
-        }, {
-          "question": "What is unique about Monaco's police force?",
-          "answers": ["A. They operate entirely on bicycles",
-"B. They are the only police force in the world where every officer is armed",
-"C. They have the highest number of police officers per capita",
-"D. They use submarines for coastal patrols"],
-          "correctAnswer": "They have the highest number of police officers per capita"
-        }
+      },
+      {
+        "question": "What is the name of the famous casino in Monaco?",
+        "answers": [
+          "Monte Carlo Casino",
+          "Bellagio",
+          "Venetian",
+          "Caesars Palace"
+        ],
+        "correctAnswer": "Monte Carlo Casino"
+      },
+      {
+        "question": "Which event is Monaco famous for hosting annually?",
+        "answers": [
+          "Tennis Grand Slam",
+          "Formula 1 Grand Prix",
+          "Cannes Film Festival",
+          "Monaco Art Fair"
+        ],
+        "correctAnswer": "Formula 1 Grand Prix"
+      },
+      {
+        "question": "Monaco is located on which body of water?",
+        "answers": [
+          "Atlantic Ocean",
+          "Mediterranean Sea",
+          "Adriatic Sea",
+          "Aegean Sea"
+        ],
+        "correctAnswer": "Mediterranean Sea"
+      },
+      {
+        "question": "What is unique about Monaco's police force?",
+        "answers": [
+          "They operate entirely on bicycles",
+          "They are the only police force in the world where every officer is armed",
+          "They have the highest number of police officers per capita",
+          "They use submarines for coastal patrols"
+        ],
+        "correctAnswer": "They have the highest number of police officers per capita"
+      }
     ]
-  }, {
+  },
+  {
     "countryname": "Netherlands",
     "countrycode": "NE",
-    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png",
     "countryinfo": {
       "greeting": "Hallo",
       "capital": "Amsterdam",
       "currency": "Euro",
-      "population": "18,255,600 (2024)",
-      "funfact": ["The world's first airport library was opened in Schiphol Airport, Amsterdam in 2010.", "In 2001 the Netherlands became the first country to legalise same-sex marriage.", "One third of the Netherlands is below sea level.", "The Netherlands is the world's biggest cut flower exporter (in 2022 they exported €81.9 million-worth of tulips).", "The Dutch are the biggest consumers of liquorice in the world, eating nearly 2kg per person per year."]
+      "population": "17.88 million (2023)",
+      "funfact": [
+        "The world's first airport library was opened in Schiphol Airport, Amsterdam in 2010.",
+        "In 2001 the Netherlands became the first country to legalise same-sex marriage.",
+        "One third of the Netherlands is below sea level.",
+        "The Netherlands is the world's biggest cut flower exporter (in 2022 they exported €81.9 million-worth of tulips).",
+        "The Dutch are the biggest consumers of liquorice in the world, eating nearly 2kg per person per year."
+      ]
     },
     "quiz": [
       {
         "question": "What flower is most associated with the Netherlands?",
-        "answers": ["A. Rose",
- "B. Tulip",
- "C. Sunflower",
- "D. Daisy"],
+        "answers": ["Rose", "Tulip", "Sunflower", "Daisy"],
         "correctAnswer": "Tulip"
-      }, {
-          "question": "Which city is known for its extensive canal system and Anne Frank House?",
-          "answers": ["A. Rotterdam",
- "B. Utrecht",
- "C. Amsterdam",
- "D. Eindhoven"],
-          "correctAnswer": "Amsterdam"
-        }, {
-          "question": "What is the traditional Dutch wooden shoe called?",
-          "answers": ["A. Moccasin",
- "B. Sabot",
- "C. Clog",
- "D. Espadrille"],
-          "correctAnswer": "Clog"
-        }, {
-          "question": "What is the traditional Dutch wooden shoe called?",
-          "answers": ["A. Moccasin",
- "B. Sabot",
- "C. Clog",
- "D. Espadrille"],
-          "correctAnswer": "Clog"
-        }, {
-          "question": "The Netherlands is famous for its cheese. Which of these is NOT a Dutch cheese?",
-          "answers": ["A. Gouda",
- "B. Edam",
- "C. Brie",
- "D. Leyden"],
-          "correctAnswer": "Brie"
-        }
+      },
+      {
+        "question": "Which city is known for its extensive canal system and Anne Frank House?",
+        "answers": [
+          "Rotterdam",
+          "Utrecht",
+          "Amsterdam",
+          "Eindhoven"
+        ],
+        "correctAnswer": "Amsterdam"
+      },
+      {
+        "question": "What is the traditional Dutch wooden shoe called?",
+        "answers": ["Moccasin", "Sabot", "Clog", "Espadrille"],
+        "correctAnswer": "Clog"
+      },
+      {
+        "question": "What is the traditional Dutch wooden shoe called?",
+        "answers": ["Moccasin", "Sabot", "Clog", "Espadrille"],
+        "correctAnswer": "Clog"
+      },
+      {
+        "question": "The Netherlands is famous for its cheese. Which of these is NOT a Dutch cheese?",
+        "answers": ["Gouda", "Edam", "Brie", "Leyden"],
+        "correctAnswer": "Brie"
+      }
     ]
   }
 ]
