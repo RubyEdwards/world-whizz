@@ -1,0 +1,28 @@
+{
+    "_id": "integer", 
+    "countryname": "string",
+    "countrycode": "string",
+    "flag_img_url": "string",
+    "funfact": "string",
+    "questions": [{
+        "question": "string",
+        "answers": ["string"],
+        "correctAnswer": "string"
+    }, {
+        "question": "string",
+        "answers": ["string"],
+        "correctAnswer": "string"
+    },{
+        "question": "string",
+        "answers": ["string"],
+        "correctAnswer": "string"
+    }, {
+        "question": "string",
+        "answers": ["string"],
+        "correctAnswer": "string"
+    }, {
+        "question": "string",
+        "answers": ["string"],
+        "correctAnswer": "string"
+    }]
+} 
