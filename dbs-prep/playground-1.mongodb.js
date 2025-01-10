@@ -3,7 +3,7 @@ use('fun-facts');
 db.getCollection('countries').insertMany([
   {
     countryname: 'Andorra',
-    countrycode: 'AN',
+    countrycode: 'AD',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1024px-Flag_of_Andorra.svg.png',
     countryinfo: {
@@ -64,7 +64,7 @@ db.getCollection('countries').insertMany([
   },
   {
     countryname: 'Austria',
-    countrycode: 'AU',
+    countrycode: 'AT',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1024px-Flag_of_Austria.svg.png',
     countryinfo: {
@@ -122,7 +122,7 @@ db.getCollection('countries').insertMany([
   },
   {
     countryname: 'Belgium',
-    countrycode: 'BG',
+    countrycode: 'BE',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1024px-Flag_of_Belgium.svg.png',
     countryinfo: {
@@ -174,7 +174,7 @@ db.getCollection('countries').insertMany([
   },
   {
     countryname: 'Denmark',
-    countrycode: 'DN',
+    countrycode: 'DK',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1024px-Flag_of_Denmark.svg.png',
     countryinfo: {
@@ -238,7 +238,7 @@ db.getCollection('countries').insertMany([
   },
   {
     countryname: 'Finland',
-    countrycode: 'FN',
+    countrycode: 'FI',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/800px-Flag_of_Finland.svg.png',
     countryinfo: {
@@ -366,7 +366,7 @@ db.getCollection('countries').insertMany([
   },
   {
     countryname: 'Germany',
-    countrycode: 'GM',
+    countrycode: 'DE',
     flag_img_url:
       'https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1024px-Flag_of_Germany.svg.png',
     countryinfo: {
