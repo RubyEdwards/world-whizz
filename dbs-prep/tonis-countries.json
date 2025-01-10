@@ -70,7 +70,7 @@
       "population": "9.132 million (2023)",
       "funfact": [
         "Approximately one quarter of the population of Austria lives in Vienna.",
-        "Vienna is home to the world's oldest zoo, Tiergarten Schonbrunn, founded in 1752.",
+        "Vienna is home to the world's oldest zoo, Tiergarten Schönbrunn, founded in 1752.",
         "More than 62% of Austria is covered by the Austrian Alps, with around 700 peaks higher than 3,000 metres.",
         "Back in 1905 an Austro-Hungarian citizen, Baroness Bertha von Suttner, was the first woman to win the Nobel Peace Prize.",
         "Austria was the first country to issue postcards. Back in 1869 when they were first sold they cost half the price of a regular letter."
@@ -374,7 +374,7 @@
       },
       {
         "question": "What German highway is famous for having stretches without a speed limit?",
-        "answers": ["Autobahn", "Route 66", "Interstate 5", "Bundesstrase"],
+        "answers": ["Autobahn", "Route 66", "Interstate 5", "Bundesstraße"],
         "correctAnswer": "Autobahn"
       },
       {
@@ -394,7 +394,7 @@
     "countrycode": "GR",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/1024px-Flag_of_Greece.svg.png",
     "countryinfo": {
-      "greeting": "Yassas",
+      "greeting": "Γειά σου",
       "capital": "Athens",
       "currency": "Euro",
       "population": "10.36 million (2023)",
