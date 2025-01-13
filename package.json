@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "seed": "mongoimport --config='./dbs-prep/config.yaml' --db='world-whiz' --collection='countries' --drop --file='./dbs-seed/countries.json' --jsonArray",
-    "test": "jest",
-    "start": "nodemon listener.js"
+    "test": "jest"
   },
   "devDependencies": {
     "cors": "^2.8.5",
@@ -24,8 +23,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongodb": "^6.12.0",
-    "mongoose": "^8.9.4",
-    "nodemon": "^3.1.9"
+    "mongodb": "^6.12.0"
   }
 }
