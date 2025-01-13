@@ -12,6 +12,9 @@
     "start": "nodemon listener.js"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "jest": "^29.7.0",
     "mongo-seeding": "^4.0.1",
     "vite": "^6.0.5"
