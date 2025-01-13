@@ -10,6 +10,9 @@
     "seed": "mongoimport --config='./dbs-prep/config.yaml' --db='world-whiz' --collection='countries' --file='./dbs-prep/doc-struc.json' --jsonArray"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "mongo-seeding": "^4.0.1",
     "vite": "^6.0.5"
   }
