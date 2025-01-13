@@ -1,0 +1,1495 @@
+[
+  {
+    "countryname": "Andorra",
+    "countrycode": "AD",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1024px-Flag_of_Andorra.svg.png",
+    "countryinfo": {
+      "greeting": "Hola",
+      "capital": "Andorra la Vella",
+      "currency": "Euro",
+      "population": "80,088 (2023)",
+      "funfact": [
+        "In 2023 Andorra ranked third highest for life expectancy in Europe, at 84.04 years.",
+        "More than 90% of Andorra is made up of mountains, forests, rivers, lakes and meadows.",
+        "Andorra has more museums per km² than anywhere else in the world.",
+        "At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.",
+        "Andorra has never had an army or Ministry of Defence."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What mountain range is Andorra located in?",
+        "answers": ["Alps", "Pyrenees", "Carpathians", "Apennines"],
+        "correctAnswer": "Pyrenees"
+      },
+      {
+        "question": "What is the official language of Andorra?",
+        "answers": ["Spanish", "French", "Catalan", "Portuguese"],
+        "correctAnswer": "Catalan"
+      },
+      {
+        "question": "Which two countries border Andorra?",
+        "answers": [
+          "France and Spain",
+          "Italy and Spain",
+          "France and Portugal",
+          "Spain and Portugal"
+        ],
+        "correctAnswer": "France and Spain"
+      },
+      {
+        "question": "What type of government does Andorra have?",
+        "answers": [
+          "Parliamentary Republic",
+          "Constitutional Monarchy",
+          "Parliamentary Co-Principality",
+          "Federal Republic"
+        ],
+        "correctAnswer": "Parliamentary Co-Principality"
+      },
+      {
+        "question": "Andorra is not a member of which organization?",
+        "answers": [
+          "European Union",
+          "United Nations",
+          "Council of Europe",
+          "Schengen Area"
+        ],
+        "correctAnswer": "European Union"
+      }
+    ],
+    "quizfacts": [
+      "Andorra is located in the Pyrenees mountain range.",
+      "The official language of Andorra is Catalan.",
+      "Andorra shares its borders with France and Spain.",
+      "Andorra has a Parliamentary Co-Principality form of government.",
+      "Andorra is not a member of the European Union."
+    ]
+  },
+  {
+    "countryname": "Austria",
+    "countrycode": "AT",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1024px-Flag_of_Austria.svg.png",
+    "countryinfo": {
+      "greeting": "German",
+      "capital": "Vienna",
+      "currency": "Euro",
+      "population": "9.132 million (2023)",
+      "funfact": [
+        "Approximately one quarter of the population of Austria lives in Vienna.",
+        "Vienna is home to the world's oldest zoo, Tiergarten Schönbrunn, founded in 1752.",
+        "More than 62% of Austria is covered by the Austrian Alps, with around 700 peaks higher than 3,000 metres.",
+        "Back in 1905 an Austro-Hungarian citizen, Baroness Bertha von Suttner, was the first woman to win the Nobel Peace Prize.",
+        "Austria was the first country to issue postcards. Back in 1869 when they were first sold they cost half the price of a regular letter."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which famous composer was born in Salzburg, Austria?",
+        "answers": ["Beethoven", "Mozart", "Bach", "Chopin"],
+        "correctAnswer": "Mozart"
+      },
+      {
+        "question": "Austria is home to the headquarters of which international organization?",
+        "answers": [
+          "North Atlantic Treaty Organisation (NATO)",
+          "Organization of the Petroleum Exporting Countires (OPEC)",
+          "United Nations (UN)",
+          "World Health Organization (WHO)"
+        ],
+        "correctAnswer": "Organization of the Petroleum Exporting Countires (OPEC)"
+      },
+      {
+        "question": "Austria shares its longest border with which country?",
+        "answers": ["Germany", "Switzerland", "Hungary", "Italy"],
+        "correctAnswer": "Germany"
+      },
+      {
+        "question": "What is the name of the famous palace in Vienna?",
+        "answers": [
+          "Schönbrunn Palace",
+          "Neuschwanstein Castle",
+          "Buckingham Palace",
+          "Versailles"
+        ],
+        "correctAnswer": "Schönbrunn Palace"
+      },
+      {
+        "question": "Austria is famous for which of the following sports?",
+        "answers": ["Ice hockey", "Skiing", "Sailing", "Football"],
+        "correctAnswer": "Skiing"
+      }
+    ],
+    "quizfacts": [
+      "Mozart, the famous composer, was born in Salzburg, Austria.",
+      "Austria is home to the headquarters of the Organisation of the Petroleum Exporting Countries (OPEC).",
+      "Austria shares its longest border with Germany.",
+      "The famous palace in Vienna is the Schönbrunn Palace.",
+      "Austria is renowned for skiing."
+    ]
+  },
+  {
+    "countryname": "Belgium",
+    "countrycode": "BE",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1024px-Flag_of_Belgium.svg.png",
+    "countryinfo": {
+      "greeting": "Dag",
+      "capital": "Brussels",
+      "currency": "Euro",
+      "population": "11.82 million (2023)",
+      "funfact": [
+        "Despite the name, some historians claim that French fries were actually invented in Belgium in the 1600s.",
+        "BMI (Body Mass Index) was invented by Adolphe Quetelet, a Belgian, in 1832.",
+        "Belgium went for 652 days without a government between December 2018 and October 2020.",
+        "Belgium has more castles per km² than any other country.",
+        "Belgium has over 650 varieties of beer, as well as 408 breweries."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Belgium is known for which sweet treat?",
+        "answers": ["Gelato", "Waffles", "Tiramisu", "Churros"],
+        "correctAnswer": "Waffles"
+      },
+      {
+        "question": "What are the three official languages of Belgium?",
+        "answers": [
+          "French, Dutch, German",
+          "French, Spanish, Dutch",
+          "German, Italian, Dutch",
+          "French, Dutch, English"
+        ],
+        "correctAnswer": "French, Dutch, German"
+      },
+      {
+        "question": "Which city in Belgium is home to the European Union headquarters?",
+        "answers": ["Antwerp", "Bruges", "Brussels", "Ghent"],
+        "correctAnswer": "Brussels"
+      },
+      {
+        "question": "What type of beer is Belgium particularly famous for?",
+        "answers": ["Lager", "Ale", "Trappist Beer", "Stout"],
+        "correctAnswer": "Trappist Beer"
+      },
+      {
+        "question": "Belgium is known for producing which luxury product?",
+        "answers": ["Perfumes", "Diamonds", "Watches", "Chocolates"],
+        "correctAnswer": "Chocolates"
+      }
+    ],
+    "quizfacts": [
+      "Belgium is known for its waffles.",
+      "The three official languages of Belgium are French, Dutch, and German.",
+      "Brussels, Belgium, is home to the European Union headquarters.",
+      "Belgium is particularly famous for Trappist beer.",
+      "Belgium is renowned for producing chocolates."
+    ]
+  },
+  {
+    "countryname": "Denmark",
+    "countrycode": "DK",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1024px-Flag_of_Denmark.svg.png",
+    "countryinfo": {
+      "greeting": "Hej",
+      "capital": "Copenhagen",
+      "currency": "Danish Krone",
+      "population": "5.947 million (2023)",
+      "funfact": [
+        "There is no word meaning \"please\" in the Danish language.",
+        "Denmark has the oldest flag in the world (first acknowledged in 1219).",
+        "Danish pastry is called \"Viennese bread\" in Denmark because it was first introduced to the country by Austrian bakers in the 1840s.",
+        "Denmark doesn't have any mountains.",
+        "Denmark was the first country to legalise same-sex unions in 1989."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which Danish author wrote \"The Little Mermaid\"?",
+        "answers": [
+          "Hans Christian Andersen",
+          "Charles Perrault",
+          "J.R.R. Tolkien",
+          "Brothers Grimm"
+        ],
+        "correctAnswer": "Hans Christian Andersen"
+      },
+      {
+        "question": "Denmark is known for pioneering which environmental initiative?",
+        "answers": [
+          "Plastic Recycling",
+          "Wind Energy",
+          "Solar Panels",
+          "Electric Vehicles"
+        ],
+        "correctAnswer": "Wind Energy"
+      },
+      {
+        "question": "What is the name of the famous amusement park in Copenhagen?",
+        "answers": [
+          "Disneyland",
+          "Tivoli Gardens",
+          "Europa Park",
+          "Magic Kingdom"
+        ],
+        "correctAnswer": "Tivoli Gardens"
+      },
+      {
+        "question": "Denmark is part of which group of countries?",
+        "answers": ["Baltic States", "Nordic Countries", "Balkans", "Benelux"],
+        "correctAnswer": "Nordic Countries"
+      },
+      {
+        "question": "What iconic Danish building block toy brand is globally famous?",
+        "answers": ["Playmobil", "LEGO", "Meccano", "K’Nex"],
+        "correctAnswer": "LEGO"
+      }
+    ],
+    "quizfacts": [
+      "Hans Christian Andersen, a Danish author, wrote The Little Mermaid.",
+      "Denmark is known for pioneering wind energy as an environmental initiative.",
+      "Tivoli Gardens is a famous amusement park located in Copenhagen.",
+      "Denmark is part of the Nordic Countries.",
+      "LEGO, the iconic building block toy brand, originated in Denmark."
+    ]
+  },
+  {
+    "countryname": "Finland",
+    "countrycode": "FI",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/800px-Flag_of_Finland.svg.png",
+    "countryinfo": {
+      "greeting": "Hyvää päivää",
+      "capital": "Helsinki",
+      "currency": "Euro",
+      "population": "5.584 million (2023)",
+      "funfact": [
+        "Finns consume approximately 12kg of coffee a year on average.",
+        "Finland celebrates 'National Sleepy Head Day' on 27th July by playing pranks on late sleepers.",
+        "Finnish children usually have 2 birthday parties - one with their friends and one with their families.",
+        "74% of Finland is covered by forest.",
+        "Finland has more heavy metal bands per capita than any other country in the world."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is Finland’s official language along with Finnish?",
+        "answers": ["Swedish", "Norwegian", "Danish", "Russian"],
+        "correctAnswer": "Swedish"
+      },
+      {
+        "question": "Finland is famous for which natural phenomenon?",
+        "answers": [
+          "Northern Lights (Aurora Borealis)",
+          "Volcanos",
+          "Hurricanes",
+          "Geysers"
+        ],
+        "correctAnswer": "Northern Lights (Aurora Borealis)"
+      },
+      {
+        "question": "Which of these is a traditional Finnish sauna feature?",
+        "answers": [
+          "Hot Spring Baths",
+          "Steam and Birch Twigs",
+          "Mud Baths",
+          "Ice Sculptures"
+        ],
+        "correctAnswer": "Steam and Birch Twigs"
+      },
+      {
+        "question": "What is Finland’s nickname due to its geography?",
+        "answers": [
+          "Land of Fire and Ice",
+          "Land of a Thousand Lakes",
+          "Land of the Midnight Sun",
+          "Land of Mountains"
+        ],
+        "correctAnswer": "Land of a Thousand Lakes"
+      },
+      {
+        "question": "Finland is consistently ranked among the top countries in the world for which quality of life factor?",
+        "answers": ["Education", "Happiness", "Healthcare", "Economy"],
+        "correctAnswer": "Happiness"
+      }
+    ],
+    "quizfacts": [
+      "Along with Finnish, Swedish is an official language of Finland.",
+      "Finland is famous for the Northern Lights (Aurora Borealis).",
+      "Traditional Finnish saunas feature steam and birch twigs.",
+      "Finland is nicknamed the \"Land of a Thousand Lakes\" due to its geography.",
+      "Finland is consistently ranked among the top countries in the world for happiness."
+    ]
+  },
+  {
+    "countryname": "France",
+    "countrycode": "FR",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png",
+    "countryinfo": {
+      "greeting": "Bonjour",
+      "capital": "Paris",
+      "currency": "Euro",
+      "population": "68.17 Million (2023)",
+      "funfact": [
+        "In France since 2016 it has been forbidden to throw away food that is still edible.",
+        "France was the first European country to make fitting seatbelts in cars compulsory.",
+        "The Tour de France has been held every July since 1903.",
+        "Louis XIX was said to have been king for only 22 minutes (while signing his father's abdication document).",
+        "France had the first manned hot air balloon flight in 1783."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the name of the famous museum in Paris that houses the Mona Lisa?",
+        "answers": [
+          "Musée d’Orsay",
+          "The Louvre",
+          "Centre Pompidou",
+          "Musée Rodin"
+        ],
+        "correctAnswer": "The Louvre"
+      },
+      {
+        "question": "Which French region is famous for producing a white sparkling wine?",
+        "answers": ["Bordeaux", "Burgundy", "Champagne", "Provence"],
+        "correctAnswer": "Champagne"
+      },
+      {
+        "question": "What is the name of the French national holiday celebrated on July 14th?",
+        "answers": [
+          "Bastille Day",
+          "Liberation Day",
+          "Revolution Day",
+          "Independence Day"
+        ],
+        "correctAnswer": "Bastille Day"
+      },
+      {
+        "question": "Which French city is known as the culinary capital of France?",
+        "answers": ["Marseille", "Lyon", "Nice", "Toulouse"],
+        "correctAnswer": "Lyon"
+      },
+      {
+        "question": "What iconic French monument was gifted to the United States?",
+        "answers": [
+          "Arc de Triomphe",
+          "Eiffel Tower",
+          "Statue of Liberty",
+          "Notre Dame"
+        ],
+        "correctAnswer": "Statue of Liberty"
+      }
+    ],
+    "quizfacts": [
+      "The Louvre is the famous museum in Paris that houses the Mona Lisa.",
+      "The Champagne region in France is famous for producing white sparkling wine.",
+      "France's national holiday, celebrated on July 14th, is called Bastille Day.",
+      "Lyon is known as the culinary capital of France.",
+      "The Statue of Liberty was an iconic monument gifted by France to the United States."
+    ]
+  },
+  {
+    "countryname": "Germany",
+    "countrycode": "DE",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1024px-Flag_of_Germany.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Berlin",
+      "currency": "Euro",
+      "population": "84.48 million (2023)",
+      "funfact": [
+        "Beer is considered to be a food in Bavaria.",
+        "German shares 60% of its vocabulary with English.",
+        "Germany has more football fan clubs than any other country.",
+        "Berlin has Europe's biggest train station.",
+        "Fanta was created in Germany during World War II because they were unable to import Coca-Cola syrup."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which German city is known as the birthplace of Beethoven?",
+        "answers": ["Munich", "Bonn", "Berlin", "Hamburg"],
+        "correctAnswer": "Bonn"
+      },
+      {
+        "question": "What is the traditional German dish made of fermented cabbage?",
+        "answers": ["Bratwurst", "Schnitzel", "Sauerkraut", "Pretzel"],
+        "correctAnswer": "Sauerkraut"
+      },
+      {
+        "question": "What German highway is famous for having stretches without a speed limit?",
+        "answers": ["Autobahn", "Route 66", "Interstate 5", "Bundesstraße"],
+        "correctAnswer": "Autobahn"
+      },
+      {
+        "question": "Germany is the largest producer of what type of energy in Europe?",
+        "answers": ["Solar", "Wind", "Nuclear", "Hydropower"],
+        "correctAnswer": "Wind"
+      },
+      {
+        "question": "Which major German festival is celebrated in Munich?",
+        "answers": ["Oktoberfest", "Karneval", "Wurstfest", "Volksfest"],
+        "correctAnswer": "Oktoberfest"
+      }
+    ],
+    "quizfacts": [
+      "Bonn is the German city known as the birthplace of Beethoven.",
+      "Sauerkraut, made of fermented cabbage, is a traditional German dish.",
+      "The Autobahn is the famous German highway with stretches that have no speed limit.",
+      "Germany is the largest producer of wind energy in Europe.",
+      "Oktoberfest is a major German festival celebrated in Munich."
+    ]
+  },
+  {
+    "countryname": "Greece",
+    "countrycode": "GR",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/1024px-Flag_of_Greece.svg.png",
+    "countryinfo": {
+      "greeting": "Γειά σου",
+      "capital": "Athens",
+      "currency": "Euro",
+      "population": "10.36 million (2023)",
+      "funfact": [
+        "The Ancient Greeks invented theatre, but only males could be actors.",
+        "Greece is one of the sunniest countries in the world, with about 3,000 hours of sunshine a year.",
+        "80% of Greece is made up of mountains.",
+        "The Greek island Santorini has red, black and white beaches.",
+        "Greece's national animal is a dolphin, representing the country's maritime heritage."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the name of the hill in Athens that houses the Parthenon?",
+        "answers": ["Mount Olympus", "Acropolis", "Delphi", "Meteora"],
+        "correctAnswer": "Acropolis"
+      },
+      {
+        "question": "Which Greek island is famous for its white-washed buildings and blue domes?",
+        "answers": ["Crete", "Santorini", "Rhodes", "Mykonos"],
+        "correctAnswer": "Santorini"
+      },
+      {
+        "question": "Greece is considered the birthplace of which system of governance?",
+        "answers": ["Monarchy", "Democracy", "Communism", "Republic"],
+        "correctAnswer": "Democracy"
+      },
+      {
+        "question": "Which sea borders Greece to the east?",
+        "answers": [
+          "Aegean Sea",
+          "Mediterranean Sea",
+          "Ionian Sea",
+          "Adriatic Sea"
+        ],
+        "correctAnswer": "Aegean Sea"
+      },
+      {
+        "question": "What is the traditional Greek dish made of meat roasted on a vertical spit?",
+        "answers": ["Souvlaki", "Moussaka", "Gyro", "Baklava"],
+        "correctAnswer": "Gyro"
+      }
+    ],
+    "quizfacts": [
+      "The Acropolis in Athens houses the Parthenon.",
+      "Santorini is the Greek island famous for its white-washed buildings and blue domes.",
+      "Greece is considered the birthplace of democracy.",
+      "The Aegean Sea borders Greece to the east.",
+      "Gyro is a traditional Greek dish made of meat roasted on a vertical spit."
+    ]
+  },
+  {
+    "countryname": "Iceland",
+    "countrycode": "IC",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1920px-Flag_of_Iceland.svg.png",
+    "countryinfo": {
+      "greeting": "Halló",
+      "capital": "Reykjavík",
+      "currency": "Icelandic Króna",
+      "population": "393,600 (2023)",
+      "funfact": [
+        "Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.",
+        "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!",
+        "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats",
+        "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.",
+        "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is Iceland’s most famous geothermal spa?",
+        "answers": ["Blue Lagoon", "Golden Circle", "Thingvellir", "Geysir"],
+        "correctAnswer": "Blue Lagoon"
+      },
+      {
+        "question": "Iceland is known for not having which type of animal in the wild?",
+        "answers": ["Foxes", "Snakes", "Wolves", "Bears"],
+        "correctAnswer": "Snakes"
+      },
+      {
+        "question": "Which Icelandic volcano caused major air travel disruptions in 2010?",
+        "answers": ["Katla", "Eyjafjallajökull", "Hekla", "Grimsvötn"],
+        "correctAnswer": "Eyjafjallajökull"
+      },
+      {
+        "question": "What is the national sport of Iceland?",
+        "answers": ["Football", "Handball", "Ice Hockey", "Skiing"],
+        "correctAnswer": "Handball"
+      },
+      {
+        "question": "What type of energy is Iceland primarily powered by?",
+        "answers": ["Solar", "Wind", "Geothermal", "Hydroelectric"],
+        "correctAnswer": "Geothermal"
+      }
+    ],
+    "quizfacts": [
+      "Iceland’s most famous geothermal spa is the Blue Lagoon.",
+      "Iceland is known for not having snakes in the wild.",
+      "The Icelandic volcano Eyjafjallajökull caused major air travel disruptions in 2010.",
+      "Handball is the national sport of Iceland.",
+      "Iceland is primarily powered by geothermal energy."
+    ]
+  },
+  {
+    "countryname": "Ireland",
+    "countrycode": "IR",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1920px-Flag_of_Ireland.svg.png",
+    "countryinfo": {
+      "greeting": "Dia duit",
+      "capital": "Dublin",
+      "currency": "Euro",
+      "population": "5.262 million (2023)",
+      "funfact": [
+        "Halloween originated in Ireland, from the ancient Celtic festival of Samhain that marked the beginning of winter.",
+        "There are no snakes in Ireland - it was too cold for them until the end of the last ice age, after which Ireland was separated from other landmasses.",
+        "Ireland has the oldest intact operational lighthouse in the world, Hook Lighthouse, built in 1172.",
+        "There is a festival called the Puck Fair in Ireland where a wild goat is caught and made king for 3 days.",
+        "At 2,500km in length, Ireland's Wild Atlantic Way coastal route is the longest in the world."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which Irish holiday is celebrated worldwide on March 17th?",
+        "answers": [
+          "St. Patrick’s Day",
+          "Easter Monday",
+          "Samhain",
+          "Bloomsday"
+        ],
+        "correctAnswer": "St. Patrick’s Day"
+      },
+      {
+        "question": "Which Irish author wrote \"Ulysses\"",
+        "answers": [
+          "James Joyce",
+          "Oscar Wilde",
+          "W.Yeats",
+          "George Bernard Shaw"
+        ],
+        "correctAnswer": "James Joyce"
+      },
+      {
+        "question": "What is the traditional Irish dance style known as?",
+        "answers": [
+          "Flamenco",
+          "Riverdance",
+          "Ceili dancing",
+          "Highland dancing"
+        ],
+        "correctAnswer": "Ceili dancing"
+      },
+      {
+        "question": "What is the name of the famous stone at Blarney Castle?",
+        "answers": [
+          "Stone of Destiny",
+          "Blarney Stone",
+          "Scone Stone",
+          "Emerald Stone"
+        ],
+        "correctAnswer": "Blarney Stone"
+      },
+      {
+        "question": "Ireland is known as the \"Emerald Isle\" due to what?",
+        "answers": [
+          "Its lush green landscapes",
+          "Its gemstone mines",
+          "Its emerald exports",
+          "Its national flag color"
+        ],
+        "correctAnswer": "Its lush green landscapes"
+      }
+    ],
+    "quizfacts": [
+      "St. Patrick’s Day is celebrated worldwide on March 17th.",
+      "James Joyce, an Irish author, wrote Ulysses.",
+      "The traditional Irish dance style is called Ceili dancing.",
+      "The famous stone at Blarney Castle is the Blarney Stone.",
+      "Ireland is known as the \"Emerald Isle\" due to its lush green landscapes."
+    ]
+  },
+  {
+    "countryname": "Italy",
+    "countrycode": "IT",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png",
+    "countryinfo": {
+      "greeting": "Ciao",
+      "capital": "Rome",
+      "currency": "Euro",
+      "population": "58.76 million (2023)",
+      "funfact": [
+        "Cats have rights in Italy - anyone convicted of killing a cat could face a €10,000 fine and up to 3 years in prison.",
+        "The Italian Police Force uses Lamborghinis.",
+        "The average Italian consumes 25kg of pasta per year.",
+        "The University of Bologna, founded in 1088, is the oldest university still in operation today.",
+        "The first spectacles were made in Italy in the late 1200s."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the name of the famous Roman amphitheatre in Italy?",
+        "answers": ["Pantheon", "Colosseum", "Roman Forum", "Circus Maximus"],
+        "correctAnswer": "Colosseum"
+      },
+      {
+        "question": "Italy is the birthplace of which famous Renaissance artist who painted the Sistine Chapel ceiling?",
+        "answers": [
+          "Leonardo da Vinci",
+          "Michelangelo",
+          "Raphael",
+          "Botticelli"
+        ],
+        "correctAnswer": "Michelangelo"
+      },
+      {
+        "question": "Which Italian city is famous for its canals?",
+        "answers": ["Milan", "Venice", "Florence", "Rome"],
+        "correctAnswer": "Venice"
+      },
+      {
+        "question": "What is Italy’s highest mountain?",
+        "answers": ["Mont Blanc", "Mount Etna", "Gran Paradiso", "Matterhorn"],
+        "correctAnswer": "Mont Blanc"
+      },
+      {
+        "question": "What is the name of the Italian dish made of rice, often cooked with saffron?",
+        "answers": ["Risotto", "Polenta", "Ravioli", "Gnocchi"],
+        "correctAnswer": "Risotto"
+      }
+    ],
+    "quizfacts": [
+      "The famous Roman amphitheatre in Italy is the Colosseum.",
+      "Italy is the birthplace of Michelangelo, the famous Renaissance artist who painted the Sistine Chapel ceiling.",
+      "Venice is the Italian city famous for its canals.",
+      "Italy's highest mountain is Mont Blanc.",
+      "Risotto is the Italian dish made of rice, often cooked with saffron."
+    ]
+  },
+  {
+    "countryname": "Liechtenstein",
+    "countrycode": "LI",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1920px-Flag_of_Liechtenstein.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Vaduz",
+      "currency": "Swiss franc",
+      "population": "39,584 (2023)",
+      "funfact": [
+        "Liechtenstein is one of the smallest countries in the world, covering just 160km², but it has one of the highest GDPs per capita globally.",
+        "Liechtenstein abolished its army in 1868 due to cost concerns. Today, the country relies on Switzerland for defense if needed.",
+        "Liechtenstein is one of only two double-landlocked countries in the world: it is landlocked and surrounded entirely by other landlocked countries (Switzerland and Austria).",
+        "Once a year, Liechtenstein allows companies or individuals to \"rent\" the entire country for private events, complete with a symbolic key to the nation.",
+        "Liechtenstein's prince has significant political influence, including the ability to veto laws and dissolve parliament."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Liechtenstein is one of the smallest countries in the worlWhich two countries border it?",
+        "answers": [
+          "Switzerland and Austria",
+          "Germany and Austria",
+          "Switzerland and Germany",
+          "Austria and France"
+        ],
+        "correctAnswer": "Switzerland and Austria"
+      },
+      {
+        "question": "What type of government does Liechtenstein have?",
+        "answers": [
+          "Parliamentary Republic",
+          "Constitutional Monarchy",
+          "Absolute Monarchy",
+          "Federal Republic"
+        ],
+        "correctAnswer": "Constitutional Monarchy"
+      },
+      {
+        "question": "Liechtenstein is known for its strong economy based on which sector?",
+        "answers": [
+          "Agriculture",
+          "Tourism",
+          "Financial services",
+          "Manufacturing"
+        ],
+        "correctAnswer": "Financial services"
+      },
+      {
+        "question": "Liechtenstein is part of which economic agreement, despite not being in the European Union?",
+        "answers": [
+          "European Economic Area (EEA)",
+          "Schengen Agreement",
+          "NAFTA",
+          "Eurozone"
+        ],
+        "correctAnswer": "European Economic Area (EEA)"
+      },
+      {
+        "question": "What is the official language of Liechtenstein?",
+        "answers": ["French", "Italian", "German", "English"],
+        "correctAnswer": "German"
+      }
+    ],
+    "quizfacts": [
+      "Liechtenstein borders Switzerland and Austria.",
+      "Liechtenstein has a Constitutional Monarchy.",
+      "Liechtenstein is known for its strong economy based on financial services.",
+      "Liechtenstein is part of the European Economic Area (EEA), despite not being in the European Union.",
+      "The official language of Liechtenstein is German."
+    ]
+  },
+  {
+    "countryname": "Luxembourg",
+    "countrycode": "LU",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1920px-Flag_of_Luxembourg.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Luxembourg",
+      "currency": "Euro",
+      "population": "668,606 (2023)",
+      "funfact": [
+        "Luxembourg has won the Eurovision Song Contest 5 times as of 2024.",
+        "The national dish of Luxembourg is smoked pork and broad beans.",
+        "The Luxembourg underground tunnel system from the 17th and 18th centuries contains an area of over 17km",
+        "Public transport is free in Luxembourg, including trains, trams and buses.",
+        "Luxembourg City has been listed twice as the European Capital of Culture"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Luxembourg is one of the founding members of which organization?",
+        "answers": ["European Union", "NATO", "United Nations", "G7"],
+        "correctAnswer": "European Union"
+      },
+      {
+        "question": "Luxembourg is known for having three official languages. Which of these is NOT one of them?",
+        "answers": ["French", "Luxembourgish", "German", "Dutch"],
+        "correctAnswer": "Dutch"
+      },
+      {
+        "question": "What is Luxembourg’s nickname due to its size?",
+        "answers": [
+          "Heart of Europe",
+          "Gibraltar of the North",
+          "The Emerald Duchy",
+          "Land of a Thousand Hills"
+        ],
+        "correctAnswer": "Gibraltar of the North"
+      },
+      {
+        "question": "Which industry is historically significant in Luxembourg's economy?",
+        "answers": [
+          "Coal mining",
+          "Steel production",
+          "Wine making",
+          "Textile manufacturing"
+        ],
+        "correctAnswer": "Steel production"
+      },
+      {
+        "question": "Luxembourg is known for which unique financial feature?",
+        "answers": [
+          "Low tax rates",
+          "Cryptocurrency hubs",
+          "Export of diamonds",
+          "Largest stock market"
+        ],
+        "correctAnswer": "string"
+      }
+    ],
+    "quizfacts": [
+      "Luxembourg is one of the founding members of the European Union.",
+      "Dutch is not one of Luxembourg's three official languages.",
+      "Luxembourg's nickname due to its size is the \"Gibraltar of the North.\"",
+      "Steel production is historically significant in Luxembourg's economy.",
+      "Luxembourg is known for its unique financial feature of low tax rates."
+    ]
+  },
+  {
+    "countryname": "Malta",
+    "countrycode": "MA",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/7/73/Flag_of_Maltvg/1920px-Flag_of_Maltvg.png",
+    "countryinfo": {
+      "greeting": "Caw",
+      "capital": "Valletta",
+      "currency": "Euro",
+      "population": "553,214 (2023)",
+      "funfact": [
+        "There are no natural lakes or rivers in Malta so they have to filter their drinking water straight from the sea.",
+        "Valletta, the capital of Malta, was the first ever planned city in Europe, back in 1565, and was built in only 15 years.",
+        "The national dish of Malta is \"Stuffat tal-Fenek\", a type of rabbit stew.",
+        "Malta is not one island but an archipelago.",
+        "Malta is one of only 4 European countries where people drive on the left hand side of the road."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What unique tradition is Malta known for during its summer months?",
+        "answers": [
+          "Firework festivals in every village",
+          "Ice sculpture contests",
+          "Underground cave concerts",
+          "Hot air balloon rides over the islands"
+        ],
+        "correctAnswer": "Firework festivals in every village"
+      },
+      {
+        "question": "Which ancient structures in Malta are older than the Pyramids of Egypt?",
+        "answers": [
+          "Hal Saflieni Hypogeum",
+          "Megalithic Temples",
+          "Tarxien Temples",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "question": "What is Malta's largest island?",
+        "answers": ["Gozo", "Comino", "Malta", "St. Paul’s Island"],
+        "correctAnswer": "Malta"
+      },
+      {
+        "question": "What is the traditional Maltese boat called?",
+        "answers": ["Luzzu", "Gondola", "Dinghy", "Skiff"],
+        "correctAnswer": "Luzzu"
+      },
+      {
+        "question": "Malta is known for its role in which war?",
+        "answers": [
+          "World War I",
+          "World War II",
+          "Crimean War",
+          "Napoleonic Wars"
+        ],
+        "correctAnswer": "World War II"
+      }
+    ],
+    "quizfacts": [
+      "Malta is known for its unique tradition of firework festivals in every village during the summer months.",
+      "The Megalithic Temples, Hal Saflieni Hypogeum, and Tarxien Temples in Malta are older than the Pyramids of Egypt.",
+      "Malta's largest island is Malta.",
+      "The traditional Maltese boat is called a Luzzu.",
+      "Malta is known for its role in World War II."
+    ]
+  },
+  {
+    "countryname": "Monaco",
+    "countrycode": "MO",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png",
+    "countryinfo": {
+      "greeting": "Bonjour",
+      "capital": "Monaco",
+      "currency": "Euro",
+      "population": "36,297 (2023)",
+      "funfact": [
+        "Monaco has around one police officer for every 70 residents.",
+        "Monaco has the highest life expectancy in the world (86.37 years in 2023).",
+        "The most popular sports in Monaco are football, sailing, yachting and tennis.",
+        "One in three people in Monaco is a millionaire.",
+        "Monaco does not allow its own citizens to enter its casinos."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Monaco is the second smallest country in the worlWhich is the smallest?",
+        "answers": ["Liechtenstein", "San Marino", "Vatican City", "Malta"],
+        "correctAnswer": "Vatican City"
+      },
+      {
+        "question": "What is the name of the famous casino in Monaco?",
+        "answers": [
+          "Monte Carlo Casino",
+          "Bellagio",
+          "Venetian",
+          "Caesars Palace"
+        ],
+        "correctAnswer": "Monte Carlo Casino"
+      },
+      {
+        "question": "Which event is Monaco famous for hosting annually?",
+        "answers": [
+          "Tennis Grand Slam",
+          "Formula 1 Grand Prix",
+          "Cannes Film Festival",
+          "Monaco Art Fair"
+        ],
+        "correctAnswer": "Formula 1 Grand Prix"
+      },
+      {
+        "question": "Monaco is located on which body of water?",
+        "answers": [
+          "Atlantic Ocean",
+          "Mediterranean Sea",
+          "Adriatic Sea",
+          "Aegean Sea"
+        ],
+        "correctAnswer": "Mediterranean Sea"
+      },
+      {
+        "question": "What is unique about Monaco's police force?",
+        "answers": [
+          "They operate entirely on bicycles",
+          "They are the only police force in the world where every officer is armed",
+          "They have the highest number of police officers per capita",
+          "They use submarines for coastal patrols"
+        ],
+        "correctAnswer": "They have the highest number of police officers per capita"
+      }
+    ],
+    "quizfacts": [
+      "Monaco is the second smallest country in the world, only bigger than Vatican City.",
+      "The famous casino in Monaco is the Monte Carlo Casino.",
+      "Monaco is famous for hosting the Formula 1 Grand Prix annually.",
+      "Monaco is located on the Mediterranean Sea.",
+      "Monaco's police force is unique for having the highest number of police officers per capita."
+    ]
+  },
+  {
+    "countryname": "Netherlands",
+    "countrycode": "NE",
+    "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png",
+    "countryinfo": {
+      "greeting": "Hallo",
+      "capital": "Amsterdam",
+      "currency": "Euro",
+      "population": "17.88 million (2023)",
+      "funfact": [
+        "The world's first airport library was opened in Schiphol Airport, Amsterdam in 2010.",
+        "In 2001 the Netherlands became the first country to legalise same-sex marriage.",
+        "One third of the Netherlands is below sea level.",
+        "The Netherlands is the world's biggest cut flower exporter (in 2022 they exported €81.9 million-worth of tulips).",
+        "The Dutch are the biggest consumers of liquorice in the world, eating nearly 2kg per person per year."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What flower is most associated with the Netherlands?",
+        "answers": ["Rose", "Tulip", "Sunflower", "Daisy"],
+        "correctAnswer": "Tulip"
+      },
+      {
+        "question": "Which city is known for its extensive canal system and Anne Frank House?",
+        "answers": ["Rotterdam", "Utrecht", "Amsterdam", "Eindhoven"],
+        "correctAnswer": "Amsterdam"
+      },
+      {
+        "question": "What is the traditional Dutch wooden shoe called?",
+        "answers": ["Moccasin", "Sabot", "Clog", "Espadrille"],
+        "correctAnswer": "Clog"
+      },
+      {
+        "question": "What is the traditional Dutch wooden shoe called?",
+        "answers": ["Moccasin", "Sabot", "Clog", "Espadrille"],
+        "correctAnswer": "Clog"
+      },
+      {
+        "question": "The Netherlands is famous for its cheese. Which of these is NOT a Dutch cheese?",
+        "answers": ["Gouda", "Edam", "Brie", "Leyden"],
+        "correctAnswer": "Brie"
+      }
+    ],
+    "quizfacts": [
+      "The flower most associated with the Netherlands is the tulip.",
+      "Amsterdam is known for its extensive canal system and the Anne Frank House.",
+      "The traditional Dutch wooden shoe is called a clog.",
+      "Brie is not a Dutch cheese; the Netherlands is famous for Gouda, Edam, and Leyden.",
+      "The official seat of government in the Netherlands is The Hague."
+    ]
+  },
+  {
+    "countryname": "Norway",
+    "countrycode": "NO",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/234px-Flag_of_Norway.svg.png",
+    "countryinfo": {
+      "greeting": "Hei",
+      "capital": "Oslo",
+      "currency": "Norwegian Krone",
+      "population": "5.52 million (2023)",
+      "funfact": [
+        "When a new book is published in Norway, at least 1,000 copies are bought by the government and put in libraries across the country.",
+        "Salmon sushi is not native to Japan - it was introduced to them by Norway.",
+        "Norway is home to Europe's biggest herd of wild reindeer.",
+        "The longest road tunnel in the world is in Norway: the Lærdalstunnelen which is 24.5km long.",
+        "The cheese slicer was invented in 1925 by a Norwegian cabinet maker called Thor Bjørklund, who took inspiration from the planer he used for work."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Norway is known as the \"Land of the Midnight Sun\" because the sun doesn’t set during which season?",
+        "answers": ["Winter", "Autumn", "Spring", "Summer"],
+        "correctAnswer": "Summer"
+      },
+      {
+        "question": "What type of coastline feature is Norway famous for?",
+        "answers": ["Fjords", "Cliffs", "Sand dunes", "Lagoons"],
+        "correctAnswer": "Fjords"
+      },
+      {
+        "question": "Which winter sport is deeply rooted in Norwegian culture?",
+        "answers": ["Skiing", "Ice hockey", "Snowboarding", "Curling"],
+        "correctAnswer": "Skiing"
+      },
+      {
+        "question": "Which Norwegian explorer was the first to reach the South Pole?",
+        "answers": [
+          "Leif Erikson",
+          "Roald Amundsen",
+          "Thor Heyerdahl",
+          "Fridtjof Nansen"
+        ],
+        "correctAnswer": "Roald Amundsen"
+      },
+      {
+        "question": "What is Norway's official language?",
+        "answers": ["Danish", "Swedish", "Norwegian", "Finnish"],
+        "correctAnswer": "Norwegian"
+      }
+    ],
+    "quizfacts": [
+      "Norway is known as the \"Land of the Midnight Sun\" because the sun doesn’t set during the summer season.",
+      "Norway is famous for its fjords, a distinctive coastline feature.",
+      "Skiing is a winter sport deeply rooted in Norwegian culture.",
+      "Roald Amundsen, a Norwegian explorer, was the first to reach the South Pole.",
+      "Norway's official language is Norwegian."
+    ]
+  },
+  {
+    "countryname": "Portugal",
+    "countrycode": "PT",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/255px-Flag_of_Portugal.svg.png",
+    "countryinfo": {
+      "greeting": "Ola",
+      "capital": "Lisbon",
+      "currency": "Euro",
+      "population": "10.53 million (2023)",
+      "funfact": [
+        "The Bertrand Bookstore in Lisbon, established in 1732, holds the Guinness World Record as the oldest operating bookstore in the world.",
+        "Portugal is home to the Vasco da Gama Bridge, which spans over 17km and crosses the Tagus River in Lisbon.",
+        "Fado, a genre of Portuguese music known for its melancholic tunes and soulful lyrics, is a UNESCO Intangible Cultural Heritage.",
+        "Portugal produces more than 50% of the world's cork. Its vast cork oak forests supply material for wine stoppers and other products.",
+        "In the 1494 Treaty of Tordesillas Portugal and Spain divided the world between them. Portugal was assigned Brazil and parts of Africa and Asia."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the name of Portugal’s famous fortified wine?",
+        "answers": ["Madeira", "Sherry", "Port", "Chianti"],
+        "correctAnswer": "Port"
+      },
+      {
+        "question": "Portugal is known for its decorative ceramic tiles. What are they called?",
+        "answers": ["Mosaics", "Azulejos", "Frescoes", "Majolica"],
+        "correctAnswer": "Azulejos"
+      },
+      {
+        "question": "Which Portuguese explorer was the first to reach India by sea?",
+        "answers": [
+          "Vasco da Gama",
+          "Ferdinand Magellan",
+          "Bartolomeu Dias",
+          "Pedro Álvares Cabral"
+        ],
+        "correctAnswer": "Vasco da Gama"
+      },
+      {
+        "question": "What is the name of the famous Portuguese custard tart?",
+        "answers": ["Pastéis de Nata", "Bacalhau", "Bolo Rei", "Arroz Doce"],
+        "correctAnswer": "Pastéis de Nata"
+      },
+      {
+        "question": "Portugal shares its only land border with which country?",
+        "answers": ["Spain", "France", "Morocco", "Italy"],
+        "correctAnswer": "Spain"
+      }
+    ],
+    "quizfacts": [
+      "Portugal’s famous fortified wine is Port.",
+      "Portugal is known for its decorative ceramic tiles called Azulejos.",
+      "Vasco da Gama was the Portuguese explorer who was the first to reach India by sea.",
+      "The famous Portuguese custard tart is Pastéis de Nata.",
+      "Portugal shares its only land border with Spain."
+    ]
+  },
+  {
+    "countryname": "San Marino",
+    "countrycode": "SM",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/227px-Flag_of_San_Marino.svg.png",
+    "countryinfo": {
+      "greeting": "Ciao",
+      "capital": "City of San Marino",
+      "currency": "Euro",
+      "population": "33,642",
+      "funfact": [
+        "San Marino is the only country in the world that has more registered cars than residents officially living there.",
+        "San Marino is the 5th smallest country in the world at just 61km².",
+        "San Marino is considered the oldest Republic in the world, having been founded in 301 AD.",
+        "San Marino doesn't have a commercial airport.",
+        "The country's name is derived from Saint Marinus, a Christian who lived there while escaping religious persecution by the Roman Empire."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which of these is a typical Christmas soup in San Marino?",
+        "answers": [
+          "Cheese and garlic",
+          "Bean and bacon",
+          "Carrot and chicken",
+          "Sweet tomato"
+        ],
+        "correctAnswer": "Bean and bacon"
+      },
+      {
+        "question": "Where is San Marino located?",
+        "answers": [
+          "French East",
+          "South of Spain",
+          "Italian Peninsula",
+          "North of Portugal"
+        ],
+        "correctAnswer": "Italian peninsula"
+      },
+      {
+        "question": "Which coast is near San Marino?",
+        "answers": ["Adriatic", "Atlantic", "Mediterranean", "North"],
+        "correctAnswer": "Adriatic"
+      },
+      {
+        "question": "San Marino is geographically divided into nine:",
+        "answers": ["Castelli", "Cannelli", "Castillos", "Canela"],
+        "correctAnswer": "Castelli"
+      },
+      {
+        "question": "Which coin was used before the Euro in San Marino?",
+        "answers": ["San Marinoin", "Sammarinese Lira", "Lira", "Marin"],
+        "correctAnswer": "Sammarinese Lira"
+      }
+    ],
+    "quizfacts": [
+      "A typical Christmas soup in San Marino is Bean and Bacon.",
+      "San Marino is located on the Italian Peninsula.",
+      "The Adriatic coast is near San Marino.",
+      "San Marino is geographically divided into nine Castelli.",
+      "Before the Euro, San Marino used the Sammarinese lira as its currency."
+    ]
+  },
+  {
+    "countryname": "Spain",
+    "countrycode": "ES",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/200px-Flag_of_Spain.svg.png",
+    "countryinfo": {
+      "greeting": "Hola",
+      "capital": "Madrid",
+      "currency": "Euro",
+      "population": "48.37 million (2023)",
+      "funfact": [
+        "Spanish is the second most widely spoken language in the world.",
+        "\"Tapas\" means \"to cover\". Long ago people started covering their drinks with slices of bread and meat to protect them from dust.",
+        "Spain claims to have the oldest restaurant in the world: Restaurante Botín in Madrid, which has been open since 1725.",
+        "The Spanish national anthem, Marcha Real, has no words - at sporting events the audience normally just hum along.",
+        "Sagrada Familia has been under construction since 1882 and as of 2025 hasn't been finished - but it does have UNESCO World Heritage status."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which Spanish festival involves participants throwing tomatoes at each other?",
+        "answers": [
+          "La Tomatina",
+          "Feria de Abril",
+          "San Fermín",
+          "Las Fallas"
+        ],
+        "correctAnswer": "La Tomatina"
+      },
+      {
+        "question": "What is the name of the traditional Spanish dance with fast-paced guitar music?",
+        "answers": ["Flamenco", "Tango", "Salsa", "Bolero"],
+        "correctAnswer": "Flamenco"
+      },
+      {
+        "question": "Which famous Spanish painter created \"Guernica\"?",
+        "answers": [
+          "Salvador Dalí",
+          "Pablo Picasso",
+          "Diego Velázquez",
+          "Francisco Goya"
+        ],
+        "correctAnswer": "Pablo Picasso"
+      },
+      {
+        "question": "What is Spain’s national dish made of rice, saffron, and seafood or meat?",
+        "answers": ["Tortilla", "Gazpacho", "Paella", "Churros"],
+        "correctAnswer": "Paella"
+      },
+      {
+        "question": "What is the name of the famous pilgrimage route in Spain?",
+        "answers": [
+          "Camino de Santiago",
+          "Via Francigena",
+          "St. Olaf’s Way",
+          "The Lycian Way"
+        ],
+        "correctAnswer": "Camino de Santiago"
+      }
+    ],
+    "quizfacts": [
+      "The Spanish festival where participants throw tomatoes at each other is La Tomatina.",
+      "Flamenco is the traditional Spanish dance with fast-paced guitar music.",
+      "Pablo Picasso, the famous Spanish painter, created \"Guernica.\"",
+      "Spain's national dish, made of rice, saffron, and seafood or meat, is Paella.",
+      "The famous pilgrimage route in Spain is the Camino de Santiago."
+    ]
+  },
+  {
+    "countryname": "Sweden",
+    "countrycode": "SE",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/255px-Flag_of_Sweden.svg.png",
+    "countryinfo": {
+      "greeting": "Hej",
+      "capital": "Stockholm",
+      "currency": "Swedish Krona",
+      "population": "10.54 million (2023)",
+      "funfact": [
+        "Sweden has approximately 267,000 islands, more than any other country in the world, though only about 1,000 of them are inhabited.",
+        "Sweden grants everyone the \"Right to Roam\": people can hike, camp, and forage freely on public and private land, as long as they respect nature and property.",
+        "The Nobel Prize originated in Sweden. Alfred Nobel, a Swedish inventor, established the awards in his will.",
+        "Sweden is home to the world's first ice hotel, located in Jukkasjärvi, which is rebuilt every winter using ice from the Torne River.",
+        "October 4th is celebrated as Kanelbullens Dag (Cinnamon Bun Day) in Sweden, dedicated to the beloved Swedish pastry."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Sweden is known for its flat-packed furniture company. What is its name?",
+        "answers": ["H&M", "IKEA", "Electrolux", "Volvo"],
+        "correctAnswer": "IKEA"
+      },
+      {
+        "question": "What is the traditional Swedish holiday celebrated in June called?",
+        "answers": ["Midsummer", "Kräftskiva", "Walpurgis Night", "Lucia Day"],
+        "correctAnswer": "Midsummer"
+      },
+      {
+        "question": "Sweden is part of which group of Nordic countries?",
+        "answers": ["Scandinavian", "Baltic", "Alpine", "Benelux"],
+        "correctAnswer": "Scandinavian"
+      },
+      {
+        "question": "What is Sweden’s largest and deepest lake?",
+        "answers": ["Vättern", "Vänern", "Mälaren", "Hjälmaren"],
+        "correctAnswer": "Vänern"
+      },
+      {
+        "question": "Which famous Swedish pop group became internationally renowned in the 1970s?",
+        "answers": ["ABBA", "Roxette", "Ace of Base", "The Cardigans"],
+        "correctAnswer": "ABBA"
+      }
+    ],
+    "quizfacts": [
+      "Sweden is known for IKEA, a flat-packed furniture company.",
+      "The traditional Swedish holiday celebrated in June is Midsummer.",
+      "Sweden is part of the Scandinavian group of Nordic countries.",
+      "Sweden’s largest and deepest lake is Vänern.",
+      "ABBA, the famous Swedish pop group, became internationally renowned in the 1970s."
+    ]
+  },
+  {
+    "countryname": "Switzerland",
+    "countrycode": "CH",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/170px-Flag_of_Switzerland_%28Pantone%29.svg.png",
+    "countryinfo": {
+      "greeting": "Gruezi",
+      "capital": "Bern",
+      "currency": "Swiss Franc",
+      "population": "8.85 million (2023)",
+      "funfact": [
+        "The iconic Swiss Army Knife was first produced in 1891 and became a symbol of Swiss craftsmanship and practicality.",
+        "Switzerland doesn't have an official capital. Bern serves as the de facto capital because it hosts the federal government.",
+        "Switzerland has about 1.5 million cows, which are treated with great care and even \"vacation\" in alpine pastures during summer.",
+        "Switzerland has remained neutral in international conflicts since the early 19th century, even avoiding involvement in both World Wars.",
+        "Switzerland is home to some of the cleanest cities globally, thanks to its strict recycling laws and commitment to sustainability."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Switzerland is known for being home to which international organization?",
+        "answers": ["United Nations", "Red Cross", "NATO", "European Union"],
+        "correctAnswer": "Red Cross"
+      },
+      {
+        "question": "What is Switzerland’s most famous type of cheese?",
+        "answers": ["Gruyère", "Camembert", "Parmesan", "Cheddar"],
+        "correctAnswer": "Gruyère"
+      },
+      {
+        "question": "Switzerland has four official languages. Which of these is NOT one of them?",
+        "answers": ["German", "French", "Italian", "Dutch"],
+        "correctAnswer": "Dutch"
+      },
+      {
+        "question": "Switzerland is famous for producing which luxury items?",
+        "answers": [
+          "Watches and chocolate",
+          "Wine and olive oil",
+          "Silk and spices",
+          "Perfumes and leather goods"
+        ],
+        "correctAnswer": "Watches and chocolate"
+      },
+      {
+        "question": "Which mountain range dominates Switzerland’s landscape?",
+        "answers": ["Pyrenees", "Alps", "Carpathians", "Dolomites"],
+        "correctAnswer": "Alps"
+      }
+    ],
+    "quizfacts": [
+      "Switzerland is home to the Red Cross, an international organization.",
+      "The most famous type of Swiss cheese is Gruyère.",
+      "Dutch is not one of Switzerland's four official languages.",
+      "Switzerland is famous for producing watches and chocolate.",
+      "The Alps mountain range dominates Switzerland's landscape."
+    ]
+  },
+  {
+    "countryname": "Turkey",
+    "countrycode": "TR",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/220px-Flag_of_Turkey.svg.png",
+    "countryinfo": {
+      "greeting": "Merhaba",
+      "capital": "Ankara",
+      "currency": "Turkish Lira",
+      "population": "85.33 million (2023)",
+      "funfact": [
+        "Istanbul is famously home to thousands of stray cats that are cared for by the community and have become a unique part of the city's culture.",
+        "While tulips are often associated with the Netherlands, they actually originated in Turkey and were brought to Europe during the Ottoman Empire.",
+        "The Grand Bazaar in Istanbul, built in 1461, is considered the world's first shopping mall. It remains a bustling market with over 4,000 shops.",
+        "Turkey has unique milk-based desserts like \"kazandibi\" (burnt pudding) and \"sütlaç\" (rice pudding), which are beloved across the country.",
+        "Turkey has numerous underground cities. These cities were used for protection during invasions and could house thousands of people."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What does a kiss on the hand mean in Turkey?",
+        "answers": [
+          "A sign of respect and love",
+          "Hello",
+          "Goodbye",
+          "I am sorry"
+        ],
+        "correctAnswer": "A sign of respect and love"
+      },
+      {
+        "question": "Which of these is a famous dish from Turkey?",
+        "answers": ["Pastela", "Doner Kebab", "Durum", "Cuscus"],
+        "correctAnswer": "Doner Kebab"
+      },
+      {
+        "question": "Which of these is the national animal of Turkey?",
+        "answers": ["Lynx", "Bear", "White rabbit", "Grey wolf"],
+        "correctAnswer": "Grey wolf"
+      },
+      {
+        "question": "Which of these is the most important building in Turkey?",
+        "answers": [
+          "Hagia Sofia Grand Mosque",
+          "Big Mosque",
+          "Grey Castle",
+          "White Palace"
+        ],
+        "correctAnswer": "Hagia Sofia Grand Mosque"
+      },
+      {
+        "question": "What is the most popular drink in Turkey?",
+        "answers": ["Coffee", "Tea", "Infusion", "Water"],
+        "correctAnswer": "Tea"
+      }
+    ],
+    "quizfacts": [
+      "A kiss on the hand in Turkey is a sign of respect and love.",
+      "A famous dish from Turkey is Doner Kebab.",
+      "The national animal of Turkey is the Grey Wolf.",
+      "The most important building in Turkey is the Hagia Sofia Grand Mosque.",
+      "The most popular drink in Turkey is Tea."
+    ]
+  },
+  {
+    "countryname": "United Kingdom",
+    "countrycode": "GB",
+    "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/255px-Flag_of_the_United_Kingdom_%281-2%29.svg.png",
+    "countryinfo": {
+      "greeting": "Hello",
+      "capital": "London",
+      "currency": "British Pound",
+      "population": "68.35 million (2023)",
+      "funfact": [
+        "Alfred the Great, considered by some to be the first King of England, made it a law for everyone to be in bed by 8pm and introduced a curfew bell.",
+        "The Penny Black, the world's first public-use adhesive postage stamp, first went on sale in the UK in 1840.",
+        "In the Isle of Man, there's no national speed limit – some roads may be driven at any speed which is safe and appropriate.",
+        "Two mice fighting over a slice of cheese is London's smallest statue.",
+        "In the UK all horses, donkeys and ponies must have a horse passport."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the name of the UK’s famous clock tower?",
+        "answers": [
+          "Elizabeth Tower",
+          "The Shard",
+          "Tower of London",
+          "Windsor Castle"
+        ],
+        "correctAnswer": "Elizabeth Tower"
+      },
+      {
+        "question": "Which river runs through London?",
+        "answers": ["Thames", "Severn", "Mersey", "Tyne"],
+        "correctAnswer": "Thames"
+      },
+      {
+        "question": "The United Kingdom is made up of how many countries?",
+        "answers": ["Two", "Three", "Four", "Five"],
+        "correctAnswer": "Four"
+      },
+      {
+        "question": "What is the name of the famous prehistoric monument in England?",
+        "answers": [
+          "Stonehenge",
+          "Hadrian’s Wall",
+          "Glastonbury Tor",
+          "Bath Spa"
+        ],
+        "correctAnswer": "Stonehenge"
+      },
+      {
+        "question": "What is the national dish of the UK often associated with Fridays?",
+        "answers": [
+          "Shepherd’s Pie",
+          "Fish and Chips",
+          "Roast Beef",
+          "Chicken Tikka Masala"
+        ],
+        "correctAnswer": "Fish and Chips"
+      }
+    ],
+    "quizfacts": [
+      "The UK's famous clock tower is named Elizabeth Tower.",
+      "The river that runs through London is the Thames.",
+      "The United Kingdom is made up of four countries.",
+      "The famous prehistoric monument in England is Stonehenge.",
+      "The national dish of the UK often associated with Fridays is Fish and Chips."
+    ]
+  }
+]
