@@ -20,8 +20,8 @@ export class Game extends Scene {
       mouse.setPosition(pointer.worldX, pointer.worldY);
     });
 
-    this.input.once("pointerdown", () => {
-      this.scene.start("GameOver");
-    });
+    // this.input.once("pointerdown", () => {
+    //   this.scene.start("GameOver");
+    // });
   }
 }

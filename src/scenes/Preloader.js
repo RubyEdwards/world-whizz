@@ -57,5 +57,8 @@ export class Preloader extends Scene {
       frameRate: 8,
       repeat: -1,
     });
+
+
+
   }
 }
