@@ -1,0 +1,10 @@
+{
+  "question": "What type of government does Andorra have?",
+  "answers": [
+    "Parliamentary Republic",
+    "Constitutional Monarchy",
+    "Parliamentary Co-Principality",
+    "Federal Republic"
+  ],
+  "correctAnswer": "Parliamentary Co-Principality"
+}

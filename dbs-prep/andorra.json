@@ -1,0 +1,60 @@
+{
+  "countryname": "Andorra",
+  "countrycode": "AD",
+  "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1024px-Flag_of_Andorra.svg.png",
+  "countryinfo": {
+    "greeting": "Hola",
+    "capital": "Andorra la Vella",
+    "currency": "Euro",
+    "population": "80,088 (2023)",
+    "funfact": [
+      "In 2023 Andorra ranked third highest for life expectancy in Europe, at 84.04 years.",
+      "More than 90% of Andorra is made up of mountains, forests, rivers, lakes and meadows.",
+      "Andorra has more museums per km² than anywhere else in the world.",
+      "At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.",
+      "Andorra has never had an army or Ministry of Defence."
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What mountain range is Andorra located in?",
+      "answers": ["Alps", "Pyrenees", "Carpathians", "Apennines"],
+      "correctAnswer": "Pyrenees"
+    },
+    {
+      "question": "What is the official language of Andorra?",
+      "answers": ["Spanish", "French", "Catalan", "Portuguese"],
+      "correctAnswer": "Catalan"
+    },
+    {
+      "question": "Which two countries border Andorra?",
+      "answers": [
+        "France and Spain",
+        "Italy and Spain",
+        "France and Portugal",
+        "Spain and Portugal"
+      ],
+      "correctAnswer": "France and Spain"
+    },
+    {
+      "question": "What type of government does Andorra have?",
+      "answers": [
+        "Parliamentary Republic",
+        "Constitutional Monarchy",
+        "Parliamentary Co-Principality",
+        "Federal Republic"
+      ],
+      "correctAnswer": "Parliamentary Co-Principality"
+    },
+    {
+      "question": "Andorra is not a member of which organization?",
+      "answers": [
+        "European Union",
+        "United Nations",
+        "Council of Europe",
+        "Schengen Area"
+      ],
+      "correctAnswer": "European Union"
+    }
+  ]
+}
