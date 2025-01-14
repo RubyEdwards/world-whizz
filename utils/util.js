@@ -1,42 +1,31 @@
 exports.funFactRandomiser = (data) => {
-  const funfactArray = data.countryinfo.funfact;
-  let index = Math.floor(Math.random() * funfactArray.length);
-  const result = funfactArray[index];
-  return result;
-};
-
-exports.showQuizFacts = (data) => {
-  const quizFactArray = data.quizfacts;
-  return quizFactArray;
+  const funfactArray = data.countryinfo.funfact
+  let i = Math.floor(Math.random()*funfactArray.length)
+  const result = funfactArray[i]
+  console.log(result)
+  return result
 };
 
 exports.answerRandomiser = (data) => {
-  const answerArray = data.answers;
-  let index = answerArray.length;
-  while (index != 0) {
-    let randomIndex = Math.floor(Math.random() * index);
-    index--;
-    [answerArray[index], answerArray[randomIndex]] = [
-      answerArray[randomIndex],
-      answerArray[index],
-    ];
+  const answerArray = data.answers
+  let i = answerArray.length
+  while(i!=0){
+    let randomIndex = Math.floor(Math.random()*i);
+    i--
+    [answerArray[i],answerArray[randomIndex]] = [answerArray[randomIndex], answerArray[i]]
   }
-  return answerArray;
+  console.log(answerArray)
+  return answerArray
 };
 
 exports.checkAnswer = (data, userInput) => {
-  let isCorrect = false;
-  const correctAnswer = data.correctAnswer;
-  if (userInput.toLowerCase() !== correctAnswer.toLowerCase()) {
-    isCorrect = false;
-    return 'Incorrect';
+  const correctAnswer = data.correctAnswer
+  if(userInput.toLowerCase() !== correctAnswer.toLowerCase()){
+    return "WROOOONG"
   } else {
-    isCorrect = true;
-    // const rightAnswers = []
-    // rightAnswers.push(varName)
-    return 'Correct';
+    return "rightio"
   }
-};
+}
 /*
 - fetch and compile data from the Dbs
 - randomise the order of the q&as

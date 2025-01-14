@@ -18,7 +18,12 @@
   "quiz": [
     {
       "question": "What is Iceland’s most famous geothermal spa?",
-      "answers": ["Blue Lagoon", "Golden Circle", "Thingvellir", "Geysir"],
+      "answers": [
+        "Blue Lagoon",
+        "Golden Circle",
+        "Thingvellir",
+        "Geysir"
+      ],
       "correctAnswer": "Blue Lagoon"
     },
     {
@@ -28,7 +33,12 @@
     },
     {
       "question": "Which Icelandic volcano caused major air travel disruptions in 2010?",
-      "answers": ["Katla", "Eyjafjallajökull", "Hekla", "Grimsvötn"],
+      "answers": [
+        "Katla",
+        "Eyjafjallajökull",
+        "Hekla",
+        "Grimsvötn"
+      ],
       "correctAnswer": "Eyjafjallajökull"
     },
     {
@@ -41,12 +51,5 @@
       "answers": ["Solar", "Wind", "Geothermal", "Hydroelectric"],
       "correctAnswer": "Geothermal"
     }
-  ],
-  "quizfacts": [
-    "Iceland’s most famous geothermal spa is the Blue Lagoon.",
-    "Iceland is known for not having snakes in the wild.",
-    "The Icelandic volcano Eyjafjallajökull caused major air travel disruptions in 2010.",
-    "Handball is the national sport of Iceland.",
-    "Iceland is primarily powered by geothermal energy."
   ]
 }
