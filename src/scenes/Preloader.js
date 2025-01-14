@@ -42,6 +42,7 @@ export class Preloader extends Scene {
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
     this.scene.start("MainMenu");
 
+
     this.anims.create({
       key: "blink",
       frames: [
@@ -57,5 +58,8 @@ export class Preloader extends Scene {
       frameRate: 8,
       repeat: -1,
     });
+
+
+
   }
 }
