@@ -33,6 +33,8 @@ export class Preloader extends Scene {
     this.load.image("worldmap", "worldmap.png");
 
     this.load.image("mouse", "cursor.png");
+    this.load.html('loginform', '../../public/assets/text/loginform.html');
+    
   }
 
   create() {
@@ -41,6 +43,8 @@ export class Preloader extends Scene {
 
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
     this.scene.start("MainMenu");
+    // this.scene.start("Login");
+
 
     this.anims.create({
       key: "blink",
