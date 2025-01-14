@@ -1,17 +1,10 @@
 import { Scene } from "phaser";
 
-import WebFontFile from "./WebFontFile";
-
 export class MainMenu extends Scene {
   constructor() {
     super("MainMenu");
   }
 
-  preload() {
-
-    this.load.addFile(new WebFontFile(this.load, "Press Start 2P"));
-
-  }
 
   create() {
     // this.add.image(512, 384, 'background');
@@ -23,14 +16,6 @@ export class MainMenu extends Scene {
       .playAfterDelay("blink", Math.random() * 3000);
 
     // this.add.image(512, 300, 'logo');
-
-const title = this.add.text(400, 300, 'Hello World!', {
-			fontFamily: '"Press Start 2P"',
-			fontSize: '50px'
-		})
-
-		title.setOrigin(0.5, 0.5)
-	}
 
     // this.add
     //   .text(180, 210, "World\nWhizz", {
