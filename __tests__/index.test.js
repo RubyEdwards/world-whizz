@@ -1,10 +1,10 @@
 import request from "supertest";
 import app from "../server/index.js";
 
-describe("/countries", () => {
+describe("/world-whizz/countries", () => {
   test("200: Return an array of all country documents", () => {
     return request(app)
-      .get("/countries")
+      .get("/world-whizz/countries")
       .expect(200)
       .then(({ body }) => {
         expect(Array.isArray(body)).toBe(true);
@@ -29,7 +29,7 @@ describe("/countries", () => {
   });
 });
 
-describe("/countries/:countrycode", () => {
+describe("/world-whizz/countries/:countrycode", () => {
   test("200: Return a single country's countryinfo", () => {
     const expected = {
       greeting: "Halló",
@@ -45,7 +45,7 @@ describe("/countries/:countrycode", () => {
       ],
     };
     return request(app)
-      .get("/countries/IC")
+      .get("/world-whizz/countries/IC")
       .expect(200)
       .then(({ body: { countryinfo } }) => {
         expect(typeof countryinfo).toBe("object");
@@ -54,7 +54,7 @@ describe("/countries/:countrycode", () => {
   });
 });
 
-describe("/countries/:countrycode/quiz", () => {
+describe("/world-whizz/countries/:countrycode/quiz", () => {
   test("200: Return a specific country's quiz object", () => {
     const expected = [
       {
@@ -96,7 +96,7 @@ describe("/countries/:countrycode/quiz", () => {
       },
     ];
     return request(app)
-      .get("/countries/AT/quiz")
+      .get("/world-whizz/countries/AT/quiz")
       .expect(200)
       .then(({ body: { quiz } }) => {
         expect(Array.isArray(quiz)).toBe(true);
@@ -113,10 +113,66 @@ describe("/countries/:countrycode/quiz", () => {
         correctAnswer: "Acropolis",
       };
       return request(app)
-        .get("/countries/GR/quiz?question=1")
+        .get("/world-whizz/countries/GR/quiz?question=1")
         .expect(200)
         .then(({ body }) => {
           console.log(body);
+          expect(body).toEqual(expected);
+        });
+    });
+  });
+});
+
+describe("/world-whizz/journal", () => {
+  test("200: Return an array of all country names in alphabetical order", () => {
+    const expected = [
+      "Andorra",
+      "Austria",
+      "Belgium",
+      "Denmark",
+      "Finland",
+      "France",
+      "Germany",
+      "Greece",
+      "Iceland",
+      "Ireland",
+      "Italy",
+      "Liechtenstein",
+      "Luxembourg",
+      "Malta",
+      "Monaco",
+      "Netherlands",
+      "Norway",
+      "Portugal",
+      "San Marino",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey",
+      "United Kingdom",
+    ];
+    return request(app)
+      .get("/world-whizz/journal")
+      .expect(200)
+      .then(({ body }) => {
+        expect(body).toEqual(expected);
+      });
+  });
+  describe("QUERIES", () => {
+    test("200: Return the quizfacts for a specific country", () => {
+      const expected = [
+        [
+          "The UK's famous clock tower is named Elizabeth Tower.",
+          "The river that runs through London is the Thames.",
+          "The United Kingdom is made up of four countries.",
+          "The famous prehistoric monument in England is Stonehenge.",
+          "The national dish of the UK often associated with Fridays is Fish and Chips.",
+        ],
+      ];
+      return request(app)
+        .get("/world-whizz/journal?countrycode=GB")
+        .expect(200)
+        .then(({ body }) => {
           expect(body).toEqual(expected);
         });
     });
