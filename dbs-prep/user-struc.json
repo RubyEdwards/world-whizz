@@ -1,0 +1,9 @@
+[
+  {
+    "username": "string",
+    "email": "string",
+    "password_hashed": "string",
+    "created": "date",
+    "profile_picture_url": "string"
+  }
+]
