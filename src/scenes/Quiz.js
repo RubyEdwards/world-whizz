@@ -7,22 +7,37 @@ export class Quiz extends Scene
         super('Quiz');
     }
 
-    create ()
-    {
-        this.cameras.main.setBackgroundColor(0xff0000);
+        graphics;
 
-        this.add.image(512, 384, 'background').setAlpha(0.5);
 
-        this.add.text(512, 384, 'Quiz', {
-            fontFamily: 'Arial Black', fontSize: 64, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
-        }).setOrigin(0.5);
+        create() {
+            const graphics = this.add.graphics();
+    
+            graphics.fillStyle(0xCFE795, 1);
 
-        this.input.once('pointerdown', () => {
+            graphics.fillRoundedRect(32, 32, 300, 600, 16);
+    
+            graphics.lineStyle(2, 0xA57261, 1);
 
-            this.scene.start('GameOver');
+            graphics.strokeRoundedRect(56, 56, 252, 552, 8);
 
-        });
-    }
+            graphics.strokeRoundedRect(62, 260, 240, 60, 18);
+
+            this.mascot = this.add
+            .sprite(0, 700, "mascot1")
+            .setDisplayOrigin(0, 1)
+            .setScale(0.5)
+            .setDepth(1)
+            .playAfterDelay("blink", Math.random() * 3000);
+        }
+
+        update() {
+            this.mascot.y -= 10;
+        
+            if (this.mascot.y <= 650) {
+              this.mascot.y = 650;
+            }
+          }
+    
+    
 }

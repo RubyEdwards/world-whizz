@@ -34,6 +34,7 @@ export class Preloader extends Scene {
 
     this.load.image("mouse", "cursor.png");
 
+
     this.load.image("badgebasic", "badge-basic.png");
     this.load.image("badge-andorra", "badge-andorra.png");
     this.load.image("badge-austria", "badge-austria.png");
@@ -59,6 +60,10 @@ export class Preloader extends Scene {
     // this.load.image("badge-switzerland", "badge-switzerland.png");
     // this.load.image("badge-turkey", "badge-turkey.png");
     // this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
+
+    this.load.html('loginform', '../../public/assets/text/loginform.html');
+    
+
   }
 
   create() {
@@ -67,6 +72,8 @@ export class Preloader extends Scene {
 
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
     this.scene.start("MainMenu");
+    // this.scene.start("Login");
+
 
     this.anims.create({
       key: "blink",
