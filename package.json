@@ -9,7 +9,7 @@
     "dev-nolog": "vite --config vite/config.dev.mjs",
     "build-nolog": "vite build --config vite/config.prod.mjs",
     "seed": "mongoimport --config='./dbs-prep/config.yaml' --db='world-whiz' --collection='countries' --drop --file='./dbs-seed/countries.json' --jsonArray",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test-jest": "jest",
     "start": "nodemon listener.js"
   },
