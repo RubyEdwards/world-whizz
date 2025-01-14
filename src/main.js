@@ -1,24 +1,28 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { Boot } from './scenes/Boot';
+import { Game } from './scenes/Game';
+import { GameOver } from './scenes/GameOver';
+import { MainMenu } from './scenes/MainMenu';
+import { Preloader } from './scenes/Preloader';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//  Find out more information about the Game Config at:
+//  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
+const config = {
+    type: Phaser.AUTO,
+    width: 1024,
+    height: 768,
+    parent: 'game-container',
+    backgroundColor: '#028af8',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    scene: [
+        Boot,
+        Preloader,
+        MainMenu,
+        Game,
+        GameOver
+    ]
+};
 
-setupCounter(document.querySelector('#counter'))
+export default new Phaser.Game(config);
