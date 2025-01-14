@@ -1,0 +1,55 @@
+{
+  "countryname": "Iceland",
+  "countrycode": "IC",
+  "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1920px-Flag_of_Iceland.svg.png",
+  "countryinfo": {
+    "greeting": "Halló",
+    "capital": "Reykjavík",
+    "currency": "Icelandic Króna",
+    "population": "393,600 (2023)",
+    "funfact": [
+      "Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.",
+      "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!",
+      "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats",
+      "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.",
+      "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat."
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What is Iceland’s most famous geothermal spa?",
+      "answers": [
+        "Blue Lagoon",
+        "Golden Circle",
+        "Thingvellir",
+        "Geysir"
+      ],
+      "correctAnswer": "Blue Lagoon"
+    },
+    {
+      "question": "Iceland is known for not having which type of animal in the wild?",
+      "answers": ["Foxes", "Snakes", "Wolves", "Bears"],
+      "correctAnswer": "Snakes"
+    },
+    {
+      "question": "Which Icelandic volcano caused major air travel disruptions in 2010?",
+      "answers": [
+        "Katla",
+        "Eyjafjallajökull",
+        "Hekla",
+        "Grimsvötn"
+      ],
+      "correctAnswer": "Eyjafjallajökull"
+    },
+    {
+      "question": "What is the national sport of Iceland?",
+      "answers": ["Football", "Handball", "Ice Hockey", "Skiing"],
+      "correctAnswer": "Handball"
+    },
+    {
+      "question": "What type of energy is Iceland primarily powered by?",
+      "answers": ["Solar", "Wind", "Geothermal", "Hydroelectric"],
+      "correctAnswer": "Geothermal"
+    }
+  ]
+}
