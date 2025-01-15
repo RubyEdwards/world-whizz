@@ -23,9 +23,9 @@ export function checkAnswer(data, userInput) {
   const correctAnswer = data.correctAnswer;
   let isCorrect = false;
   if (userInput.toLowerCase() !== correctAnswer.toLowerCase()) {
-    return "Incorrect";
+    return 'Incorrect';
   } else {
     isCorrect = true;
-    return "Correct";
+    return 'Correct';
   }
 }
