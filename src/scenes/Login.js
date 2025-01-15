@@ -8,7 +8,7 @@ export class Login extends Scene {
   create() {
     this.add.image(100, 100, 'worldmap');
     this.add
-      .text(50, 50, "Login", {
+      .text(100, 50, "Login", {
         fontFamily: "Arial Black",
         fontSize: 30,
         color: "#ffffff",
