@@ -121,9 +121,9 @@ export class Game extends Scene {
       mouse.setPosition(pointer.worldX, pointer.worldY);
     });
 
-    // this.input.once("pointerdown", () => {
-    //   this.scene.start("Quiz");
-    // });
+    this.input.once("pointerdown", () => {
+      this.scene.start("Quiz");
+     });
 
     // badgebasic.postFX.addShine(1, 0.2, 5);
     badgeandorra.postFX.addShine(1, 0.2, 5);
@@ -151,8 +151,8 @@ export class Game extends Scene {
     badgeturkey.postFX.addShine(1, 0.2, 5);
     badgeunitedkingdom.postFX.addShine(1, 0.2, 5);
 
-    const fx = badgeandorra.on("pointerdown", () => {
-      this.scene.start("Quiz");
-    });
+    // const fx = badgeandorra.on("pointerdown", () => {
+    //   this.scene.start("Quiz");
+    // });
   }
 }
