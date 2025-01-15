@@ -1,8 +1,8 @@
 import { Scene } from "phaser";
 
-export class Login extends Scene {
+export class SignUp extends Scene {
   constructor() {
-    super("Login");
+    super("SignUp");
   }
 
   create() {
@@ -10,7 +10,7 @@ export class Login extends Scene {
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.add
-      .text(180, 40, "Login", {
+      .text(180, 40, "Sign Up", {
         fontFamily: "Arial Black",
         fontSize: 30,
         color: "#ffffff",
@@ -86,10 +86,11 @@ export class Login extends Scene {
   update() {
     this.mascot.y -= 1;
 
-    if (this.mascot.y <= 420) {
-      this.mascot.y = 420;
+    if (this.mascot.y <= 620) {
+      this.mascot.y = 620;
     }
   }
 }
+
 
 

@@ -76,6 +76,7 @@ export class Preloader extends Scene {
     this.registry.set("username","")
     this.registry.set("password","")
     this.scene.start("Login");
+    // this.scene.start("MainMenu");
 
     this.anims.create({
       key: "blink",
