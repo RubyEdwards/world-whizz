@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import { CountryBadge } from "../game-objects/CountryBadge";
 
 export class Game extends Scene {
   constructor() {
@@ -6,114 +7,108 @@ export class Game extends Scene {
   }
 
   create() {
+    //Camera
+
     this.cameras.main.setBackgroundColor(0x00ff00);
 
     this.cameras.main.setBounds(3170, 250, 1550, 900);
 
-    this.add.image(0, 0, "worldmap").setOrigin(0);
+    //Images
 
-    // let badgebasic = this.add
-    //   .image(3550, 630, "badgebasic")
-    //   .setOrigin(0)
-    //   .setInteractive();
-    let badgeandorra = this.add
-      .image(3725, 920, "badge-andorra")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeaustria = this.add
-      .image(4020, 795, "badge-austria")
-      .setOrigin(0)
-      .setInteractive();
-    let badgebelgium = this.add
-      .image(3790, 720, "badge-belgium")
-      .setOrigin(0)
-      .setInteractive();
-    let badgedenmark = this.add
-      .image(3910, 600, "badge-denmark")
-      .setOrigin(0)
-      .setInteractive();
-    let badgefinland = this.add
-      .image(4300, 400, "badge-finland")
-      .setOrigin(0)
-      .setInteractive();
-    let badgefrance = this.add
-      .image(3760, 810, "badge-france")
-      .setOrigin(0)
-      .setInteractive();
-    let badgegermany = this.add
-      .image(3920, 700, "badge-germany")
-      .setOrigin(0)
-      .setInteractive();
-    let badgegreece = this.add
-      .image(4180, 1020, "badge-greece")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeiceland = this.add
-      .image(3300, 400, "badge-iceland")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeireland = this.add
-      .image(3550, 630, "badge-ireland")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeitaly = this.add
-      .image(4010, 940, "badge-italy")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeliechtenstein = this.add
-      .image(3930, 810, "badge-liechtenstein")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeluxembourg = this.add
-      .image(3840, 740, "badge-luxembourg")
-      .setOrigin(0)
-      .setInteractive();
-    let badgemalta = this.add
-      .image(4000, 1070, "badge-malta")
-      .setOrigin(0)
-      .setInteractive();
-    let badgemonaco = this.add
-      .image(3850, 890, "badge-monaco")
-      .setOrigin(0)
-      .setInteractive();
-    let badgenetherlands = this.add
-      .image(3820, 675, "badge-netherlands")
-      .setOrigin(0)
-      .setInteractive();
-    let badgenorway = this.add
-      .image(3910, 470, "badge-norway")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeportugal = this.add
-      .image(3500, 990, "badge-portugal")
-      .setOrigin(0)
-      .setInteractive();
-    let badgesanmarino = this.add
-      .image(3980, 880, "badge-sanmarino")
-      .setOrigin(0)
-      .setInteractive();
-    let badgespain = this.add
-      .image(3620, 970, "badge-spain")
-      .setOrigin(0)
-      .setInteractive();
-    let badgesweden = this.add
-      .image(4065, 400, "badge-sweden")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeswitzerland = this.add
-      .image(3860, 810, "badge-switzerland")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeturkey = this.add
-      .image(4450, 1000, "badge-turkey")
-      .setOrigin(0)
-      .setInteractive();
-    let badgeunitedkingdom = this.add
-      .image(3650, 640, "badge-unitedkingdom")
-      .setOrigin(0)
-      .setInteractive();
+    this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
-    const mouse = this.add.image(3600, 630, "mouse").setOrigin(0);
+    const mouse = this.add.image(3800, 800, "mouse").setOrigin(0);
+
+    this.add
+      .image(255, 5, "journal-icon")
+      .setOrigin(0)
+      .setScrollFactor(0)
+      .setDepth(2);
+
+    const mascot = this.add
+      .sprite(0, 500, "mascot1")
+      .setScale(0.9)
+      .setOrigin(0)
+      .setScrollFactor(0)
+      .setDepth(2)
+      .playAfterDelay("blink", Math.random() * 3000);
+
+    let badgeandorra = this.children.add(
+      new CountryBadge(this, 3725, 920, "badge-andorra")
+    );
+    let badgeaustria = this.children.add(
+      new CountryBadge(this, 4020, 795, "badge-austria")
+    );
+    let badgebelgium = this.children.add(
+      new CountryBadge(this, 3790, 720, "badge-belgium")
+    );
+    let badgedenmark = this.children.add(
+      new CountryBadge(this, 3910, 600, "badge-denmark")
+    );
+    let badgefinland = this.children.add(
+      new CountryBadge(this, 4300, 400, "badge-finland")
+    );
+    let badgefrance = this.children.add(
+      new CountryBadge(this, 3760, 810, "badge-france")
+    );
+    let badgegermany = this.children.add(
+      new CountryBadge(this, 3920, 700, "badge-germany")
+    );
+    let badgegreece = this.children.add(
+      new CountryBadge(this, 4180, 1020, "badge-greece")
+    );
+    let badgeiceland = this.children.add(
+      new CountryBadge(this, 3300, 400, "badge-iceland")
+    );
+    let badgeireland = this.children.add(
+      new CountryBadge(this, 3550, 630, "badge-ireland")
+    );
+    let badgeitaly = this.children.add(
+      new CountryBadge(this, 4010, 940, "badge-italy")
+    );
+    let badgeliechtenstein = this.children.add(
+      new CountryBadge(this, 3930, 810, "badge-liechtenstein")
+    );
+    let badgeluxembourg = this.children.add(
+      new CountryBadge(this, 3840, 740, "badge-luxembourg")
+    );
+    let badgemalta = this.children.add(
+      new CountryBadge(this, 4000, 1070, "badge-malta")
+    );
+    let badgemonaco = this.children.add(
+      new CountryBadge(this, 3850, 890, "badge-monaco")
+    );
+    let badgenetherlands = this.children.add(
+      new CountryBadge(this, 3820, 675, "badge-netherlands")
+    );
+    let badgenorway = this.children.add(
+      new CountryBadge(this, 3910, 470, "badge-norway")
+    );
+    let badgeportugal = this.children.add(
+      new CountryBadge(this, 3500, 990, "badge-portugal")
+    );
+    let badgesanmarino = this.children.add(
+      new CountryBadge(this, 3980, 880, "badge-sanmarino")
+    );
+    let badgespain = this.children.add(
+      new CountryBadge(this, 3620, 970, "badge-spain")
+    );
+    let badgesweden = this.children.add(
+      new CountryBadge(this, 4065, 400, "badge-sweden")
+    );
+    let badgeswitzerland = this.children.add(
+      new CountryBadge(this, 3860, 810, "badge-switzerland")
+    );
+    let badgeturkey = this.children.add(
+      new CountryBadge(this, 4450, 1000, "badge-turkey")
+    );
+    let badgeunitedkingdom = this.children.add(
+      new CountryBadge(this, 3650, 640, "badge-unitedkingdom")
+    );
+
+    //Speech Bubbles
+
+    //Movement
 
     this.cameras.main.startFollow(mouse, true);
 
@@ -121,38 +116,20 @@ export class Game extends Scene {
       mouse.setPosition(pointer.worldX, pointer.worldY);
     });
 
-    this.input.once("pointerdown", () => {
-      this.scene.start("Quiz");
-     });
+    //Functionality
 
-    // badgebasic.postFX.addShine(1, 0.2, 5);
-    badgeandorra.postFX.addShine(1, 0.2, 5);
-    badgeaustria.postFX.addShine(1, 0.2, 5);
-    badgebelgium.postFX.addShine(1, 0.2, 5);
-    badgedenmark.postFX.addShine(1, 0.2, 5);
-    badgefinland.postFX.addShine(1, 0.2, 5);
-    badgefrance.postFX.addShine(1, 0.2, 5);
-    badgegermany.postFX.addShine(1, 0.2, 5);
-    badgegreece.postFX.addShine(1, 0.2, 5);
-    badgeiceland.postFX.addShine(1, 0.2, 5);
-    badgeireland.postFX.addShine(1, 0.2, 5);
-    badgeitaly.postFX.addShine(1, 0.2, 5);
-    badgeliechtenstein.postFX.addShine(1, 0.2, 5);
-    badgeluxembourg.postFX.addShine(1, 0.2, 5);
-    badgemalta.postFX.addShine(1, 0.2, 5);
-    badgemonaco.postFX.addShine(1, 0.2, 5);
-    badgenetherlands.postFX.addShine(1, 0.2, 5);
-    badgenorway.postFX.addShine(1, 0.2, 5);
-    badgeportugal.postFX.addShine(1, 0.2, 5);
-    badgesanmarino.postFX.addShine(1, 0.2, 5);
-    badgespain.postFX.addShine(1, 0.2, 5);
-    badgesweden.postFX.addShine(1, 0.2, 5);
-    badgeswitzerland.postFX.addShine(1, 0.2, 5);
-    badgeturkey.postFX.addShine(1, 0.2, 5);
-    badgeunitedkingdom.postFX.addShine(1, 0.2, 5);
-
-    // const fx = badgeandorra.on("pointerdown", () => {
+    // this.input.once("pointerdown", () => {
     //   this.scene.start("Quiz");
     // });
+
+    // badgeandorra.on("pointerdown", () => {
+    //   badgeandorra.preFX.addVignette();
+    //   // this.scene.start("Quiz");
+    // });
+
+    this.input.on("pointerdown", () => {
+      mascot.setVisible(false);
+    });
+
   }
 }

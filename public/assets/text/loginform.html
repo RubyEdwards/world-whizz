@@ -1,15 +1,16 @@
 <form >
     <label for="username">Username
-        <input type="text" name="username">
+      <input placeholder="Write your username" type="text" name="username">
     </label>
 
+
     <label for="password">Password
-        <input type="text" name="password">
+        <input placeholder="Write your password" type="text" name="password">
     </label>
-    <a>Forgot your password?</a>
-    <button name="loginButton">Login</button>
+    <!-- <a>Forgot your password?</a> -->
+    <button  id="loginButton" name="loginButton">Login</button>
     <p>Don't have an account?</p>
-    <button name="signUpButton">Sign up</button>
+    <button  id="signUpButton" name="signUpButton">Sign up</button>
 
 </form>
 
@@ -24,9 +25,11 @@
      color:black;
     
     }
+
   
     input, button {
-      padding: 10px;
+      padding: 1em;
+      width:90%
       
     }
   
@@ -35,12 +38,36 @@
       color: white;
       border: none;
       width:100px;
-      margin:0;
+      margin:0 auto;
       border-radius:0.5em;
     }
+
+    #loginButton{
+      background-color:#127475 ;
+    }
+
+    #signUpButton{
+      background-color: #A57261;
+    }
+
+    a{
+      text-align: right;
+      margin-bottom:0.5em
+    }
+
     p{
       margin:0;
+      margin-top:0.5em;
+      text-align: center;
      
+    }
+
+    input{
+      background-color: #FFF5E8;
+      border:none;
+      border-radius: 0.6em;
+      
+
     }
   </style>
   

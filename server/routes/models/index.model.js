@@ -39,10 +39,8 @@ export async function fetchJournal() {
 
 export async function fetchCountryQuizFacts(req) {
   let collection = await db.collection("countries");
-  let country =
-    req.params.countryname.charAt(0).toUpperCase() +
-    req.params.countryname.slice(1);
-  let query = { countryname: country };
+  let { countryname } = req.params;
+  let query = { countryname: countryname };
   let countryQuizFacts = await collection.findOne(query, {
     projection: { _id: 0, quizfacts: 1 },
   });
