@@ -8,7 +8,7 @@ export class Login extends Scene {
   create() {
     this.add.image(100, 100, 'worldmap');
     this.add
-      .text(50, 50, "Login", {
+      .text(185, 50, "Login", {
         fontFamily: "Arial Black",
         fontSize: 30,
         color: "#ffffff",
@@ -29,7 +29,7 @@ export class Login extends Scene {
     border.lineStyle(4, 0x884630, 1)
     border.strokeRoundedRect(45,95,270,350)
 
-    const element = this.add.dom(200, 300).createFromCache('loginform');
+    const element = this.add.dom(200,200).createFromCache('loginform');
     // element.setDepth(200)
     
     element.setPerspective(800);
@@ -45,13 +45,10 @@ element.on('click', function (event)
         const inputUsername = this.getChildByName('username');
         const inputPassword = this.getChildByName('password');
 
-        //  Have they entered anything?
         if (inputUsername.value !== '' && inputPassword.value !== '')
         {
-            //  Turn off the click events
             this.removeListener('click');
 
-            //  Tween the login form out
             this.scene.tweens.add({ targets: element.rotate3d, x: 1, w: 90, duration: 3000, ease: 'Power3' });
 
             this.scene.tweens.add({
@@ -62,13 +59,11 @@ element.on('click', function (event)
                 }
             });
 
-            //  Populate the text with whatever they typed in as the username!
             text.setText(`Welcome ${inputUsername.value}`);
         }
         else
         {
-            //  Flash the prompt
-            this.scene.tweens.add({ targets: text, alpha: 0.1, duration: 200, ease: 'Power3', yoyo: true });
+            this.scene.tweens.add({ targets: text, alpha: 0.1, duration: 300, ease: 'Power3', yoyo: true });
         }
     }
 
@@ -76,7 +71,7 @@ element.on('click', function (event)
 
 this.tweens.add({
     targets: element,
-    y: 300,
+    y: 255,
     duration: 3000,
     ease: 'Power3'
 });
