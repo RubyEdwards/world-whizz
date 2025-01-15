@@ -7,10 +7,10 @@ export class Login extends Scene {
 
   create() {
   
-    this.add.image(50, 80, "worldmap");
+    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.add
-      .text(185, 40, "Login", {
+      .text(180, 40, "Login", {
         fontFamily: "Arial Black",
         fontSize: 30,
         color: "#ffffff",
@@ -21,35 +21,44 @@ export class Login extends Scene {
       .setOrigin(0.5);
 
     const graphics = this.add.graphics();
-    graphics.fillStyle(0xead4ba, 1);
+    graphics.fillStyle(0xCFE795, 1);
     graphics.fillRoundedRect(-150, -190, 300, 380);
 
     const border = this.add.graphics();
-    border.lineStyle(4, 0x884630, 1);
+    border.lineStyle(2, 0xA57261, 1);
     border.strokeRoundedRect(-135, -175, 270, 350); 
 
     const formHtml = this.add.dom(0, 0).createFromCache("loginform");
    formHtml.setPerspective(800);
 
    
-    const container = this.add.container(200, 200, [graphics, border, formHtml]);
-
+    const container = this.add.container(180, 200, [graphics, border, formHtml]);
  
    formHtml.addListener("click");
-   formHtml.on("click", function (event) {
-      if (event.target.name === "loginButton") {
-        const inputUsername = this.getChildByName("username");
-        const inputPassword = this.getChildByName("password");
+   formHtml.on("click",  (e)=> {
+      e.preventDefault()
+      if (e.target.name === "loginButton") {
+        const inputUsername = formHtml.getChildByName("username");
+        const inputPassword = formHtml.getChildByName("password");
 
         if (inputUsername.value !== "" && inputPassword.value !== "") {
-          this.removeListener("click");
-
-
-          const welcomeText = `Welcome ${inputUsername.value}`;
-          console.log(welcomeText); 
+          formHtml.removeListener("click");
+          this.registry.set("username",inputUsername.value)  
+          this.registry.set("password",inputPassword.value)   
+          // const username = this.registry.get("username")
+          // const password = this.registry.get("password")
+          // console.log(username)   
+          // console.log(password)
+        
+          this.scene.start("Game");
+      
         } 
+        else{
+          //handle no input for username and password
+        }
       }
     });
+
 
     this.tweens.add({
       targets: container,
@@ -68,6 +77,7 @@ export class Login extends Scene {
     this.input.once("pointerdown", () => {
       this.scene.start("Game");
     });
+
   }
 
   update() {
