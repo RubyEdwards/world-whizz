@@ -23,7 +23,7 @@ export class Preloader extends Scene {
   }
 
   preload() {
-    //  Load the assets for the game - Replace with your own assets
+    
     this.load.setPath("assets");
 
     this.load.image("mascot1", "wwmascot1a.png");
@@ -34,36 +34,33 @@ export class Preloader extends Scene {
 
     this.load.image("mouse", "cursor.png");
 
-
     this.load.image("badgebasic", "badge-basic.png");
     this.load.image("badge-andorra", "badge-andorra.png");
     this.load.image("badge-austria", "badge-austria.png");
     this.load.image("badge-belgium", "badge-belgium.png");
     this.load.image("badge-denmark", "badge-denmark.png");
     this.load.image("badge-finland", "badge-finland.png");
-    // this.load.image("badge-france", "badge-france.png");
-    // this.load.image("badge-germany", "badge-germany.png");
-    // this.load.image("badge-greece", "badge-greece.png");
-    // this.load.image("badge-iceland", "badge-iceland.png");
-    // this.load.image("badge-ireland", "badge-ireland.png");
-    // this.load.image("badge-italy", "badge-italy.png");
-    // this.load.image("badge-liechtenstein", "badge-liechtenstein.png");
-    // this.load.image("badge-luxembourg", "badge-luxembourg.png");
-    // this.load.image("badge-malta", "badge-malta.png");
-    // this.load.image("badge-monaco", "badge-monaco.png");
-    // this.load.image("badge-netherlands", "badge-netherlands.png");
-    // this.load.image("badge-norway", "badge-norway.png");
-    // this.load.image("badge-portugal", "badge-portugal.png");
-    // this.load.image("badge-sanmarino", "badge-sanmarino.png");
-    // this.load.image("badge-spain", "badge-spain.png");
-    // this.load.image("badge-sweden", "badge-sweden.png");
-    // this.load.image("badge-switzerland", "badge-switzerland.png");
-    // this.load.image("badge-turkey", "badge-turkey.png");
-    // this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
+    this.load.image("badge-france", "badge-france.png");
+    this.load.image("badge-germany", "badge-germany.png");
+    this.load.image("badge-greece", "badge-greece.png");
+    this.load.image("badge-iceland", "badge-iceland.png");
+    this.load.image("badge-ireland", "badge-ireland.png");
+    this.load.image("badge-italy", "badge-italy.png");
+    this.load.image("badge-liechtenstein", "badge-liechtenstein.png");
+    this.load.image("badge-luxembourg", "badge-luxembourg.png");
+    this.load.image("badge-malta", "badge-malta.png");
+    this.load.image("badge-monaco", "badge-monaco.png");
+    this.load.image("badge-netherlands", "badge-netherlands.png");
+    this.load.image("badge-norway", "badge-norway.png");
+    this.load.image("badge-portugal", "badge-portugal.png");
+    this.load.image("badge-sanmarino", "badge-sanmarino.png");
+    this.load.image("badge-spain", "badge-spain.png");
+    this.load.image("badge-sweden", "badge-sweden.png");
+    this.load.image("badge-switzerland", "badge-switzerland.png");
+    this.load.image("badge-turkey", "badge-turkey.png");
+    this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
-    this.load.html('loginform', '../../public/assets/text/loginform.html');
-    
-
+    this.load.html("loginform", "text/loginform.html");
   }
 
   create() {
@@ -73,7 +70,6 @@ export class Preloader extends Scene {
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
     this.scene.start("MainMenu");
     // this.scene.start("Login");
-
 
     this.anims.create({
       key: "blink",
