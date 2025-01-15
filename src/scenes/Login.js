@@ -90,7 +90,7 @@ this.mascot = this.add
   }
 
   update() {
-    this.mascot.y -= 10;
+    this.mascot.y -= 1;
 
     if (this.mascot.y <= 420) {
       this.mascot.y = 420;
@@ -98,6 +98,7 @@ this.mascot = this.add
   }
   
 }
+
 
 
 
