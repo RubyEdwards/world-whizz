@@ -34,6 +34,8 @@ export class Preloader extends Scene {
 
     this.load.image("worldmapbkg", "worldmapbkg.png");
 
+    this.load.image("journal-icon", "journal-icon.png");
+
     this.load.image("mouse", "cursor.png");
 
     this.load.image("badgebasic", "badge-basic.png");
