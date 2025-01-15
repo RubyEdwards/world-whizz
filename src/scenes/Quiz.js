@@ -34,6 +34,10 @@ export class Quiz extends Scene
             this.add.triangle(171, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
             this.add.triangle(194, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
             this.add.triangle(214, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
+
+            //start
+            const star = this.add.star(245, 95, 5, 20, 10, 0xffffff, 1);
+            star.setRotation(-Math.PI / 1.7);
              
             //quiz example placeholder
             this.quiz = {
@@ -107,7 +111,7 @@ export class Quiz extends Scene
                 centerX,                     
                 nextButtonY + nextButtonHeight / 2, 
                 "NEXT >",                      
-                { fontSize: "18px",
+                { fontSize: "16px",
                   fontFamily: "Roboto",
                   fill: "#ffffff" 
                 }

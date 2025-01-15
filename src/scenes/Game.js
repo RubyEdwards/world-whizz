@@ -118,9 +118,9 @@ export class Game extends Scene {
 
     //Functionality
 
-    // this.input.once("pointerdown", () => {
-    //   this.scene.start("Quiz");
-    // });
+       this.input.once("pointerdown", () => {
+       this.scene.start("Quiz");
+    });
 
     // badgeandorra.on("pointerdown", () => {
     //   badgeandorra.preFX.addVignette();
