@@ -63,6 +63,7 @@ export class Preloader extends Scene {
     this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
     this.load.html("loginform", "text/loginform.html");
+    // this.load.
   }
 
   create() {
@@ -70,8 +71,11 @@ export class Preloader extends Scene {
     //  For example, you can define global animations here, so we can use them in other scenes.
 
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
-    this.scene.start("MainMenu");
-    // this.scene.start("Login");
+    // this.scene.start("MainMenu");
+
+    this.registry.set("username","")
+    this.registry.set("password","")
+    this.scene.start("Login");
 
     this.anims.create({
       key: "blink",
