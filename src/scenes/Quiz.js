@@ -11,6 +11,9 @@ export class Quiz extends Scene
 
 
         create() {
+
+            this.add.image(0, 0, "worldmapbkg").setOrigin(0);
+
             const graphics = this.add.graphics();
     
             graphics.fillStyle(0xCFE795, 1);
@@ -23,6 +26,10 @@ export class Quiz extends Scene
 
             graphics.strokeRoundedRect(62, 260, 240, 60, 18);
 
+           
+        
+            
+
             this.mascot = this.add
             .sprite(0, 700, "mascot1")
             .setDisplayOrigin(0, 1)
@@ -30,6 +37,7 @@ export class Quiz extends Scene
             .setDepth(1)
             .playAfterDelay("blink", Math.random() * 3000);
         }
+        
 
         update() {
             this.mascot.y -= 10;
