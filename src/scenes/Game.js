@@ -130,5 +130,6 @@ export class Game extends Scene {
     this.input.on("pointerdown", () => {
       mascot.setVisible(false);
     });
+
   }
 }
