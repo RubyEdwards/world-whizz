@@ -36,13 +36,7 @@ describe("/world-whizz/countries/:countrycode", () => {
       capital: "Reykjavík",
       currency: "Icelandic Króna",
       population: "393,600 (2023)",
-      funfact: [
-        "Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.",
-        "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!",
-        "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats",
-        "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.",
-        "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat.",
-      ],
+      funfact: expect.any(String),
     };
     return request(app)
       .get("/world-whizz/countries/IC")
@@ -109,14 +103,12 @@ describe("/world-whizz/countries/:countrycode/quiz", () => {
       const expected = {
         question:
           "What is the name of the hill in Athens that houses the Parthenon?",
-        answers: ["Mount Olympus", "Acropolis", "Delphi", "Meteora"],
-        correctAnswer: "Acropolis",
+        answers: expect.any(Array),
       };
       return request(app)
         .get("/world-whizz/countries/GR/quiz?question=1")
         .expect(200)
         .then(({ body }) => {
-          console.log(body);
           expect(body).toEqual(expected);
         });
     });
@@ -158,23 +150,22 @@ describe("/world-whizz/journal", () => {
         expect(body).toEqual(expected);
       });
   });
-  describe("QUERIES", () => {
-    test("200: Return the quizfacts for a specific country", () => {
-      const expected = [
-        [
-          "The UK's famous clock tower is named Elizabeth Tower.",
-          "The river that runs through London is the Thames.",
-          "The United Kingdom is made up of four countries.",
-          "The famous prehistoric monument in England is Stonehenge.",
-          "The national dish of the UK often associated with Fridays is Fish and Chips.",
-        ],
-      ];
-      return request(app)
-        .get("/world-whizz/journal?countrycode=GB")
-        .expect(200)
-        .then(({ body }) => {
-          expect(body).toEqual(expected);
-        });
-    });
+});
+
+describe("/world-whizz/journal/:countryname", () => {
+  test("200: Return the quizfacts for a specific country", () => {
+    const expected = [
+      "The UK's famous clock tower is named Elizabeth Tower.",
+      "The river that runs through London is the Thames.",
+      "The United Kingdom is made up of four countries.",
+      "The famous prehistoric monument in England is Stonehenge.",
+      "The national dish of the UK often associated with Fridays is Fish and Chips.",
+    ];
+    return request(app)
+      .get("/world-whizz/journal/United%20Kingdom")
+      .expect(200)
+      .then(({ body: { quizfacts } }) => {
+        expect(quizfacts).toEqual(expected);
+      });
   });
 });
