@@ -1,9 +1,10 @@
-import { Boot } from './scenes/Boot';
-import { Game } from './scenes/Game';
-import { GameOver } from './scenes/GameOver';
-import { MainMenu } from './scenes/MainMenu';
-import { Preloader } from './scenes/Preloader';
-import { Login } from './scenes/Login';
+import { Boot } from "./scenes/Boot";
+import { Game } from "./scenes/Game";
+import { GameOver } from "./scenes/GameOver";
+import { MainMenu } from "./scenes/MainMenu";
+import { Preloader } from "./scenes/Preloader";
+import { Quiz } from "./scenes/Quiz";
+import { Login } from "./scenes/Login";
 
 //  Find out more information about the Game Config at:
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
@@ -25,10 +26,10 @@ const config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
+  scene: [Boot, Preloader, MainMenu, Game, GameOver, Quiz, Login],
   dom: {
-    createContainer: true
-},
-  scene: [Boot, Preloader,Login, MainMenu, Game, GameOver],
+    createContainer: true,
+  },
 };
 
 export default new Phaser.Game(config);
