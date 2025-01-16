@@ -153,6 +153,7 @@ export class Game extends Scene {
       flipX: false,
     });
 
+
     this.input.on("pointerdown", () => {
       if (tween.isPlaying()) {
         tween.pause();
@@ -160,5 +161,6 @@ export class Game extends Scene {
         tween.resume();
       }
     });
+
   }
 }
