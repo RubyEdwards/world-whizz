@@ -3,9 +3,9 @@ export class JournalIcon extends Phaser.GameObjects.Image {
     super(scene, x, y, texture);
 
     this.setOrigin(0)
-      .setInteractive()
+      .setInteractive({ useHandCursor: true })
       .setPosition(x, y)
-      .setScrollFactor(0)
+      .setScrollFactor(0);
     this.on("pointerover", () => {
       this.preFX.setPadding(18);
       this.preFX.addGlow();

@@ -3,7 +3,7 @@ export class CountryBadge extends Phaser.GameObjects.Image {
     super(scene, x, y, texture);
 
     this.setOrigin(0)
-      .setInteractive()
+      .setInteractive({ useHandCursor: true })
       .setPosition(x, y)
       .postFX.addShine(1, 0.2, 5);
     this.on("pointerover", () => {
