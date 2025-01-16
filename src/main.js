@@ -31,6 +31,12 @@ const config = {
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
 
+  fx: {
+    glow: {
+      distance: 12,
+      quality: 0.1,
+    },
+  },
   scene: [Boot, Preloader, MainMenu, SignUp, Game, Quiz, Login, Journal],
   dom: {
     createContainer: true,
