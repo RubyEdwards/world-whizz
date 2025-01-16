@@ -1,27 +1,28 @@
-import express from 'express';
+import express from "express";
 import {
   getCountries,
   getCountry,
   getCountryQuizFacts,
   getJournal,
   getQuiz,
-} from './controllers/index.controller.js';
+} from "./controllers/index.controller.js";
 import {
   isRequestValidated,
   validateSignInRequest,
   validateSignUpRequest,
-} from '../mongoose-modal/auth.js';
+} from "../validator/auth.validator.js";
+import { signIn, signUp } from "../routes/controllers/auth.controller.js";
 
 const router = express.Router();
 
-router.get('/countries', getCountries);
-router.get('/countries/:countrycode', getCountry);
-router.get('/countries/:countrycode/quiz', getQuiz);
+router.get("/countries", getCountries);
+router.get("/countries/:countrycode", getCountry);
+router.get("/countries/:countrycode/quiz", getQuiz);
 
-router.get('/journal', getJournal);
-router.get('/journal/:countryname', getCountryQuizFacts);
+router.get("/journal", getJournal);
+router.get("/journal/:countryname", getCountryQuizFacts);
 
-router.route('/signin').post(validateSignInRequest, isRequestValidated, signIn);
-router.route('/signup').post(validateSignUpRequest, isRequestValidated, signUp);
+router.post("/signup", validateSignUpRequest, isRequestValidated, signUp);
+router.post("/signin", validateSignInRequest, isRequestValidated, signIn);
 
 export default router;
