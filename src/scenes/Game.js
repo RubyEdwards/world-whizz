@@ -1,6 +1,7 @@
 import { Scene } from "phaser";
 import { CountryBadge } from "../game-objects/CountryBadge";
 import { JournalIcon } from "../game-objects/JournalIcon";
+import { SpeechBubble } from "../game-objects/SpeechBubble";
 
 export class Game extends Scene {
   constructor() {
@@ -15,7 +16,7 @@ export class Game extends Scene {
 
     let cam = this.cameras.main;
 
-    cam.setBounds(3170, 250, 1550, 900);
+    cam.setBounds(3170, 250, 1550, 910);
 
     this.input.on("pointermove", (pointer) => {
       if (!pointer.isDown) return;
@@ -138,10 +139,6 @@ export class Game extends Scene {
 
     //Functionality
 
-    // this.input.on("pointerdown", () => {
-    //   mascot.setVisible(false);
-    // });
-
     const tween = this.tweens.add({
       targets: mascot,
       y: 740,
@@ -155,12 +152,20 @@ export class Game extends Scene {
 
 
     this.input.on("pointerdown", () => {
-      if (tween.isPlaying()) {
-        tween.pause();
-      } else {
+      if (!tween.isPlaying()) {
         tween.resume();
+      } else {
+        // tween.pause();
       }
     });
+
+
+
+// let greeting = this.children.add(
+//   new SpeechBubble(this, 100, 100, 400, "Hi")
+// );
+
+
 
   }
 }
