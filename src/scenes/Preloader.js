@@ -68,15 +68,35 @@ export class Preloader extends Scene {
     //HTML 
     this.load.html("loginform", "text/loginform.html");
 
+    this.load.html("signUpForm", "text/signUpForm.html")
+
+
     this.load.html("countryinfo", "text/countryinfo.jsx");
     
+
   }
 
   create() {
 
-    this.registry.set("username", "");
-    this.registry.set("password", "");
-    this.scene.start("Login");
+
+   
+
+    this.registry.set("currUserData", {
+      username: "",
+      password: "",
+  });
+
+  this.registry.set("newUserData", {
+    newUsername: "",
+    newEmail: "",
+    newPassword: "",
+    newPasswordConf: ""
+});
+
+
+  
+    this.scene.start("MainMenu");
+
 
     this.anims.create({
       key: "blink",

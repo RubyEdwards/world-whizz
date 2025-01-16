@@ -37,16 +37,21 @@ export class Login extends Scene {
    formHtml.addListener("click");
    formHtml.on("click",  (e)=> {
       e.preventDefault()
-      if (e.target.name === "loginButton") {
+      if (e.target.id === "loginButton") {
         const inputUsername = formHtml.getChildByName("username");
         const inputPassword = formHtml.getChildByName("password");
 
         if (inputUsername.value !== "" && inputPassword.value !== "") {
           formHtml.removeListener("click");
-          this.registry.set("username",inputUsername.value)  
-          this.registry.set("password",inputPassword.value)   
-          // const username = this.registry.get("username")
-          // const password = this.registry.get("password")
+
+          const userData = this.registry.get("currUserData")
+          userData.username = inputUsername.value;
+          userData.password = inputPassword.value;
+
+          this.registry.set("currUserData", userData);
+          
+          // const username = userData.username
+          // const password = userData.password
           // console.log(username)   
           // console.log(password)
         
@@ -54,8 +59,11 @@ export class Login extends Scene {
       
         } 
         else{
-          //handle no input for username and password
+          // handle all info not provided
         }
+      }
+      else if(e.target.id === "signUpButton"){
+        this.scene.start("SignUp");
       }
     });
 
@@ -63,7 +71,7 @@ export class Login extends Scene {
     this.tweens.add({
       targets: container,
       y: 255, 
-      duration: 3000,
+      duration: 1000,
       ease: "Power3",
     });
 
@@ -81,7 +89,7 @@ export class Login extends Scene {
   }
 
   update() {
-    this.mascot.y -= 1;
+    this.mascot.y -= 2;
 
     if (this.mascot.y <= 420) {
       this.mascot.y = 420;
