@@ -49,11 +49,10 @@ Installation Steps
     4.	Install dependencies:
     5.	npm install
     6.	Set up environment variables:
-    o	Create a .env file in the root directory.
-    o	Add the following variables: 
-    o	PORT=8080
-    o	MONGO_URI=mongodb:
-    o	JWT_SECRET=
+        o	Create a .env file in the root directory.
+        o	Add the following variables: 
+        o	PORT=8080
+        o	MONGO_URI=mongodb:
     7.	Start the development server:
     8.	npm run dev
     9.	Open the app in your browser at http://localhost:8080.
