@@ -1,21 +1,20 @@
-export class CountryBadge extends Phaser.GameObjects.Image {
+export class JournalIcon extends Phaser.GameObjects.Image {
   constructor(scene, x, y, texture) {
     super(scene, x, y, texture);
 
     this.setOrigin(0)
       .setInteractive()
       .setPosition(x, y)
-      .postFX.addShine(1, 0.2, 5);
+      .setScrollFactor(0)
     this.on("pointerover", () => {
-      this.preFX.setPadding(12);
+      this.preFX.setPadding(18);
       this.preFX.addGlow();
     });
     this.on("pointerout", () => {
       this.clearFX();
-      this.postFX.addShine(1, 0.2, 5);
     });
     this.on("pointerdown", () => {
-      this.scene.scene.start("Quiz");
+      this.scene.scene.start("Journal");
     });
   }
 }

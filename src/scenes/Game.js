@@ -1,5 +1,6 @@
 import { Scene } from "phaser";
 import { CountryBadge } from "../game-objects/CountryBadge";
+import { JournalIcon } from "../game-objects/JournalIcon";
 
 export class Game extends Scene {
   constructor() {
@@ -29,11 +30,9 @@ export class Game extends Scene {
 
     this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
-    let journalicon = this.add
-      .image(255, 5, "journal-icon")
-      .setOrigin(0)
-      .setScrollFactor(0)
-      .setDepth(2).setInteractive;
+    let journalicon = this.children.add(
+      new JournalIcon(this, 250, 10, "journal-icon").setDepth(2)
+    );
 
     const mascot = this.add
       .sprite(0, 500, "mascot1")
@@ -139,16 +138,29 @@ export class Game extends Scene {
 
     //Functionality
 
+    // this.input.on("pointerdown", () => {
+    //   mascot.setVisible(false);
+    // });
+
+    const tween = this.tweens.add({
+      targets: mascot,
+      y: 740,
+      ease: "Power1",
+      duration: 3000,
+      paused: true,
+      yoyo: false,
+      repeat: 0,
+      flipX: false,
+    });
+
 
     this.input.on("pointerdown", () => {
-      mascot.setVisible(false);
+      if (tween.isPlaying()) {
+        tween.pause();
+      } else {
+        tween.resume();
+      }
+    });
 
-    });
-    this.input.once("pointerdown", () => {
-      this.scene.start("Journal");
-    });
-    // journalicon.on("pointerdown", () => {
-    //   this.scene.start("Journal")
-    // });
   }
 }

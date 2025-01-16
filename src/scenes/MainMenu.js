@@ -8,7 +8,7 @@ export class MainMenu extends Scene {
   create() {
 
     this.mascot = this.add
-      .sprite(0, 500, "mascot1")
+      .sprite(0, 600, "mascot1")
       .setOrigin(0)
       .setDepth(1)
       .playAfterDelay("blink", Math.random() * 3000);
