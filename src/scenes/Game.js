@@ -139,8 +139,10 @@ export class Game extends Scene {
 
     //Functionality
 
+
     this.input.on("pointerdown", () => {
       mascot.setVisible(false);
+
     });
 
     // journalicon.on("pointerdown", () => {

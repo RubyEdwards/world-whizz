@@ -1,25 +1,28 @@
-import express from 'express';
-import cors from 'cors';
-import './loadEnvironment.js';
-// import "express-async-errors";
-import worldwhizz from './routes/countries.js';
+import express from "express";
+import "./loadEnvironment.js";
+import dotenv from "dotenv";
+import connectDB from "../server/db/connection.js";
+import cors from "cors";
+import authRouter from "../server/routes/countries.js";
 
-const PORT = process.env.PORT || 5050;
-console.log('🚀 ~ PORT:', PORT);
-
+dotenv.config();
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use("/world-whizz", authRouter);
 
-app.use('/world-whizz', worldwhizz);
+const port = process.env.PORT || 5000;
 
-app.use((err, _req, res, next) => {
-  res.status(500).send('Uh oh! An unexpected error occured.');
-});
+const start = async () => {
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  } catch (error) {
+    console.log("error =>", error);
+  }
+};
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
-});
-
-export default app;
+start();
