@@ -88,7 +88,6 @@ export class Preloader extends Scene {
 
   this.registry.set("newUserData", {
     newUsername: "",
-    newEmail: "",
     newPassword: "",
     newPasswordConf: ""
 });

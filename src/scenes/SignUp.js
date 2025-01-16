@@ -39,13 +39,11 @@ export class SignUp extends Scene {
       e.preventDefault()
       
       const inputNewUsername = formHtml.getChildByName("newUsername");
-      const inputNewEmail = formHtml.getChildByName("newEmail");
       const inputNewPassword = formHtml.getChildByName("newPassword");
       const inputNewPasswordConf= formHtml.getChildByName("newPasswordConf");
 
 
       if (inputNewUsername.value !== "" &&
-          inputNewEmail.value !== "" &&
           inputNewPassword.value !== "" &&
           inputNewPasswordConf.val !== "" 
         ) {
@@ -55,19 +53,16 @@ export class SignUp extends Scene {
         
           const userData = this.registry.get("newUserData")
           userData.newUsername= inputNewUsername.value
-          userData.newEmail=inputNewEmail.value 
           userData.newPassword=inputNewPassword.value
           userData.newPasswordConf= inputNewPasswordConf.value
 
           this.registry.set("newUserData", userData);
           
           // const newUsername = userData.newUsername
-          // const newEmail = userData.newEmail
           // const newPassword = userData.newPassword
           // const newPasswordConf = userData.newPasswordConf
 
           // console.log(newUsername)   
-          // console.log(newEmail)
           // console.log(newPassword)   
           // console.log(newPasswordConf)
           
