@@ -139,7 +139,7 @@ export class Game extends Scene {
 
 
        this.input.once("pointerdown", () => {
-       this.scene.start("Quiz");
+       this.scene.start("Journal");
     });
 
     // badgeandorra.on("pointerdown", () => {
