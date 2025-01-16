@@ -4,15 +4,15 @@ import { StatusCodes } from "http-status-codes";
 export const validateSignUpRequest = [
   check("username").notEmpty().withMessage("Please enter a username."),
   check("password")
-    .isLength({ min: 8 })
-    .withMessage("Password must be at least 8 characters long."),
+    .matches(/^(?=.*?[A-z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^A-Za-z0-9]).{8,25}$/g)
+    .withMessage("Password must be 8 to 25 characters long, have one uppercase, have one lowercase character, one digit, and one special character."),
 ];
 
 export const validateSignInRequest = [
   check("username").notEmpty().withMessage("Please enter a username."),
   check("password")
-    .isLength({ min: 8 })
-    .withMessage("Please enter a valid password (min. 8 characters)."),
+    .notEmpty()
+    .withMessage("Please enter a password."),
 ];
 
 export function isRequestValidated(req, res, next) {
