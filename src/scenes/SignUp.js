@@ -92,10 +92,6 @@ export class SignUp extends Scene {
       .setDepth(1)
       .playAfterDelay("blink", Math.random() * 3000);
 
-    this.input.once("pointerdown", () => {
-      this.scene.start("Game");
-    });
-
   }
 
   update() {
