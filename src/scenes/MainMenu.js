@@ -6,17 +6,13 @@ export class MainMenu extends Scene {
   }
 
   create() {
-    // this.add.image(512, 384, 'background');
 
     this.mascot = this.add
       .sprite(0, 500, "mascot1")
-      .setDisplayOrigin(0)
+      .setOrigin(0)
       .setDepth(1)
       .playAfterDelay("blink", Math.random() * 3000);
 
-
-
-    // this.add.image(512, 300, 'logo');
 
     this.add
       .text(180, 210, "World\nWhizz", {
