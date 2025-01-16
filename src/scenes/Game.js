@@ -19,11 +19,11 @@ export class Game extends Scene {
 
     const mouse = this.add.image(3800, 800, "mouse").setOrigin(0);
 
-    this.add
+    const journalicon = this.add
       .image(255, 5, "journal-icon")
       .setOrigin(0)
       .setScrollFactor(0)
-      .setDepth(2);
+      .setDepth(2).setInteractive;
 
     const mascot = this.add
       .sprite(0, 500, "mascot1")
@@ -108,6 +108,25 @@ export class Game extends Scene {
 
     //Speech Bubbles
 
+    // this.add
+    //   .triangle(200, 480, 20, -10, 0, 25, 45, 0, 0x884630)
+    //   .setScrollFactor(0);
+
+    // const countrygraphics = this.add.graphics();
+    // countrygraphics.fillStyle(0x884630, 1);
+    // countrygraphics.fillRoundedRect(-150, -170, 300, 350).setScrollFactor(0);
+
+    // const countryborder = this.add.graphics();
+    // countryborder.lineStyle(2, 0xa57261, 1);
+    // countryborder.strokeRoundedRect(-135, -155, 270, 320).setScrollFactor(0);
+
+    // const countryinfo = this.add.dom(0, 0).createFromCache("countryinfo");
+    // countryinfo.setPerspective(800).setScrollFactor(0);
+
+    // const countrycontainer = this.add
+    //   .container(180, 290, [countrygraphics, countryborder, countryinfo])
+    //   .setScrollFactor(0);
+
     //Movement
 
     this.cameras.main.startFollow(mouse, true);
@@ -118,18 +137,22 @@ export class Game extends Scene {
 
     //Functionality
 
+
        this.input.once("pointerdown", () => {
        this.scene.start("Quiz");
     });
 
     // badgeandorra.on("pointerdown", () => {
-    //   badgeandorra.preFX.addVignette();
-    //   // this.scene.start("Quiz");
+    // badgeandorra.preFX.addVignette();
+    // this.scene.start("Quiz");
     // });
 
-    this.input.on("pointerdown", () => {
-      mascot.setVisible(false);
-    });
+    // this.input.on("pointerdown", () => {
+    //   mascot.setVisible(false);
+    // });
 
+    // journalicon.on("pointerdown", (pointer) => {
+    //   this.scene.start("Journal");
+    // });
   }
 }

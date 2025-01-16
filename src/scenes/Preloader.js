@@ -7,13 +7,13 @@ export class Preloader extends Scene {
 
   init() {
     //  We loaded this image in our Boot Scene, so we can display it here
-    this.add.image(512, 384, "background");
+    // this.add.image(512, 384, "background");
 
     //  A simple progress bar. This is the outline of the bar.
-    this.add.rectangle(512, 384, 468, 32).setStrokeStyle(1, 0xffffff);
+    this.add.rectangle(200, 384, 468, 32).setStrokeStyle(1, 0xffffff);
 
     //  This is the progress bar itself. It will increase in size from the left based on the % of progress.
-    const bar = this.add.rectangle(512 - 230, 384, 4, 28, 0xffffff);
+    const bar = this.add.rectangle(200 - 230, 384, 4, 28, 0xffffff);
 
     //  Use the 'progress' event emitted by the LoaderPlugin to update the loading bar
     this.load.on("progress", (progress) => {
@@ -23,9 +23,10 @@ export class Preloader extends Scene {
   }
 
   preload() {
-    
+    //Path
     this.load.setPath("assets");
 
+    //Images
     this.load.image("mascot1", "wwmascot1a.png");
     this.load.image("mascot2", "wwmascot1b.png");
     this.load.image("mascot3", "wwmascot1c.png");
@@ -64,19 +65,17 @@ export class Preloader extends Scene {
     this.load.image("badge-turkey", "badge-turkey.png");
     this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
+    //HTML 
     this.load.html("loginform", "text/loginform.html");
-    // this.load.
+
+    this.load.html("countryinfo", "text/countryinfo.jsx");
+    
   }
 
   create() {
-    //  When all the assets have loaded, it's often worth creating global objects here that the rest of the game can use.
-    //  For example, you can define global animations here, so we can use them in other scenes.
 
-    //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
-    // this.scene.start("MainMenu");
-
-    this.registry.set("username","")
-    this.registry.set("password","")
+    this.registry.set("username", "");
+    this.registry.set("password", "");
     this.scene.start("Login");
 
     this.anims.create({

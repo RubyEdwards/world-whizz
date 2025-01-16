@@ -6,7 +6,10 @@ export class CountryBadge extends Phaser.GameObjects.Image {
       .setInteractive()
       .setPosition(x, y)
       .postFX.addShine(1, 0.2, 5)
-      
+    //   .on("pointerdown", () => {
+    // this.preFX.addVignette();
+    // this.scene.start("Quiz");
+    // });
 
     //   .on("pointerover", () => this.enterButtonHoverState())
     //   .on("pointerout", () => this.enterButtonRestState())
