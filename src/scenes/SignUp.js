@@ -22,43 +22,65 @@ export class SignUp extends Scene {
 
     const graphics = this.add.graphics();
     graphics.fillStyle(0xCFE795, 1);
-    graphics.fillRoundedRect(-150, -190, 300, 380);
+    graphics.fillRoundedRect(-150, -190, 300, 500);
 
     const border = this.add.graphics();
     border.lineStyle(2, 0xA57261, 1);
-    border.strokeRoundedRect(-135, -175, 270, 350); 
+    border.strokeRoundedRect(-135, -175, 270, 470); 
 
-    const formHtml = this.add.dom(0, 0).createFromCache("loginform");
+    const formHtml = this.add.dom(0, 50).createFromCache("signUpForm");
    formHtml.setPerspective(800);
 
    
-    const container = this.add.container(180, 200, [graphics, border, formHtml]);
+    const container = this.add.container(180, 180, [graphics, border, formHtml]);
  
    formHtml.addListener("click");
    formHtml.on("click",  (e)=> {
       e.preventDefault()
-      if (e.target.name === "loginButton") {
-        const inputUsername = formHtml.getChildByName("username");
-        const inputPassword = formHtml.getChildByName("password");
+      if (e.target.id === "newSignUpButton") {
+        const inputNewUsername = formHtml.getChildByName("newUsername");
+        const inputNewEmail = formHtml.getChildByName("newEmail");
+        const inputNewPassword = formHtml.getChildByName("newPassword");
+        const inputNewPasswordConf= formHtml.getChildByName("newPasswordConf");
 
-        if (inputUsername.value !== "" && inputPassword.value !== "") {
-          formHtml.removeListener("click");
-          this.registry.set("username",inputUsername.value)  
-          this.registry.set("password",inputPassword.value)   
-          // const username = this.registry.get("username")
-          // const password = this.registry.get("password")
-          // console.log(username)   
-          // console.log(password)
+
+        if (inputNewUsername.value !== "" &&
+            inputNewEmail.value !== "" &&
+            inputNewPassword.value !== "" &&
+            inputNewPasswordConf.val !== "" 
+         ) {
+        
+            formHtml.removeListener("click");
+        
+         
+            const userData = this.registry.get("newUserData")
+            userData.newUsername= inputNewUsername.value
+            userData.newEmail=inputNewEmail.value 
+            userData.newPassword=inputNewPassword.value
+            userData.newPasswordConf= inputNewPasswordConf.value
+
+            this.registry.set("newUserData", userData);
+            
+            // const newUsername = userData.newUsername
+            // const newEmail = userData.newEmail
+            // const newPassword = userData.newPassword
+            // const newPasswordConf = userData.newPasswordConf
+
+            // console.log(newUsername)   
+            // console.log(newEmail)
+            // console.log(newPassword)   
+            // console.log(newPasswordConf)
+            
         
           this.scene.start("Game");
       
         } 
         else{
-          //handle no input for username and password
+          //handle all input not provided
         }
       }
-      else if(e.target.name === "signUpButton"){
-        this.scene.start("SignUp");
+      else if(e.target.id === "newLoginButton"){
+        this.scene.start("Login");
       }
     });
 
@@ -66,13 +88,13 @@ export class SignUp extends Scene {
     this.tweens.add({
       targets: container,
       y: 255, 
-      duration: 3000,
+      duration: 1000,
       ease: "Power3",
     });
 
   
     this.mascot = this.add
-      .sprite(0, 500, "mascot1")
+      .sprite(0, 650, "mascot1")
       .setDisplayOrigin(0)
       .setDepth(1)
       .playAfterDelay("blink", Math.random() * 3000);
@@ -84,10 +106,10 @@ export class SignUp extends Scene {
   }
 
   update() {
-    this.mascot.y -= 1;
+    this.mascot.y -= 2;
 
-    if (this.mascot.y <= 620) {
-      this.mascot.y = 620;
+    if (this.mascot.y <= 550) {
+      this.mascot.y = 550;
     }
   }
 }

@@ -17,10 +17,65 @@
         <input placeholder="Write your password" type="text" name="newPasswordConf" id="newPasswordConf">
     </label>
      
-      <button  id="newSignUp">Sign up</button>
+      <button  id="newSignUpButton">Sign up</button>
       <p>Already have an account?</p>
-      <button  id="newLogin" >Log in</button>
+      <button  id="newLoginButton" >Log in</button>
   </form>
 
 
 
+  <style>
+    form {
+      display: flex;
+      flex-direction: column; 
+      gap: 10px; 
+      max-width: 200px;
+     margin-top:0px;
+     color:black;
+    
+    }
+
+  
+    input, button {
+      padding: 1em;
+      width:90%
+      
+    }
+  
+    button {
+      background-color: #884630;
+      color: white;
+      border: none;
+      width:100px;
+      margin:0 auto;
+      border-radius:0.5em;
+    }
+
+    #newSignUpButton{
+      background-color:#127475 ;
+    }
+
+    #newLoginButton{
+      background-color: #A57261;
+    }
+
+    a{
+      text-align: right;
+      margin-bottom:0.5em
+    }
+
+    p{
+      margin:0;
+      margin-top:0.5em;
+      text-align: center;
+     
+    }
+
+    input{
+      background-color: #FFF5E8;
+      border:none;
+      border-radius: 0.6em;
+      
+
+    }
+  </style>

@@ -63,7 +63,7 @@ export class Preloader extends Scene {
     this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
     this.load.html("loginform", "text/loginform.html");
-    // this.load.
+    this.load.html("signUpForm", "text/signUpForm.html")
   }
 
   create() {
@@ -73,10 +73,25 @@ export class Preloader extends Scene {
     //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
     // this.scene.start("MainMenu");
 
-    this.registry.set("username","")
-    this.registry.set("password","")
-    this.scene.start("Login");
-    // this.scene.start("MainMenu");
+    //DELETE THIS IF BELO WORKS!
+    // this.registry.set("username","")
+    // this.registry.set("password","")
+
+    this.registry.set("currUserData", {
+      username: "",
+      password: "",
+  });
+
+  this.registry.set("newUserData", {
+    newUsername: "",
+    newEmail: "",
+    newPassword: "",
+    newPasswordConf: ""
+});
+
+
+  
+    this.scene.start("MainMenu");
 
     this.anims.create({
       key: "blink",
