@@ -8,6 +8,17 @@ export class Login extends Scene {
   create() {
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
+    this.add
+    .text(180, 40, "Login", {
+      fontFamily: "Arial Black",
+      fontSize: 30,
+      color: "#ffffff",
+      stroke: "#127475",
+      strokeThickness: 10,
+    })
+    .setDepth(100)
+    .setOrigin(0.5);
+
     const graphics = this.add.graphics();
     graphics.fillStyle(0xCFE795, 1);
     graphics.fillRoundedRect(-150, -190, 300, 380);
