@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+import mongoose from "mongoose";
+import bcrypt from "bcrypt";
 
 const userSchema = new mongoose.Schema(
   {
@@ -28,4 +28,4 @@ userSchema.method({
   },
 });
 
-export default mongoose.model('User', userSchema);
+export default mongoose.model("User", userSchema, "users");
