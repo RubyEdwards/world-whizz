@@ -7,19 +7,29 @@ export class Game extends Scene {
   }
 
   create() {
-    //Camera
+    //Camera and motion
 
-    this.cameras.main.setBackgroundColor(0x00ff00);
+    this.input.mousePointer.motionFactor = 0.5;
+    this.input.pointer1.motionFactor = 0.5;
 
-    this.cameras.main.setBounds(3170, 250, 1550, 900);
+    let cam = this.cameras.main;
+
+    cam.setBounds(3170, 250, 1550, 900);
+
+    this.input.on("pointermove", (pointer) => {
+      if (!pointer.isDown) return;
+
+      const { x, y } = pointer.velocity;
+
+      cam.scrollX -= x / cam.zoom;
+      cam.scrollY -= y / cam.zoom;
+    });
 
     //Images
 
     this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
-    const mouse = this.add.image(3800, 800, "mouse").setOrigin(0);
-
-    const journalicon = this.add
+    let journalicon = this.add
       .image(255, 5, "journal-icon")
       .setOrigin(0)
       .setScrollFactor(0)
@@ -40,7 +50,7 @@ export class Game extends Scene {
       new CountryBadge(this, 4020, 795, "badge-austria")
     );
     let badgebelgium = this.children.add(
-      new CountryBadge(this, 3790, 720, "badge-belgium")
+      new CountryBadge(this, 3780, 720, "badge-belgium")
     );
     let badgedenmark = this.children.add(
       new CountryBadge(this, 3910, 600, "badge-denmark")
@@ -127,31 +137,14 @@ export class Game extends Scene {
     //   .container(180, 290, [countrygraphics, countryborder, countryinfo])
     //   .setScrollFactor(0);
 
-    //Movement
-
-    this.cameras.main.startFollow(mouse, true);
-
-    this.input.on("pointermove", (pointer) => {
-      mouse.setPosition(pointer.worldX, pointer.worldY);
-    });
-
     //Functionality
 
-    this.input.once("pointerdown", () => {
-      this.scene.start("Quiz");
+    this.input.on("pointerdown", () => {
+      mascot.setVisible(false);
     });
 
-    // badgeandorra.on("pointerdown", () => {
-    // badgeandorra.preFX.addVignette();
-    // this.scene.start("Quiz");
-    // });
-
-    // this.input.on("pointerdown", () => {
-    //   mascot.setVisible(false);
-    // });
-
-    // journalicon.on("pointerdown", (pointer) => {
-    //   this.scene.start("Journal");
+    // journalicon.on("pointerdown", () => {
+    //   this.scene.start("Journal")
     // });
   }
 }
