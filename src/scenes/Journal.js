@@ -33,65 +33,75 @@ export class Journal extends Scene {
             graphics.strokeRoundedRect(56, margin + 24, 252, cardHeight - 48, 8);
 
             //journal example placeholder
-            const username = "BOB"
-             
+            const username = "BOB";
+            this.username = username;
     
             this.showUser();
         }
         
         showUser() {
             const rectWidth = 220; 
-            const rectHeight = 50; 
             const centerX = this.scale.width / 2;
-            const cornerRadius = 16;
     
-            const journalText = this.add.text(
-                centerX - rectWidth / 2,
+            this.add.text(
+                centerX - rectWidth / 2 + 8,
                 90,                     
-                "${username}'s Travel Journal",     
+                `${this.username}'s Travel Journal`,     
                 {
-                fontSize: "20px",
+                fontSize: "22px",
                 fontFamily: "Patrick Hand",
                 fill: "#2d2d2d",
                 wordWrap: { width: rectWidth },
                 align: "center"
                 }
             ).setOrigin(0, 0); 
-    
-            const countries = this.add.text(
-              centerX - rectWidth / 2,
-              180,
-              "Andorra, Austria, Belgium, Denmark, Finland, France, Germany, Greece, Iceland, Ireland, Italy, Liechtenstein, Luxembourg, Malta, Monaco, Netherlands, Norway, Portugal, San Marino, Spain, Sweden, Switzerland, Turkey, United Kingdom",
-              {
-                fontSize: "20px",
-                fontFamily: "Patrick Hand",
-                fill: "#2d2d2d",
-                wordWrap: { width: rectWidth },
-                align: "center"
-                }
-            ).setOrigin(0, 0); 
-            
 
+            const countriesList = [
+              "Andorra", "Austria", "Belgium", "Denmark", "Finland", "France", "Germany", 
+              "Greece", "Iceland", "Ireland", "Italy", "Liechtenstein", "Luxembourg", 
+              "Malta", "Monaco", "Netherlands", "Norway", "Portugal", "San Marino", 
+              "Spain", "Sweden", "Switzerland", "Turkey", "United Kingdom"
+          ];
     
-            //next button
-            const nextButtonY = 640 + 20;
-            const nextButtonWidth = 160;
-            const nextButtonHeight = 40;
-            const nextButtonRadius = 8;
+          let positionY = 130;
+          countriesList.forEach((country, index) => {
+            this.add.image(
+              centerX - rectWidth / 2 + 20,
+              positionY + index * 22 + 10,
+              "badgeempty"
+            ).setScale(0.5);
+
+            this.add.text(
+              centerX - rectWidth / 2 + 40,
+              positionY + index * 22,
+               `${country}`,
+              {
+                fontSize: "16px",
+                fontFamily: "Patrick Hand",
+                fill: "#2d2d2d"
+              }
+            );
+          });
+            
+            //back to map button
+            const mapButtonY = 640 + 30;
+            const mapButtonWidth = 160;
+            const mapButtonHeight = 40;
+            const mapButtonRadius = 8;
     
-            const nextButtonGraphics = this.add.graphics();
-            nextButtonGraphics.fillStyle(0x127475, 1);
-            nextButtonGraphics.fillRoundedRect(
-              centerX - nextButtonWidth / 2,
-              nextButtonY,
-              nextButtonWidth,
-              nextButtonHeight,
-              nextButtonRadius
+            const mapButtonGraphics = this.add.graphics();
+            mapButtonGraphics.fillStyle(0x127475, 1);
+            mapButtonGraphics.fillRoundedRect(
+              centerX - mapButtonWidth / 2,
+              mapButtonY,
+              mapButtonWidth,
+              mapButtonHeight,
+              mapButtonRadius
         );
     
             this.add.text(
                 centerX,                     
-                nextButtonY + nextButtonHeight / 2, 
+                mapButtonY + mapButtonHeight / 2, 
                 "BACK TO MAP",                      
                 { fontSize: "16px",
                   fontFamily: "Roboto",
@@ -99,19 +109,23 @@ export class Journal extends Scene {
                 }
             ).setOrigin(0.5, 0.5); 
     
-            nextButtonGraphics.setInteractive(new Phaser.Geom.Rectangle(
-                centerX - nextButtonWidth / 2,
-                nextButtonY,
-                nextButtonWidth,
-                nextButtonHeight
+            mapButtonGraphics.setInteractive(new Phaser.Geom.Rectangle(
+                centerX - mapButtonWidth / 2,
+                mapButtonY,
+                mapButtonWidth,
+                mapButtonHeight
             ), Phaser.Geom.Rectangle.Contains);
     
 
-            // //click on button
-            // nextButtonGraphics.on("pointerdown", () => {
-            //     console.log("Next button clicked");
-            // });
+            //click on button to come back to map
+            //  mapButtonGraphics.on("pointerdown", () => {
+            //      console.log("map button clicked");
+            //  });
             
+
+             this.input.once("pointerdown", () => {
+             this.scene.start("Quiz");
+          });
         }
         
 
@@ -124,9 +138,7 @@ export class Journal extends Scene {
               this.mascot.y = 720;
             }
 
-            this.input.once("pointerdown", () => {
-              this.scene.start("Quiz");
-           });
+         
           }
     
     

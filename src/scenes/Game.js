@@ -144,7 +144,9 @@ export class Game extends Scene {
       mascot.setVisible(false);
 
     });
-
+    this.input.once("pointerdown", () => {
+      this.scene.start("Journal");
+    });
     // journalicon.on("pointerdown", () => {
     //   this.scene.start("Journal")
     // });
