@@ -31,7 +31,7 @@ export class Game extends Scene {
     this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
     let journalicon = this.children.add(
-      new JournalIcon(this, 250, 10, "journal-icon")
+      new JournalIcon(this, 250, 10, "journal-icon").setDepth(2)
     );
 
     const mascot = this.add
