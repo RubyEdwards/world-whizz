@@ -1278,7 +1278,7 @@
         "correctAnswer": "IKEA"
       },
       {
-        "question": "What is the traditional Swedish holiday celebrated in June called?",
+        "question": "What is the traditional Swedish holiday celebrated in June?",
         "answers": ["Midsummer", "Kräftskiva", "Walpurgis Night", "Lucia Day"],
         "correctAnswer": "Midsummer"
       },
@@ -1311,7 +1311,7 @@
     "countrycode": "CH",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/170px-Flag_of_Switzerland_%28Pantone%29.svg.png",
     "countryinfo": {
-      "greeting": "Gruezi",
+      "greeting": "Grüezi",
       "capital": "Bern",
       "currency": "Swiss Franc",
       "population": "8.85 million (2023)",
@@ -1325,7 +1325,7 @@
     },
     "quiz": [
       {
-        "question": "Switzerland is known for being home to which international organization?",
+        "question": "Switzerland is home to which international organization?",
         "answers": ["United Nations", "Red Cross", "NATO", "European Union"],
         "correctAnswer": "Red Cross"
       },
@@ -1419,10 +1419,10 @@
     ],
     "quizfacts": [
       "A kiss on the hand in Turkey is a sign of respect and love.",
-      "A famous dish from Turkey is Doner Kebab.",
-      "The national animal of Turkey is the Grey Wolf.",
+      "A famous dish from Turkey is doner kebab.",
+      "The national animal of Turkey is the grey wolf.",
       "The most important building in Turkey is the Hagia Sofia Grand Mosque.",
-      "The most popular drink in Turkey is Tea."
+      "The most popular drink in Turkey is tea."
     ]
   },
   {
@@ -1489,7 +1489,7 @@
       "The river that runs through London is the Thames.",
       "The United Kingdom is made up of four countries.",
       "The famous prehistoric monument in England is Stonehenge.",
-      "The national dish of the UK often associated with Fridays is Fish and Chips."
+      "The national dish of the UK often associated with Fridays is fish and chips."
     ]
   }
 ]
