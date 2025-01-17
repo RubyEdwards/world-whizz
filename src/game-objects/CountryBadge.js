@@ -1,3 +1,5 @@
+import { getCountry } from "../api";
+
 export class CountryBadge extends Phaser.GameObjects.Image {
   constructor(scene, x, y, texture) {
     super(scene, x, y, texture);
@@ -14,13 +16,14 @@ export class CountryBadge extends Phaser.GameObjects.Image {
       this.clearFX();
       this.postFX.addShine(1, 0.2, 5);
     });
-    // this.on("pointerdown", () => {
-    //   this.scene.scene.start("Quiz");
-    // });
+    let id = ""
+    this.on("pointerdown", () => {
+      let countryId = this.texture.key;
+      if (countryId === "badge-andorra") {
+        id="AD"
+      }
+      // makeCountryInfo(id)
+      // console.log(countryId)
+    });
   }
-  
-  
 }
-
-
-
