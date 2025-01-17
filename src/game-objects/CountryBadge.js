@@ -18,4 +18,9 @@ export class CountryBadge extends Phaser.GameObjects.Image {
     //   this.scene.scene.start("Quiz");
     // });
   }
+  
+  
 }
+
+
+

@@ -1,37 +1,15 @@
-import { Scene } from 'phaser';
-import { CountryBadge } from '../game-objects/CountryBadge';
-import { JournalIcon } from '../game-objects/JournalIcon';
-import { getCountries } from '../api';
-// import axios from 'axios';
+import { Scene } from "phaser";
+import { CountryBadge } from "../game-objects/CountryBadge";
+import { JournalIcon } from "../game-objects/JournalIcon";
+import { getCountry } from "../api";
+
 
 export class Game extends Scene {
   constructor() {
-    super('Game');
+    super("Game");
   }
 
   create() {
-    // try {
-    //   const response = await axios.get(
-    //     'http://localhost:8080/world-whizz/countries'
-    //   );
-    //   const { data } = await response;
-    //   console.log('Countires:', data);
-    // } catch (err) {
-    //   console.error('Error fetching data:', err);
-    // }
-
-    // try {
-    //   const response = await axios.get(
-    //     "http://localhost:8080/world-whizz/countries/AD"
-    //   );
-    //   const { data } = await response;
-    //   console.log("Countires:", data.countryinfo.greeting);
-    // } catch (err) {
-    //   console.error("Error fetching data:", err);
-    // }
-
-    getCountries().then(() => {console.log("Hiiii")})
-
     //Camera and motion
     this.input.mousePointer.motionFactor = 0.5;
     this.input.pointer1.motionFactor = 0.5;
@@ -40,7 +18,7 @@ export class Game extends Scene {
 
     cam.setBounds(3170, 250, 1550, 910);
 
-    this.input.on('pointermove', (pointer) => {
+    this.input.on("pointermove", (pointer) => {
       if (!pointer.isDown) return;
 
       const { x, y } = pointer.velocity;
@@ -51,100 +29,101 @@ export class Game extends Scene {
 
     //Images
 
-    this.add.image(0, 0, 'worldmap').setOrigin(0).setDepth(0);
+    this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
     let journalicon = this.children.add(
-      new JournalIcon(this, 250, 10, 'journal-icon').setDepth(2)
+      new JournalIcon(this, 250, 10, "journal-icon").setDepth(2)
     );
 
     const mascot = this.add
-      .sprite(0, 500, 'mascot1')
+      .sprite(0, 500, "mascot1")
       .setScale(0.9)
       .setOrigin(0)
       .setScrollFactor(0)
       .setDepth(2)
-      .playAfterDelay('blink', Math.random() * 3000);
+      .playAfterDelay("blink", Math.random() * 3000);
 
     let badgeandorra = this.children.add(
-      new CountryBadge(this, 3725, 920, 'badge-andorra')
+      new CountryBadge(this, 3725, 920, "badge-andorra")
     );
 
-    badgeandorra.on('pointerdown', () => {
-      andorrainfo.setVisible(true);
+    badgeandorra.on("pointerdown", () => {
+      makeCountryInfo();
+      // andorrainfo.setVisible(true);
     });
 
     let badgeaustria = this.children.add(
-      new CountryBadge(this, 4020, 795, 'badge-austria')
+      new CountryBadge(this, 4020, 795, "badge-austria")
     );
     let badgebelgium = this.children.add(
-      new CountryBadge(this, 3780, 720, 'badge-belgium')
+      new CountryBadge(this, 3780, 720, "badge-belgium")
     );
     let badgedenmark = this.children.add(
-      new CountryBadge(this, 3910, 600, 'badge-denmark')
+      new CountryBadge(this, 3910, 600, "badge-denmark")
     );
     let badgefinland = this.children.add(
-      new CountryBadge(this, 4300, 400, 'badge-finland')
+      new CountryBadge(this, 4300, 400, "badge-finland")
     );
     let badgefrance = this.children.add(
-      new CountryBadge(this, 3760, 810, 'badge-france')
+      new CountryBadge(this, 3760, 810, "badge-france")
     );
     let badgegermany = this.children.add(
-      new CountryBadge(this, 3920, 700, 'badge-germany')
+      new CountryBadge(this, 3920, 700, "badge-germany")
     );
     let badgegreece = this.children.add(
-      new CountryBadge(this, 4180, 1020, 'badge-greece')
+      new CountryBadge(this, 4180, 1020, "badge-greece")
     );
     let badgeiceland = this.children.add(
-      new CountryBadge(this, 3300, 400, 'badge-iceland')
+      new CountryBadge(this, 3300, 400, "badge-iceland")
     );
     let badgeireland = this.children.add(
-      new CountryBadge(this, 3550, 630, 'badge-ireland')
+      new CountryBadge(this, 3550, 630, "badge-ireland")
     );
     let badgeitaly = this.children.add(
-      new CountryBadge(this, 4010, 940, 'badge-italy')
+      new CountryBadge(this, 4010, 940, "badge-italy")
     );
     let badgeliechtenstein = this.children.add(
-      new CountryBadge(this, 3930, 810, 'badge-liechtenstein')
+      new CountryBadge(this, 3930, 810, "badge-liechtenstein")
     );
     let badgeluxembourg = this.children.add(
-      new CountryBadge(this, 3840, 740, 'badge-luxembourg')
+      new CountryBadge(this, 3840, 740, "badge-luxembourg")
     );
     let badgemalta = this.children.add(
-      new CountryBadge(this, 4000, 1070, 'badge-malta')
+      new CountryBadge(this, 4000, 1070, "badge-malta")
     );
     let badgemonaco = this.children.add(
-      new CountryBadge(this, 3850, 890, 'badge-monaco')
+      new CountryBadge(this, 3850, 890, "badge-monaco")
     );
     let badgenetherlands = this.children.add(
-      new CountryBadge(this, 3820, 675, 'badge-netherlands')
+      new CountryBadge(this, 3820, 675, "badge-netherlands")
     );
     let badgenorway = this.children.add(
-      new CountryBadge(this, 3910, 470, 'badge-norway')
+      new CountryBadge(this, 3910, 470, "badge-norway")
     );
     let badgeportugal = this.children.add(
-      new CountryBadge(this, 3500, 990, 'badge-portugal')
+      new CountryBadge(this, 3500, 990, "badge-portugal")
     );
     let badgesanmarino = this.children.add(
-      new CountryBadge(this, 3980, 880, 'badge-sanmarino')
+      new CountryBadge(this, 3980, 880, "badge-sanmarino")
     );
     let badgespain = this.children.add(
-      new CountryBadge(this, 3620, 970, 'badge-spain')
+      new CountryBadge(this, 3620, 970, "badge-spain")
     );
     let badgesweden = this.children.add(
-      new CountryBadge(this, 4065, 400, 'badge-sweden')
+      new CountryBadge(this, 4065, 400, "badge-sweden")
     );
     let badgeswitzerland = this.children.add(
-      new CountryBadge(this, 3860, 810, 'badge-switzerland')
+      new CountryBadge(this, 3860, 810, "badge-switzerland")
     );
     let badgeturkey = this.children.add(
-      new CountryBadge(this, 4450, 1000, 'badge-turkey')
+      new CountryBadge(this, 4450, 1000, "badge-turkey")
     );
     let badgeunitedkingdom = this.children.add(
-      new CountryBadge(this, 3650, 640, 'badge-unitedkingdom')
+      new CountryBadge(this, 3650, 640, "badge-unitedkingdom")
     );
 
     //Username example placeholder
-    const username = 'Bob';
+    const username = "Bob";
     this.username = username;
 
     //Speech Bubbles
@@ -157,39 +136,44 @@ export class Game extends Scene {
       `Welcome, ${this.username}!\nWhere should we explore today?`
     ).setScrollFactor(0);
 
-    //Country Info popup
-    //  const countryInfoBkg = this.add.graphics();
-    //  graphics.fillStyle(0xcfe795, 1);
-    //  graphics.fillRoundedRect(-150, -190, 300, 380);
-
-    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
-    //  const countryInfo = this.add.dom(0, 0).createFromCache("countryInfo");
-
-    // const quizbutton = this.add
-    //   .container(180, 200, [countryInfo])
-    //   .setScrollFactor(0);;
-    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
+    //Get data
+    const makeCountryInfo = () => {
+      getCountry("AD")
+        .then(({ countryinfo }) => {
+          console.log(countryinfo);
+          return countryinfo;
+        })
+        .then((countryinfo) => {
+          this.createSpeechBubble(
+            20,
+            130,
+            320,
+            400,
+            `${countryinfo.greeting}, ${this.username}!\n\nCountry: ${countryinfo.countryname}\nCapital: ${countryinfo.capital}\nCurrency: ${countryinfo.currency}\nPopulation: ${countryinfo.population}\n\nFun fact: ${countryinfo.funfact}`
+          ).setScrollFactor(0);
+        });
+    };
 
     //Greeting example placeholder
-    const countryGreeting = 'Boo';
-    this.greeting = countryGreeting;
+    // const countryGreeting = "Boo";
+    // this.greeting = countryGreeting;
 
-    const andorrainfo = this.createSpeechBubble(
-      20,
-      130,
-      320,
-      400,
-      // `${countryinfo.greeting}, ${this.username}!\nCountry: ${countryname}\nCapital: ${countryinfo.capital}\nCurrency: ${countryinfo.currency}\nPopulation: ${countryinfo.population}\nFun fact: ${countryinfo.funfact}`
-      `${this.greeting}, ${this.username}!\n\nCountry: Andorra\nCapital: Andorra la Vella\nCurrency: Euro\nPopulation: 80,088 (2023)\n\nFun fact: At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.\n\n`
-    ).setScrollFactor(0);
-    andorrainfo.setVisible(false);
+    // const andorrainfo = this.createSpeechBubble(
+    //   20,
+    //   130,
+    //   320,
+    //   400,
+    // `${countryinfo.greeting}, ${this.username}!\nCountry: ${countryname}\nCapital: ${countryinfo.capital}\nCurrency: ${countryinfo.currency}\nPopulation: ${countryinfo.population}\nFun fact: ${countryinfo.funfact}`
+    //   `${countryinfo.greeting}, ${this.username}!\n\nCountry: Andorra\nCapital: Andorra la Vella\nCurrency: Euro\nPopulation: 80,088 (2023)\n\nFun fact: At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.\n\n`
+    // ).setScrollFactor(0);
+    // andorrainfo.setVisible(false);
 
     //Functionality
 
     const tween = this.tweens.add({
       targets: mascot,
       y: 740,
-      ease: 'Power1',
+      ease: "Power1",
       duration: 3000,
       paused: true,
       yoyo: false,
@@ -208,7 +192,7 @@ export class Game extends Scene {
     //   flipX: false,
     // });
 
-    this.input.on('pointerdown', () => {
+    this.input.on("pointerdown", () => {
       if (!tween.isPlaying()) {
         tween.resume();
         greeting.setVisible(false);
@@ -259,10 +243,10 @@ export class Game extends Scene {
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
     const content = this.add.text(0, 0, quote, {
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontSize: 20,
-      color: '#000000',
-      align: 'left',
+      color: "#000000",
+      align: "left",
       wordWrap: { width: bubbleWidth - bubblePadding * 2 },
     });
 
