@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import { signUp } from "../api";
 
 export class SignUp extends Scene {
   constructor() {
@@ -58,16 +59,35 @@ export class SignUp extends Scene {
 
           this.registry.set("newUserData", userData);
           
-          // const newUsername = userData.newUsername
-          // const newPassword = userData.newPassword
-          // const newPasswordConf = userData.newPasswordConf
+          const username = userData.newUsername
+          const password = userData.newPassword
+          const passwordConf = userData.newPasswordConf
+
+          const userInfo={
+            username,
+            password
+          }
+
+          if(password===passwordConf){
+            signUp(userInfo)
+            .then(()=>{
+              this.scene.start("Game");
+            })
+            .catch(err=>{
+              console.log(err.response.data.error)
+            })
+          }
+          //Password1!
+          else{
+            console.log("passwords do not match!")
+          }
 
           // console.log(newUsername)   
           // console.log(newPassword)   
           // console.log(newPasswordConf)
           
       
-        this.scene.start("Game");
+    
     
       } 
     });

@@ -40,14 +40,14 @@ const getCountryQuizFacts = (countryname) => {
 };
 
 const signUp = (userInfo) => {
-  return api.post(`/signup`).then(({ data }) => {
+  return api.post(`/signup`,userInfo).then(({ data }) => {
     console.log(data);
     return data;
   });
 };
 
 const signIn = (userInfo) => {
-  return api.post(`/signin`).then(({ data }) => {
+  return api.post(`/signin`,userInfo).then(({ data }) => {
     console.log(data);
     return data;
   });
