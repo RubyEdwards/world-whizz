@@ -1,23 +1,36 @@
 import { Scene } from 'phaser';
 import { CountryBadge } from '../game-objects/CountryBadge';
 import { JournalIcon } from '../game-objects/JournalIcon';
-import axios from 'axios';
+import { getCountries } from '../api';
+// import axios from 'axios';
 
 export class Game extends Scene {
   constructor() {
     super('Game');
   }
 
-  async create() {
-    try {
-      const response = await axios.get(
-        'http://localhost:8080/world-whizz/countries'
-      );
-      const { data } = await response;
-      console.log('Countires:', data);
-    } catch (err) {
-      console.error('Error fetching data:', err);
-    }
+  create() {
+    // try {
+    //   const response = await axios.get(
+    //     'http://localhost:8080/world-whizz/countries'
+    //   );
+    //   const { data } = await response;
+    //   console.log('Countires:', data);
+    // } catch (err) {
+    //   console.error('Error fetching data:', err);
+    // }
+
+    // try {
+    //   const response = await axios.get(
+    //     "http://localhost:8080/world-whizz/countries/AD"
+    //   );
+    //   const { data } = await response;
+    //   console.log("Countires:", data.countryinfo.greeting);
+    // } catch (err) {
+    //   console.error("Error fetching data:", err);
+    // }
+
+    getCountries().then(() => {console.log("Hiiii")})
 
     //Camera and motion
     this.input.mousePointer.motionFactor = 0.5;
