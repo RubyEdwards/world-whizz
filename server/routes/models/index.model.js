@@ -1,48 +1,67 @@
-import db from "../../db/connection.js";
+import mongoose from 'mongoose';
+import connectDB from '../../db/connection.js';
+
+const countrySchema = new mongoose.Schema({}, { collection: 'countries' });
+const Country = mongoose.model('Country', countrySchema);
 
 export async function fetchCountries() {
-  let collection = await db.collection("countries");
-  let results = await collection.find({}).toArray();
-  return results;
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let results = await Country.find({}, { _id: 0 });
+    return results;
+  } catch (err) {
+    console.error('Error fetching countries: ', err);
+    throw err;
+  }
 }
 
 export async function fetchCountry(req) {
-  let collection = await db.collection("countries");
-  let query = { countrycode: req.params.countrycode };
-  let country = await collection.findOne(query, {
-    projection: { _id: 0, countryinfo: 1 },
-  });
-  return country;
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let query = { countrycode: req.params.countrycode };
+    let country = await Country.findOne(query, { countryinfo: 1, _id: 0 });
+    return country;
+  } catch (err) {
+    console.error('Error fetching country: ', err);
+    throw err;
+  }
 }
 
 export async function fetchQuiz(req) {
-  let collection = await db.collection("countries");
-  let param = { countrycode: req.params.countrycode };
-  let countryquiz = await collection.findOne(param, {
-    projection: { _id: 0, quiz: 1 },
-  });
-  return countryquiz;
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let param = { countrycode: req.params.countrycode };
+    let countryquiz = await Country.findOne(param, { quiz: 1, _id: 0 });
+    return countryquiz;
+  } catch (err) {
+    console.error('Error displaying country quiz: ', err);
+    throw err;
+  }
 }
 
 export async function fetchJournal() {
-  let collection = await db.collection("countries");
-  let countryNames = await collection
-    .find(
-      {},
-      {
-        projection: { _id: 0, countryname: 1 },
-      }
-    )
-    .toArray();
-  return countryNames;
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let countryNames = await Country.find({}, { countryname: 1, _id: 0 });
+    return countryNames;
+  } catch (err) {
+    console.error('Error fetching Journal: ', err);
+    throw err;
+  }
 }
 
 export async function fetchCountryQuizFacts(req) {
-  let collection = await db.collection("countries");
-  let { countryname } = req.params;
-  let query = { countryname: countryname };
-  let countryQuizFacts = await collection.findOne(query, {
-    projection: { _id: 0, quizfacts: 1 },
-  });
-  return countryQuizFacts;
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let { countryname } = req.params;
+    let query = { countryname: countryname };
+    let countryQuizFacts = await Country.findOne(query, {
+      quizfacts: 1,
+      _id: 0,
+    });
+    return countryQuizFacts;
+  } catch (err) {
+    console.error('Error loading quiz facts: ', err);
+    throw err;
+  }
 }
