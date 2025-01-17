@@ -67,12 +67,8 @@ export class Preloader extends Scene {
 
     //HTML
     this.load.html("loginform", "text/loginform.html");
-
     this.load.html("signUpForm", "text/signUpForm.html");
 
-    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
-    this.load.html("countryInfo", "text/country-info.html");
-    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
   }
 
   create() {
