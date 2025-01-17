@@ -1,6 +1,7 @@
 import { Scene } from "phaser";
 import { CountryBadge } from "../game-objects/CountryBadge";
 import { JournalIcon } from "../game-objects/JournalIcon";
+import { getCountries } from "../../server/routes/controllers/index.controller";
 
 export class Game extends Scene {
   constructor() {
@@ -134,13 +135,35 @@ export class Game extends Scene {
       `Welcome, ${this.username}!\nWhere should we explore today?`
     ).setScrollFactor(0);
 
+    //Country Info popup
+    //  const countryInfoBkg = this.add.graphics();
+    //  graphics.fillStyle(0xcfe795, 1);
+    //  graphics.fillRoundedRect(-150, -190, 300, 380);
+
+    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
+    //  const countryInfo = this.add.dom(0, 0).createFromCache("countryInfo");
+
+    // const quizbutton = this.add
+    //   .container(180, 200, [countryInfo])
+    //   .setScrollFactor(0);;
+    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
+
+    //Greeting example placeholder
+    const countryGreeting = "Boo";
+    this.greeting = countryGreeting;
+
+    getCountries().then((countries) => {
+      console.log(countries);
+    });
+    
+
     const andorrainfo = this.createSpeechBubble(
       20,
       130,
       320,
       400,
       // `${countryinfo.greeting}, ${this.username}!\nCountry: ${countryname}\nCapital: ${countryinfo.capital}\nCurrency: ${countryinfo.currency}\nPopulation: ${countryinfo.population}\nFun fact: ${countryinfo.funfact}`
-      `Hola, ${this.username}!\n\nCountry: Andorra\nCapital: Andorra la Vella\nCurrency: Euro\nPopulation: 80,088 (2023)\n\nFun fact: At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.\n\n`
+      `${this.greeting}, ${this.username}!\n\nCountry: Andorra\nCapital: Andorra la Vella\nCurrency: Euro\nPopulation: 80,088 (2023)\n\nFun fact: At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.\n\n`
     ).setScrollFactor(0);
     andorrainfo.setVisible(false);
 
