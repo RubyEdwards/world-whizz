@@ -1,9 +1,9 @@
 [
   {
-    "countryname": "Andorra",
     "countrycode": "AD",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1024px-Flag_of_Andorra.svg.png",
     "countryinfo": {
+      "countryname": "Andorra",
       "greeting": "Hola",
       "capital": "Andorra la Vella",
       "currency": "Euro",
@@ -67,10 +67,10 @@
     ]
   },
   {
-    "countryname": "Austria",
     "countrycode": "AT",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1024px-Flag_of_Austria.svg.png",
     "countryinfo": {
+      "countryname": "Austria",
       "greeting": "Hallo",
       "capital": "Vienna",
       "currency": "Euro",
@@ -129,10 +129,10 @@
     ]
   },
   {
-    "countryname": "Belgium",
     "countrycode": "BE",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1024px-Flag_of_Belgium.svg.png",
     "countryinfo": {
+      "countryname": "Belgium",
       "greeting": "Dag",
       "capital": "Brussels",
       "currency": "Euro",
@@ -186,10 +186,10 @@
     ]
   },
   {
-    "countryname": "Denmark",
     "countrycode": "DK",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1024px-Flag_of_Denmark.svg.png",
     "countryinfo": {
+      "countryname": "Denmark",
       "greeting": "Hej",
       "capital": "Copenhagen",
       "currency": "Danish Krone",
@@ -253,10 +253,10 @@
     ]
   },
   {
-    "countryname": "Finland",
     "countrycode": "FI",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/800px-Flag_of_Finland.svg.png",
     "countryinfo": {
+      "countryname": "Finland",
       "greeting": "Hyvää päivää",
       "capital": "Helsinki",
       "currency": "Euro",
@@ -320,10 +320,10 @@
     ]
   },
   {
-    "countryname": "France",
     "countrycode": "FR",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png",
     "countryinfo": {
+      "countryname": "France",
       "greeting": "Bonjour",
       "capital": "Paris",
       "currency": "Euro",
@@ -387,10 +387,10 @@
     ]
   },
   {
-    "countryname": "Germany",
     "countrycode": "DE",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1024px-Flag_of_Germany.svg.png",
     "countryinfo": {
+      "countryname": "Germany",
       "greeting": "Hallo",
       "capital": "Berlin",
       "currency": "Euro",
@@ -439,10 +439,10 @@
     ]
   },
   {
-    "countryname": "Greece",
     "countrycode": "GR",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/1024px-Flag_of_Greece.svg.png",
     "countryinfo": {
+      "countryname": "Greece",
       "greeting": "Geia sou",
       "capital": "Athens",
       "currency": "Euro",
@@ -496,10 +496,10 @@
     ]
   },
   {
-    "countryname": "Iceland",
     "countrycode": "IC",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1920px-Flag_of_Iceland.svg.png",
     "countryinfo": {
+      "countryname": "Iceland",
       "greeting": "Halló",
       "capital": "Reykjavík",
       "currency": "Icelandic Króna",
@@ -548,10 +548,10 @@
     ]
   },
   {
-    "countryname": "Ireland",
     "countrycode": "IR",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1920px-Flag_of_Ireland.svg.png",
     "countryinfo": {
+      "countryname": "Ireland",
       "greeting": "Dia duit",
       "capital": "Dublin",
       "currency": "Euro",
@@ -625,10 +625,10 @@
     ]
   },
   {
-    "countryname": "Italy",
     "countrycode": "IT",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png",
     "countryinfo": {
+      "countryname": "Italy",
       "greeting": "Ciao",
       "capital": "Rome",
       "currency": "Euro",
@@ -682,10 +682,10 @@
     ]
   },
   {
-    "countryname": "Liechtenstein",
     "countrycode": "LI",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1920px-Flag_of_Liechtenstein.svg.png",
     "countryinfo": {
+      "countryname": "Liechtenstein",
       "greeting": "Hallo",
       "capital": "Vaduz",
       "currency": "Swiss franc",
@@ -754,10 +754,10 @@
     ]
   },
   {
-    "countryname": "Luxembourg",
     "countrycode": "LU",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1920px-Flag_of_Luxembourg.svg.png",
     "countryinfo": {
+      "countryname": "Luxembourg",
       "greeting": "Hallo",
       "capital": "Luxembourg",
       "currency": "Euro",
@@ -821,10 +821,10 @@
     ]
   },
   {
-    "countryname": "Malta",
     "countrycode": "MA",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/7/73/Flag_of_Maltvg/1920px-Flag_of_Maltvg.png",
     "countryinfo": {
+      "countryname": "Malta",
       "greeting": "Bongu",
       "capital": "Valletta",
       "currency": "Euro",
@@ -960,10 +960,10 @@
     ]
   },
   {
-    "countryname": "Netherlands",
     "countrycode": "NE",
     "flag_img_url": "https://upload.wikimedirg/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png",
     "countryinfo": {
+      "countryname": "Netherlands",
       "greeting": "Hallo",
       "capital": "Amsterdam",
       "currency": "Euro",
@@ -1012,10 +1012,10 @@
     ]
   },
   {
-    "countryname": "Norway",
     "countrycode": "NO",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/234px-Flag_of_Norway.svg.png",
     "countryinfo": {
+      "countryname": "Norway",
       "greeting": "Hei",
       "capital": "Oslo",
       "currency": "Norwegian Krone",
@@ -1069,10 +1069,10 @@
     ]
   },
   {
-    "countryname": "Portugal",
     "countrycode": "PT",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/255px-Flag_of_Portugal.svg.png",
     "countryinfo": {
+      "countryname": "Portugal",
       "greeting": "Olá",
       "capital": "Lisbon",
       "currency": "Euro",
@@ -1126,10 +1126,10 @@
     ]
   },
   {
-    "countryname": "San Marino",
     "countrycode": "SM",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/227px-Flag_of_San_Marino.svg.png",
     "countryinfo": {
+      "countryname": "San Marino",
       "greeting": "Ciao",
       "capital": "San Marino",
       "currency": "Euro",
@@ -1188,10 +1188,10 @@
     ]
   },
   {
-    "countryname": "Spain",
     "countrycode": "ES",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/200px-Flag_of_Spain.svg.png",
     "countryinfo": {
+      "countryname": "Spain",
       "greeting": "Hola",
       "capital": "Madrid",
       "currency": "Euro",
@@ -1255,10 +1255,10 @@
     ]
   },
   {
-    "countryname": "Sweden",
     "countrycode": "SE",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/255px-Flag_of_Sweden.svg.png",
     "countryinfo": {
+      "countryname": "Sweden",
       "greeting": "Hej",
       "capital": "Stockholm",
       "currency": "Swedish Krona",
@@ -1307,10 +1307,10 @@
     ]
   },
   {
-    "countryname": "Switzerland",
     "countrycode": "CH",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/170px-Flag_of_Switzerland_%28Pantone%29.svg.png",
     "countryinfo": {
+      "countryname": "Switzerland",
       "greeting": "Grüezi",
       "capital": "Bern",
       "currency": "Swiss Franc",
@@ -1364,10 +1364,10 @@
     ]
   },
   {
-    "countryname": "Turkey",
     "countrycode": "TR",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/220px-Flag_of_Turkey.svg.png",
     "countryinfo": {
+      "countryname": "Turkey",
       "greeting": "Merhaba",
       "capital": "Ankara",
       "currency": "Turkish Lira",
@@ -1426,10 +1426,10 @@
     ]
   },
   {
-    "countryname": "United Kingdom",
     "countrycode": "GB",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/255px-Flag_of_the_United_Kingdom_%281-2%29.svg.png",
     "countryinfo": {
+      "countryname": "United Kingdom",
       "greeting": "Hello",
       "capital": "London",
       "currency": "British Pound",
