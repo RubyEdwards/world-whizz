@@ -6,6 +6,7 @@ import { Quiz } from "./scenes/Quiz";
 import { Login } from "./scenes/Login";
 import { SignUp } from "./scenes/SignUp";
 import { Journal } from "./scenes/Journal";
+import { CountryFacts } from "./scenes/CountryFacts";
 
 
 const config = {
@@ -34,7 +35,7 @@ const config = {
       quality: 0.1,
     },
   },
-  scene: [Boot, Preloader, MainMenu, SignUp, Game, Quiz, Login, Journal],
+  scene: [Boot, Preloader, MainMenu, SignUp, Game, Quiz, Login, Journal, CountryFacts],
   dom: {
     createContainer: true,
   },
