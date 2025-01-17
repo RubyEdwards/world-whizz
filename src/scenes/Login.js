@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import { signIn } from "../api";
 
 export class Login extends Scene {
   constructor() {
@@ -50,12 +51,24 @@ export class Login extends Scene {
       userData.password = inputPassword.value;
 
       this.registry.set("currUserData", userData);
-      // const username = userData.username
-      // const password = userData.password
+      const username = userData.username
+      const password = userData.password
+
+      const userInfo={
+        username,
+        password
+      }
+      signIn(userInfo)
+      .then(()=>{
+        this.scene.start("Game");
+      })
+      .catch((err)=>{
+        console.log(err.response.data.message)
+      })
       // console.log(username)
       // console.log(password)
       this.scale._resetZoom;
-      this.scene.start("Game");
+      
     });
 
     const signUpButton = formHtml.getChildByName("signUpButton");
