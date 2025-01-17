@@ -1073,7 +1073,7 @@
     "countrycode": "PT",
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/255px-Flag_of_Portugal.svg.png",
     "countryinfo": {
-      "greeting": "Ola",
+      "greeting": "Olá",
       "capital": "Lisbon",
       "currency": "Euro",
       "population": "10.53 million (2023)",
@@ -1131,9 +1131,9 @@
     "flag_img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/227px-Flag_of_San_Marino.svg.png",
     "countryinfo": {
       "greeting": "Ciao",
-      "capital": "City of San Marino",
+      "capital": "San Marino",
       "currency": "Euro",
-      "population": "33,642",
+      "population": "33,642 (2023)",
       "funfact": [
         "San Marino is the only country in the world that has more registered cars than residents officially living there.",
         "San Marino is the 5th smallest country in the world at just 61km².",

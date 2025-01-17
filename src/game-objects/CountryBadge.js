@@ -14,8 +14,8 @@ export class CountryBadge extends Phaser.GameObjects.Image {
       this.clearFX();
       this.postFX.addShine(1, 0.2, 5);
     });
-    this.on("pointerdown", () => {
-      this.scene.scene.start("Quiz");
-    });
+    // this.on("pointerdown", () => {
+    //   this.scene.scene.start("Quiz");
+    // });
   }
 }
