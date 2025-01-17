@@ -65,37 +65,29 @@ export class Preloader extends Scene {
     this.load.image("badge-turkey", "badge-turkey.png");
     this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
-    //HTML 
+    //HTML
     this.load.html("loginform", "text/loginform.html");
 
-    this.load.html("signUpForm", "text/signUpForm.html")
+    this.load.html("signUpForm", "text/signUpForm.html");
 
-
-    this.load.html("countryinfo", "text/countryinfo.jsx");
-    
-
+    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
+    this.load.html("countryInfo", "text/country-info.html");
+    // >>>>>TO REMOVE IF SPEECH BUBBLE WORKS
   }
 
   create() {
-
-
-   
-
     this.registry.set("currUserData", {
       username: "",
       password: "",
-  });
+    });
 
-  this.registry.set("newUserData", {
-    newUsername: "",
-    newPassword: "",
-    newPasswordConf: ""
-});
+    this.registry.set("newUserData", {
+      newUsername: "",
+      newPassword: "",
+      newPasswordConf: "",
+    });
 
-
-  
     this.scene.start("MainMenu");
-
 
     this.anims.create({
       key: "blink",
