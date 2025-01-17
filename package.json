@@ -10,8 +10,7 @@
     "build-nolog": "vite build --config vite/config.prod.mjs",
     "seed": "mongoimport --config='./dbs-prep/config.yaml' --db='world-whiz' --collection='countries' --drop --file='./dbs-seed/countries.json' --jsonArray",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js __tests__/index.test.js",
-    "test-jest": "jest",
-    "start": "nodemon listener.js"
+    "test-jest": "jest"
   },
   "devDependencies": {
     "cors": "^2.8.5",
@@ -34,7 +33,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.5",
-    "nodemon": "^3.1.9",
     "phaser": "^3.87.0"
   }
 }

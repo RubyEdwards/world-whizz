@@ -43,7 +43,7 @@ export async function fetchJournal() {
   try {
     await connectDB(process.env.ATLAS_URI);
     let countryNames = await Country.find({}, { countryname: 1, _id: 0 });
-    return countryNames;
+    return { countryNames };
   } catch (err) {
     console.error('Error fetching Journal: ', err);
     throw err;

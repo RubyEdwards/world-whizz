@@ -43,9 +43,13 @@ export function getQuiz(req, res) {
 }
 
 export function getJournal(req, res) {
-  fetchJournal().then((countryNames) => {
-    let countryList = countryNames.map(({ countryname }) => countryname).sort();
-    res.status(200).send(countryList);
+  fetchJournal().then(({ countryNames }) => {
+    let sortedArray = countryNames
+      .map(({ _doc }) => {
+        return _doc.countryname;
+      })
+      .sort();
+    res.status(200).send(sortedArray);
   });
 }
 
