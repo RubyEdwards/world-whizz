@@ -22,11 +22,28 @@ export class Quiz extends Scene
             .playAfterDelay("blink", Math.random() * 3000);
 
             //quiz card
+            const cardX = 32; 
+            const cardY = 32; 
+            const cardWidth = 300;
+            const cardHeight = 600;
+
             const graphics = this.add.graphics();
-            graphics.fillStyle(0xCFE795, 1);
-            graphics.fillRoundedRect(32, 32, 300, 600, 16);
-            graphics.lineStyle(2, 0xA57261, 1);
-            graphics.strokeRoundedRect(56, 56, 252, 552, 8);
+            graphics.fillStyle(0xcfe795, 1);
+            graphics.fillRoundedRect(cardX, cardY, cardWidth, cardHeight, 16);
+            graphics.lineStyle(2, 0xa57261, 1);
+            graphics.strokeRoundedRect(cardX + 24, cardY + 24, cardWidth - 48, cardHeight - 48, 8);
+            
+            //change to Game screen when clicked outside quiz card
+            this.input.on("pointerdown", (pointer) => {
+                if (
+                    pointer.x < cardX ||
+                    pointer.x > cardX + cardWidth ||
+                    pointer.y < cardY ||
+                    pointer.y > cardY + cardHeight
+                ) {
+                    this.scene.start("Game");
+                }
+            });
 
             //triangles 
             this.add.triangle(125, 110, 0, -15, 0, 15, 25, 0, 0x10C74D); 
@@ -130,6 +147,8 @@ export class Quiz extends Scene
                 console.log("Next button clicked");
             });
             
+
+
         }
         
 
