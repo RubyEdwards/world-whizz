@@ -6,6 +6,8 @@ export class Login extends Scene {
   }
 
   create() {
+
+
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.add
