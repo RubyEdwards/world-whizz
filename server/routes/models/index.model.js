@@ -54,7 +54,11 @@ export async function fetchCountryQuizFacts(req) {
   try {
     await connectDB(process.env.ATLAS_URI);
     let { countryname } = req.params;
-    let query = { countryname: countryname };
+    let upperVersion = countryname
+      .split('')
+      .map((char, index) => (index === 0 ? char.toUpperCase() : char))
+      .join('');
+    let query = { countryname: upperVersion };
     let countryQuizFacts = await Country.findOne(query, {
       quizfacts: 1,
       _id: 0,
