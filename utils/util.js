@@ -1,5 +1,5 @@
 export function funFactRandomiser(data) {
-  const funfactArray = data.countryinfo.funfact;
+  const funfactArray = data._doc.countryinfo.funfact;
   let index = Math.floor(Math.random() * funfactArray.length);
   const result = funfactArray[index];
   return result;
@@ -20,7 +20,7 @@ export function answerRandomiser(data) {
 }
 
 export function checkAnswer(data, userInput) {
-  const correctAnswer = data.correctAnswer;
+  const correctAnswer = data._doc.correctAnswer;
   let isCorrect = false;
   if (userInput.toLowerCase() !== correctAnswer.toLowerCase()) {
     return 'Incorrect';

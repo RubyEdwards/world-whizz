@@ -1,11 +1,11 @@
-import { answerRandomiser, funFactRandomiser } from "../../../utils/util.js";
+import { answerRandomiser, funFactRandomiser } from '../../../utils/util.js';
 import {
   fetchCountries,
   fetchCountry,
   fetchCountryQuizFacts,
   fetchJournal,
   fetchQuiz,
-} from "../models/index.model.js";
+} from '../models/index.model.js';
 
 export function getCountries(req, res) {
   fetchCountries().then((countries) => {
@@ -15,7 +15,7 @@ export function getCountries(req, res) {
 
 export function getCountry(req, res) {
   fetchCountry(req).then((country) => {
-    if (!country) res.status(404).send("Not found");
+    if (!country) res.status(404).send('Not found');
     else {
       let randomFact = funFactRandomiser(country);
       let updatedCountry = JSON.parse(JSON.stringify(country));
@@ -28,11 +28,11 @@ export function getCountry(req, res) {
 export function getQuiz(req, res) {
   const { question } = req.query;
   fetchQuiz(req).then((countryquiz) => {
-    if (!countryquiz) res.status(404).send("Not found");
+    if (!countryquiz) res.status(404).send('Not found');
     if (question) {
       const questionIndex = question - 1;
       const answersRandomOrder = answerRandomiser(
-        countryquiz.quiz[questionIndex]
+        countryquiz._doc.quiz[questionIndex]
       );
       let updatedQuestion = JSON.parse(JSON.stringify(countryquiz));
       updatedQuestion.quiz.answers = answersRandomOrder;
