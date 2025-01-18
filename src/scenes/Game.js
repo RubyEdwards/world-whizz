@@ -249,10 +249,12 @@ export class Game extends Scene {
 
     //Get data
     let countryCard = {};
+    let countryId = "";
 
     const makeCountryInfo = (id) => {
       getCountry(id)
         .then(({ countryinfo }) => {
+          countryId = countryinfo.countrycode;
           return countryinfo;
         })
         .then((countryinfo) => {
@@ -372,7 +374,7 @@ export class Game extends Scene {
     popupQuizButton.setVisible(false);
 
     popupQuizButton.on("pointerdown", () => {
-      this.scene.start("Quiz");
+      this.scene.start("Quiz", countryId);
     });
 
     //Functionality
