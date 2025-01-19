@@ -31,6 +31,8 @@ export class Preloader extends Scene {
     this.load.image("mascot2", "wwmascot1b.png");
     this.load.image("mascot3", "wwmascot1c.png");
 
+    this.load.image("ww-logo", "ww-logo.png");
+
     this.load.image("worldmap", "worldmap.png");
 
     this.load.image("worldmapbkg", "worldmapbkg.png");
