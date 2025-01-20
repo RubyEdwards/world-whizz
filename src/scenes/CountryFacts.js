@@ -1,34 +1,30 @@
-import { Scene } from "phaser";
+import { Scene } from 'phaser';
+import { getCountries } from '../api';
 
 export class CountryFacts extends Scene {
   constructor() {
-    super("CountryFacts");
+    super('CountryFacts');
   }
 
   create(data) {
-
     const selectedCountry = {
-      name: data.country,
-      badge: "badge-andorra",
-      facts: [
-        "Located in the Pyrenees mountain range.",
-        "The official language is Catalan.",
-        "Shares borders with France and Spain.",
-        "Has a Parliamentary Co-Principality government.",
-        "Not a member of the European Union.",
-      ],
+      name: `${data.countryinfo.countryname}`,
+      badge: `badge-${data.countryinfo.countryname
+        .replace(/ /g, '')
+        .toLowerCase()}`,
+      facts: data.quizfacts,
     };
 
     //background
-    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
+    this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
 
     //mascot
     this.mascot = this.add
-      .sprite(210, 700, "mascot1")
+      .sprite(210, 700, 'mascot1')
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
-      .playAfterDelay("blink", Math.random() * 3000);
+      .playAfterDelay('blink', Math.random() * 3000);
 
     //card journal
     const screenHeight = this.scale.height;
@@ -41,25 +37,28 @@ export class CountryFacts extends Scene {
     graphics.fillRoundedRect(32, margin, this.cardWidth, cardHeight, 16);
 
     graphics.lineStyle(2, 0x8c0e00, 1);
-    graphics.strokeRoundedRect(56, margin + 24, this.cardWidth - 48, cardHeight - 48, 8);
+    graphics.strokeRoundedRect(
+      56,
+      margin + 24,
+      this.cardWidth - 48,
+      cardHeight - 48,
+      8
+    );
 
     //username
-    const username = "BOB";
+    const username = 'BOB';
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
-    this.add.text(
-      centerX - rectWidth / 2 + 8,
-      90,
-      `${username}'s Travel Journal`,
-      {
-        fontSize: "22px",
-        fontFamily: "Patrick Hand",
-        fill: "#2d2d2d",
+    this.add
+      .text(centerX - rectWidth / 2 + 8, 90, `${username}'s Travel Journal`, {
+        fontSize: '22px',
+        fontFamily: 'Patrick Hand',
+        fill: '#2d2d2d',
         wordWrap: { width: rectWidth },
-        align: "center",
-      }
-    ).setOrigin(0, 0);
+        align: 'center',
+      })
+      .setOrigin(0, 0);
 
     //country detauls
     this.showCountryDetails(selectedCountry);
@@ -72,37 +71,40 @@ export class CountryFacts extends Scene {
 
     //country badge & name
     const positionY = 154;
-    this.add.image(
-      centerX - this.cardWidth / 2 + marginLeft + 30,
-      positionY + 12,
-      country.badge
-    ).setScale(0.8);
+    this.add
+      .image(
+        centerX - this.cardWidth / 2 + marginLeft + 30,
+        positionY + 12,
+        country.badge
+      )
+      .setScale(0.8);
 
     this.add.text(
       centerX - rectWidth / 2 + marginLeft + 40,
       positionY,
-      country.name.toUpperCase(),
+      country.name,
       {
-        fontSize: "22px",
-        fontFamily: "Patrick Hand",
-        fill: "#2d2d2d",
+        fontSize: '22px',
+        fontFamily: 'Patrick Hand',
+        fill: '#2d2d2d',
       }
     );
 
     //country facts
     const factsStartY = positionY + 50;
-    const factLineHeight = 60;
+    const factLineHeight = 90;
+
     country.facts.forEach((fact, index) => {
       this.add.text(
         centerX - rectWidth / 2 + marginLeft - 30,
         factsStartY + index * factLineHeight,
         `${index + 1}. ${fact}`,
         {
-          fontSize: "18px",
-          fontFamily: "Patrick Hand",
-          fill: "#2d2d2d",
-          wordWrap: { width: this.cardWidth - 2 * marginLeft},
-          align: "left"
+          fontSize: '18px',
+          fontFamily: 'Patrick Hand',
+          fill: '#2d2d2d',
+          wordWrap: { width: this.cardWidth - 2 * marginLeft },
+          align: 'left',
         }
       );
     });
@@ -123,26 +125,26 @@ export class CountryFacts extends Scene {
       backButtonRadius
     );
 
-    this.add.text(
-      centerX,
-      backButtonY + backButtonHeight / 2,
-      "BACK TO JOURNAL",
-      {
-        fontSize: "16px",
-        fontFamily: "Roboto",
-        fill: "#ffffff",
-      }
-    ).setOrigin(0.5, 0.5);
+    this.add
+      .text(centerX, backButtonY + backButtonHeight / 2, 'BACK TO JOURNAL', {
+        fontSize: '16px',
+        fontFamily: 'Roboto',
+        fill: '#ffffff',
+      })
+      .setOrigin(0.5, 0.5);
 
-    backButtonGraphics.setInteractive(new Phaser.Geom.Rectangle(
-      centerX - backButtonWidth / 2,
-      backButtonY,
-      backButtonWidth,
-      backButtonHeight
-    ), Phaser.Geom.Rectangle.Contains);
+    backButtonGraphics.setInteractive(
+      new Phaser.Geom.Rectangle(
+        centerX - backButtonWidth / 2,
+        backButtonY,
+        backButtonWidth,
+        backButtonHeight
+      ),
+      Phaser.Geom.Rectangle.Contains
+    );
 
-    backButtonGraphics.on("pointerdown", () => {
-      this.scene.start("Journal");
+    backButtonGraphics.on('pointerdown', () => {
+      this.scene.start('Journal');
     });
   }
 }
