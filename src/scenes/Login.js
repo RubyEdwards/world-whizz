@@ -63,10 +63,9 @@ export class Login extends Scene {
         this.scene.start("Game");
       })
       .catch((err)=>{
-        console.log(err.response.data.message)
+        alert(err.response.data.message)
+        
       })
-      // console.log(username)
-      // console.log(password)
       this.scale._resetZoom;
       
     });

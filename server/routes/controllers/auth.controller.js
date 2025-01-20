@@ -20,7 +20,7 @@ export async function signUp(req, res) {
   if (user) {
     return res
       .status(StatusCodes.BAD_REQUEST)
-      .json({ message: 'Username already taken.' });
+      .json({ message: 'Username already taken. Please enter a new one!' });
   } else {
     User.create(userData).then((data, err) => {
       if (err) res.status(StatusCodes.BAD_REQUEST).json({ err });
@@ -44,19 +44,19 @@ export async function signIn(req, res) {
       const { _id, username } = user;
       bcrypt.compare(req.body.password, user.hash_password, (err, result) => {
         if (err) {
-          res.status(500).json({ error: 'Internal server error' });
+          res.status(500).json({ message: 'Internal server error.' });
         } else if (result) {
           res
             .status(200)
             .json({ message: 'Login successful!', user: { _id, username } });
         } else {
-          res.status(401).json({ error: 'Invalid username or password' });
+          res.status(401).json({ message: 'Invalid username or password.' });
         }
       });
     } else {
       res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ message: 'User does not exist.' });
+        .json({ message: 'User does not exist. Please sign up!' });
     }
   } catch (error) {
     res
