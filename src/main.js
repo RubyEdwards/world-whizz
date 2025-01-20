@@ -22,7 +22,7 @@ const config = {
     height: 932,
   },
   parent: "game-container",
-  backgroundColor: "#028af8",
+  backgroundColor: "#49b2ec",
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
