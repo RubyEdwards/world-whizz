@@ -8,7 +8,11 @@ export class Quiz extends Scene {
   init() {}
   graphics;
 
-  create(id) {
+  create(data) {
+    if (data.quizQuestionNum < 5) {
+      data.quizQuestionNum += 1;
+    }
+
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.mascot = this.add
@@ -65,16 +69,18 @@ export class Quiz extends Scene {
       answers: [],
       correctAnswer: "",
     };
-
-    let countryId = id;
-    let quizQuestionNum = 0;
+    console.log(data, "data");
+    let countryId = data.countryId;
+    // let quizQuestionNum = 1;
+    let quizQuestionNum = data.quizQuestionNum;
 
     const makeQuiz = () => {
-      getQuiz(countryId).then(({ quiz }) => {
+      getQuiz(countryId, quizQuestionNum).then((quiz) => {
+        console.log(quiz);
         this.quiz = {
-          question: quiz[quizQuestionNum].question,
-          answers: quiz[quizQuestionNum].answers,
-          correctAnswer: quiz[quizQuestionNum].correctAnswer,
+          question: quiz.question,
+          answers: quiz.answers,
+          correctAnswer: quiz.correctAnswer,
         };
         const question = this.quiz.question;
         const rectWidth = 200;
@@ -86,7 +92,7 @@ export class Quiz extends Scene {
           .text(
             centerX - rectWidth / 2,
             130,
-            `${quizQuestionNum + 1}. ${this.quiz.question}`,
+            `${quizQuestionNum}. ${this.quiz.question}`,
             {
               fontSize: "18px",
               fontFamily: "Roboto",
@@ -104,13 +110,13 @@ export class Quiz extends Scene {
           graphics.fillRoundedRect(
             centerX - rectWidth / 2,
             y,
-            rectWidth +10,
+            rectWidth + 10,
             rectHeight,
             cornerRadius
           );
 
           this.add
-            .text(centerX +5, y + rectHeight / 2, option, {
+            .text(centerX + 5, y + rectHeight / 2, option, {
               fontSize: "20px",
               fontFamily: "Roboto",
               fill: "#ffffff",
@@ -153,8 +159,14 @@ export class Quiz extends Scene {
         );
 
         //click on button
+        const gotoNextQuestion = () => {
+          // quizQuestionNum += 1;
+          this.scene.restart();
+          console.log(quizQuestionNum);
+        };
         nextButtonGraphics.on("pointerdown", () => {
           console.log("Next button clicked");
+          gotoNextQuestion();
         });
       });
     };
