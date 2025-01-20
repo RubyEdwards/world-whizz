@@ -1,11 +1,13 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: `http://localhost:8080/world-whizz`,
+  baseURL: `https://world-whizz.onrender.com/world-whizz`,
 });
 
+const baseURL = 'https://world-whizz.onrender.com/world-whizz';
+
 const getCountries = () => {
-  return api.get(`/countries`).then(({ data }) => {
+  return api.get(`${baseURL}/countries`).then(({ data }) => {
     console.log(data);
     return data;
   });
@@ -40,14 +42,14 @@ const getCountryQuizFacts = (countryname) => {
 };
 
 const signUp = (userInfo) => {
-  return api.post(`/signup`,userInfo).then(({ data }) => {
+  return api.post(`/signup`, userInfo).then(({ data }) => {
     console.log(data);
     return data;
   });
 };
 
 const signIn = (userInfo) => {
-  return api.post(`/signin`,userInfo).then(({ data }) => {
+  return api.post(`/signin`, userInfo).then(({ data }) => {
     console.log(data);
     return data;
   });
