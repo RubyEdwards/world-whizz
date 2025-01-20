@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import { getCountries } from "../api";
 
 export class Journal extends Scene {
   constructor() {
@@ -47,91 +48,96 @@ export class Journal extends Scene {
       }
     ).setOrigin(0, 0);
 
-    //countries
-    const countriesList = [
-      "Andorra", "Austria", "Belgium", "Denmark", "Finland", "France", "Germany", 
-      "Greece", "Iceland", "Ireland", "Italy", "Liechtenstein", "Luxembourg", 
-      "Malta", "Monaco", "Netherlands", "Norway", "Portugal", "San Marino", 
-      "Spain", "Sweden", "Switzerland", "Turkey", "United Kingdom"
-  ];
-
-    let positionY = 130;
-
-    countriesList.forEach((country, index) => {
-      this.add.image(
-        centerX - rectWidth / 2 + 20,
-        positionY + index * 22 + 10,
-        "badgeempty"
-      ).setScale(0.5);
-
-      const countryText = this.add.text(
-        centerX - rectWidth / 2 + 40,
-        positionY + index * 22,
-        country,
-        {
-          fontSize: "16px",
-          fontFamily: "Patrick Hand",
-          fill: "#2d2d2d",
-        }
-      );
-
-      //click on country name to go to country facts
-      countryText.setInteractive();
-      countryText.on("pointerdown", () => {
-        this.scene.start("CountryFacts", { country });
-      });
-      
-    });
-
-    //back to map button
-    const mapButtonY = this.scale.height - 140;
-    const mapButtonWidth = 160;
-    const mapButtonHeight = 40;
-    const mapButtonRadius = 8;
-
-    const mapButtonGraphics = this.add.graphics();
-    mapButtonGraphics.fillStyle(0x127475, 1);
-    mapButtonGraphics.fillRoundedRect(
-      centerX - mapButtonWidth / 2,
-      mapButtonY,
-      mapButtonWidth,
-      mapButtonHeight,
-      mapButtonRadius
-);
-
-    this.add.text(
-        centerX,                     
-        mapButtonY + mapButtonHeight / 2, 
-        "BACK TO MAP",                      
-        { fontSize: "16px",
-          fontFamily: "Roboto",
-          fill: "#ffffff" 
-        }
-    ).setOrigin(0.5, 0.5); 
-
-    mapButtonGraphics.setInteractive(new Phaser.Geom.Rectangle(
-        centerX - mapButtonWidth / 2,
-        mapButtonY,
-        mapButtonWidth,
-        mapButtonHeight
-    ), Phaser.Geom.Rectangle.Contains);
-    
-      mapButtonGraphics.on("pointerdown", () => {
-        this.scene.start("Game");
-      });
-  
-}
-
-
-update() {
-
-    //mascot updated
-    this.mascot.y -= 10;
-
-    if (this.mascot.y <= 720) {
-      this.mascot.y = 720;
-    }
+    //countries list from database
+    this.countriesList(centerX, rectWidth);
   }
-}
+
+   countriesList (centerX, rectWidth) {
+    const positionYStart = 130;
+    const lineHeight = 22;
+
+    getCountries()
+      .then((countries) => {
+        countries.forEach((country, index) => {
+          const positionY = positionYStart + index * lineHeight;
+
+        //badge
+        this.add.image(
+          centerX - rectWidth / 2 + 20,
+          positionY,
+          "badgeempty"
+        ).setScale(0.5);
+        
+
+        const countryText = this.add.text(
+          centerX - rectWidth / 2 + 40,
+          positionY,
+          country.countryname,
+          {
+            fontSize: "16px",
+            fontFamily: "Patrick Hand",
+            fill: "#2d2d2d",
+          }
+       );
+
+       //click on country name to go to country facts
+       countryText.setInteractive();
+       countryText.on("pointerdown", () => {
+         this.scene.start("CountryFacts", { countryname });
+       });
+        });
+     });
+     
+
+     //back to map button
+    const mapButtonY = this.scale.height - 140;
+     const mapButtonWidth = 160;
+     const mapButtonHeight = 40;
+     const mapButtonRadius = 8;
+
+     const mapButtonGraphics = this.add.graphics();
+     mapButtonGraphics.fillStyle(0x127475, 1);
+     mapButtonGraphics.fillRoundedRect(
+       centerX - mapButtonWidth / 2,
+       mapButtonY,
+       mapButtonWidth,
+       mapButtonHeight,
+       mapButtonRadius
+ );
+
+     this.add.text(
+         centerX,                     
+         mapButtonY + mapButtonHeight / 2, 
+         "BACK TO MAP",                      
+         { fontSize: "16px",
+           fontFamily: "Roboto",
+           fill: "#ffffff" 
+         }
+     ).setOrigin(0.5, 0.5); 
+
+     mapButtonGraphics.setInteractive(new Phaser.Geom.Rectangle(
+         centerX - mapButtonWidth / 2,
+         mapButtonY,
+         mapButtonWidth,
+         mapButtonHeight
+     ), Phaser.Geom.Rectangle.Contains);
+    
+       mapButtonGraphics.on("pointerdown", () => {
+         this.scene.start("Game");
+       });
+  
+ }
+
+
+ update() {
+
+     //mascot updated
+     this.mascot.y -= 10;
+
+     if (this.mascot.y <= 720) {
+       this.mascot.y = 720;
+     }
+   }
+ }
   
 
