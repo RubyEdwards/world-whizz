@@ -11,9 +11,9 @@
       "population": "80,088 (2023)",
       "funfact": [
         "In 2023 Andorra ranked third highest for life expectancy in Europe, at 84.04 years.",
-        "More than 90% of Andorra is made up of mountains, forests, rivers, lakes and meadows.",
+        "More than 90% of Andorra is made up of mountains, forests, rivers, lakes & meadows.",
         "Andorra has more museums per km² than anywhere else in the world.",
-        "At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific and Cultural Organization (UNESCO) Intangible Cultural Heritage.",
+        "At the summer solstice fire festivals people flip fireballs into the air - this event is listed as a United Nations Educational, Scientific & Cultural Organization (UNESCO) Intangible Cultural Heritage.",
         "Andorra has never had an army or Ministry of Defence."
       ]
     },
@@ -31,22 +31,22 @@
       {
         "question": "Which two countries border Andorra?",
         "answers": [
-          "France and Spain",
-          "Italy and Spain",
-          "France and Portugal",
-          "Spain and Portugal"
+          "France & Spain",
+          "Italy & Spain",
+          "France & Portugal",
+          "Spain & Portugal"
         ],
-        "correctAnswer": "France and Spain"
+        "correctAnswer": "France & Spain"
       },
       {
-        "question": "What type of government does Andorra have?",
+        "question": "Which of these is a national symbol of Andorra?",
         "answers": [
-          "Parliamentary Republic",
-          "Constitutional Monarchy",
-          "Parliamentary Co-Principality",
-          "Federal Republic"
+          "Eagle",
+          "Lion",
+          "Bear",
+          "Cow"
         ],
-        "correctAnswer": "Parliamentary Co-Principality"
+        "correctAnswer": "Lion"
       },
       {
         "question": "Andorra is not a member of which organization?",
@@ -62,7 +62,7 @@
     "quizfacts": [
       "Andorra is located in the Pyrenees mountain range.",
       "The official language of Andorra is Catalan.",
-      "Andorra shares its borders with France and Spain.",
+      "Andorra shares its borders with France & Spain.",
       "Andorra has a Parliamentary Co-Principality form of government.",
       "Andorra is not a member of the European Union."
     ]
@@ -94,10 +94,10 @@
       {
         "question": "Austria is home to the headquarters of which international organization?",
         "answers": [
-          "North Atlantic Treaty Organisation (NATO)",
-          "Organization of the Petroleum Exporting Countires (OPEC)",
-          "United Nations (UN)",
-          "World Health Organization (WHO)"
+          "NATO",
+          "OPEC",
+          "UN",
+          "WHO"
         ],
         "correctAnswer": "Organization of the Petroleum Exporting Countires (OPEC)"
       },
@@ -143,7 +143,7 @@
       "funfact": [
         "Despite the name, some historians claim that French fries were actually invented in Belgium in the 1600s.",
         "BMI (Body Mass Index) was invented by Adolphe Quetelet, a Belgian, in 1832.",
-        "Belgium went for 652 days without a government between December 2018 and October 2020.",
+        "Belgium went for 652 days without a government between December 2018 & October 2020.",
         "Belgium has more castles per km² than any other country.",
         "Belgium has over 650 varieties of beer, as well as 408 breweries."
       ]
@@ -182,7 +182,7 @@
     ],
     "quizfacts": [
       "Belgium is known for its waffles.",
-      "The three official languages of Belgium are French, Dutch, and German.",
+      "The three official languages of Belgium are French, Dutch, & German.",
       "Brussels, Belgium, is home to the European Union headquarters.",
       "Belgium is particularly famous for Trappist beer.",
       "Belgium is renowned for producing chocolates."
@@ -210,7 +210,7 @@
       {
         "question": "Which Danish author wrote \"The Little Mermaid\"?",
         "answers": [
-          "Hans Christian Andersen",
+          "H.C. Andersen",
           "Charles Perrault",
           "J.R.R. Tolkien",
           "Brothers Grimm"
@@ -269,7 +269,7 @@
       "funfact": [
         "Finns consume approximately 12kg of coffee a year on average.",
         "Finland celebrates 'National Sleepy Head Day' on 27th July by playing pranks on late sleepers.",
-        "Finnish children usually have 2 birthday parties - one with their friends and one with their families.",
+        "Finnish children usually have 2 birthday parties - one with their friends & one with their families.",
         "74% of Finland is covered by forest.",
         "Finland has more heavy metal bands per capita than any other country in the world."
       ]
@@ -283,7 +283,7 @@
       {
         "question": "Finland is famous for which natural phenomenon?",
         "answers": [
-          "Northern Lights (Aurora Borealis)",
+          "Aurora Borealis",
           "Volcanos",
           "Hurricanes",
           "Geysers"
@@ -294,19 +294,19 @@
         "question": "Which of these is a traditional Finnish sauna feature?",
         "answers": [
           "Hot Spring Baths",
-          "Steam and Birch Twigs",
+          "Steam & Birch Twigs",
           "Mud Baths",
           "Ice Sculptures"
         ],
-        "correctAnswer": "Steam and Birch Twigs"
+        "correctAnswer": "Steam & Birch Twigs"
       },
       {
-        "question": "What is Finland’s nickname due to its geography?",
+        "question": "What is Finland’s nickname due to its geography? Land of...",
         "answers": [
-          "Land of Fire and Ice",
-          "Land of a Thousand Lakes",
-          "Land of the Midnight Sun",
-          "Land of Mountains"
+          "...Fire & Ice",
+          "...a Thousand Lakes",
+          "...the Midnight Sun",
+          "...Mountains"
         ],
         "correctAnswer": "Land of a Thousand Lakes"
       },
@@ -319,7 +319,7 @@
     "quizfacts": [
       "Along with Finnish, Swedish is an official language of Finland.",
       "Finland is famous for the Northern Lights (Aurora Borealis).",
-      "Traditional Finnish saunas feature steam and birch twigs.",
+      "Traditional Finnish saunas feature steam & birch twigs.",
       "Finland is nicknamed the \"Land of a Thousand Lakes\" due to its geography.",
       "Finland is consistently ranked among the top countries in the world for happiness."
     ]
@@ -459,7 +459,7 @@
         "The Ancient Greeks invented theatre, but only males could be actors.",
         "Greece is one of the sunniest countries in the world, with about 3,000 hours of sunshine a year.",
         "80% of Greece is made up of mountains.",
-        "The Greek island Santorini has red, black and white beaches.",
+        "The Greek island Santorini has red, black & white beaches.",
         "Greece's national animal is a dolphin, representing the country's maritime heritage."
       ]
     },
@@ -470,7 +470,7 @@
         "correctAnswer": "Acropolis"
       },
       {
-        "question": "Which Greek island is famous for its white-washed buildings and blue domes?",
+        "question": "Which Greek island is famous for its white-washed buildings & blue domes?",
         "answers": ["Crete", "Santorini", "Rhodes", "Mykonos"],
         "correctAnswer": "Santorini"
       },
@@ -497,7 +497,7 @@
     ],
     "quizfacts": [
       "The Acropolis in Athens houses the Parthenon.",
-      "Santorini is the Greek island famous for its white-washed buildings and blue domes.",
+      "Santorini is the Greek island famous for its white-washed buildings & blue domes.",
       "Greece is considered the birthplace of democracy.",
       "The Aegean Sea borders Greece to the east.",
       "Gyro is a traditional Greek dish made of meat roasted on a vertical spit."
@@ -516,7 +516,7 @@
       "funfact": [
         "Iceland has the oldest parliament in Europe - Althingi, established in 930 AD.",
         "There is only one native land mammal in Iceland: the Arctic fox. There are no polar bears!",
-        "There are no mosquitoes in Iceland thanks to its cold climate and lack of suitable breeding habitats.",
+        "There are no mosquitoes in Iceland thanks to its cold climate & lack of suitable breeding habitats.",
         "Once an Icelandic horse leaves the country, it is not allowed to return, in order to avoid the introduction of diseases.",
         "A traditional Icelandic bread baking technique involves burying the dough near hot springs to bake slowly using natural heat."
       ]
@@ -528,9 +528,9 @@
         "correctAnswer": "Blue Lagoon"
       },
       {
-        "question": "Iceland is known for not having which type of animal in the wild?",
-        "answers": ["Foxes", "Snakes", "Wolves", "Bears"],
-        "correctAnswer": "Snakes"
+        "question": "What percentage of Iceland is covered by glaciers?",
+        "answers": ["About 5%", "About 10%", "About 20%", "About 50%"],
+        "correctAnswer": "About 20%"
       },
       {
         "question": "Which Icelandic volcano caused major air travel disruptions in 2010?",
@@ -570,7 +570,7 @@
         "Halloween originated in Ireland, from the ancient Celtic festival of Samhain that marked the beginning of winter.",
         "There are no snakes in Ireland - it was too cold for them until the end of the last ice age, after which Ireland was separated from other landmasses.",
         "Ireland has the oldest intact operational lighthouse in the world, Hook Lighthouse, built in 1172.",
-        "There is a festival called the Puck Fair in Ireland where a wild goat is caught and made king for 3 days.",
+        "There is a festival called the Puck Fair in Ireland where a wild goat is caught & made king for 3 days.",
         "At 2,500km in length, Ireland's Wild Atlantic Way coastal route is the longest in the world."
       ]
     },
@@ -618,10 +618,10 @@
       {
         "question": "Ireland is known as the \"Emerald Isle\" due to what?",
         "answers": [
-          "Its lush green landscapes",
-          "Its gemstone mines",
-          "Its emerald exports",
-          "Its national flag color"
+          "Lush green landscape",
+          "Gemstone mines",
+          "Emerald exports",
+          "National flag color"
         ],
         "correctAnswer": "Its lush green landscapes"
       }
@@ -645,7 +645,7 @@
       "currency": "Euro",
       "population": "58.76 million (2023)",
       "funfact": [
-        "Cats have rights in Italy - anyone convicted of killing a cat could face a €10,000 fine and up to 3 years in prison.",
+        "Cats have rights in Italy - anyone convicted of killing a cat could face a €10,000 fine & up to 3 years in prison.",
         "The Italian Police Force uses Lamborghinis.",
         "The average Italian consumes 25kg of pasta per year.",
         "The University of Bologna, founded in 1088, is the oldest university still in operation today.",
@@ -705,21 +705,21 @@
       "funfact": [
         "Liechtenstein is one of the smallest countries in the world, covering just 160km², but it has one of the highest GDPs per capita globally.",
         "Liechtenstein abolished its army in 1868 due to cost concerns. Today, the country relies on Switzerland for defense if needed.",
-        "Liechtenstein is one of only two double-landlocked countries in the world: it is landlocked and surrounded entirely by other landlocked countries (Switzerland and Austria).",
+        "Liechtenstein is one of only two double-landlocked countries in the world: it is landlocked & surrounded entirely by other landlocked countries (Switzerland & Austria).",
         "Once a year, Liechtenstein allows companies or individuals to \"rent\" the entire country for private events, complete with a symbolic key to the nation.",
-        "Liechtenstein's prince has significant political influence, including the ability to veto laws and dissolve parliament."
+        "Liechtenstein's prince has significant political influence, including the ability to veto laws & dissolve parliament."
       ]
     },
     "quiz": [
       {
         "question": "Liechtenstein is one of the smallest countries in the worlWhich two countries border it?",
         "answers": [
-          "Switzerland and Austria",
-          "Germany and Austria",
-          "Switzerland and Germany",
-          "Austria and France"
+          "Switzerland & Austria",
+          "Germany & Austria",
+          "Switzerland & Germany",
+          "Austria & France"
         ],
-        "correctAnswer": "Switzerland and Austria"
+        "correctAnswer": "Switzerland & Austria"
       },
       {
         "question": "What type of government does Liechtenstein have?",
@@ -744,7 +744,7 @@
       {
         "question": "Liechtenstein is part of which economic agreement, despite not being in the European Union?",
         "answers": [
-          "European Economic Area (EEA)",
+          "EEA",
           "Schengen Agreement",
           "NAFTA",
           "Eurozone"
@@ -758,7 +758,7 @@
       }
     ],
     "quizfacts": [
-      "Liechtenstein borders Switzerland and Austria.",
+      "Liechtenstein borders Switzerland & Austria.",
       "Liechtenstein has a Constitutional Monarchy.",
       "Liechtenstein is known for its strong economy based on financial services.",
       "Liechtenstein is part of the European Economic Area (EEA), despite not being in the European Union.",
@@ -777,9 +777,9 @@
       "population": "668,606 (2023)",
       "funfact": [
         "Luxembourg has won the Eurovision Song Contest 5 times as of 2024.",
-        "The national dish of Luxembourg is smoked pork and broad beans.",
-        "The Luxembourg underground tunnel system from the 17th and 18th centuries contains an area of over 17km.",
-        "Public transport is free in Luxembourg, including trains, trams and buses.",
+        "The national dish of Luxembourg is smoked pork & broad beans.",
+        "The Luxembourg underground tunnel system from the 17th & 18th centuries contains an area of over 17km.",
+        "Public transport is free in Luxembourg, including trains, trams & buses.",
         "Luxembourg City has been listed twice as the European Capital of Culture."
       ]
     },
@@ -800,7 +800,7 @@
           "Heart of Europe",
           "Gibraltar of the North",
           "The Emerald Duchy",
-          "Land of a Thousand Hills"
+          "Land of a 1000 Hills"
         ],
         "correctAnswer": "Gibraltar of the North"
       },
@@ -845,7 +845,7 @@
       "population": "553,214 (2023)",
       "funfact": [
         "There are no natural lakes or rivers in Malta so they have to filter their drinking water straight from the sea.",
-        "Valletta, the capital of Malta, was the first ever planned city in Europe, back in 1565, and was built in only 15 years.",
+        "Valletta, the capital of Malta, was the first ever planned city in Europe, back in 1565, & was built in only 15 years.",
         "The national dish of Malta is \"Stuffat tal-Fenek\", a type of rabbit stew.",
         "Malta is not one island but an archipelago.",
         "Malta is one of only 4 European countries where people drive on the left hand side of the road."
@@ -855,10 +855,10 @@
       {
         "question": "What unique tradition is Malta known for during its summer months?",
         "answers": [
-          "Firework festivals in every village",
-          "Ice sculpture contests",
-          "Underground cave concerts",
-          "Hot air balloon rides over the islands"
+          "Firework festivals",
+          "Ice sculptured",
+          "Cave concerts",
+          "Balloon rides"
         ],
         "correctAnswer": "Firework festivals in every village"
       },
@@ -895,7 +895,7 @@
     ],
     "quizfacts": [
       "Malta is known for its unique tradition of firework festivals in every village during the summer months.",
-      "The Megalithic Temples, Hal Saflieni Hypogeum, and Tarxien Temples in Malta are older than the Pyramids of Egypt.",
+      "The Megalithic Temples, Hal Saflieni Hypogeum, & Tarxien Temples in Malta are older than the Pyramids of Egypt.",
       "Malta's largest island is Malta.",
       "The traditional Maltese boat is called a Luzzu.",
       "Malta is known for its role in World War II."
@@ -914,7 +914,7 @@
       "funfact": [
         "Monaco has around one police officer for every 70 residents.",
         "Monaco has the highest life expectancy in the world (86.37 years in 2023).",
-        "The most popular sports in Monaco are football, sailing, yachting and tennis.",
+        "The most popular sports in Monaco are football, sailing, yachting & tennis.",
         "One in three people in Monaco is a millionaire.",
         "Monaco does not allow its own citizens to enter its casinos."
       ]
@@ -956,14 +956,14 @@
         "correctAnswer": "Mediterranean Sea"
       },
       {
-        "question": "What is unique about Monaco's police force?",
+        "question": "What is the official title of Monaco's head of state?",
         "answers": [
-          "They operate entirely on bicycles",
-          "They are the only police force in the world where every officer is armed",
-          "They have the highest number of police officers per capita",
-          "They use submarines for coastal patrols"
+          "King",
+          "President",
+          "Prince",
+          "Duke"
         ],
-        "correctAnswer": "They have the highest number of police officers per capita"
+        "correctAnswer": "Prince"
       }
     ],
     "quizfacts": [
@@ -999,7 +999,7 @@
         "correctAnswer": "Tulip"
       },
       {
-        "question": "Which city is known for its extensive canal system and Anne Frank House?",
+        "question": "Which city is known for its extensive canal system & Anne Frank House?",
         "answers": ["Rotterdam", "Utrecht", "Amsterdam", "Eindhoven"],
         "correctAnswer": "Amsterdam"
       },
@@ -1021,9 +1021,9 @@
     ],
     "quizfacts": [
       "The flower most associated with the Netherlands is the tulip.",
-      "Amsterdam is known for its extensive canal system and the Anne Frank House.",
+      "Amsterdam is known for its extensive canal system & the Anne Frank House.",
       "The traditional Dutch wooden shoe is called a clog.",
-      "Brie is not a Dutch cheese; the Netherlands is famous for Gouda, Edam, and Leyden.",
+      "Brie is not a Dutch cheese; the Netherlands is famous for Gouda, Edam, & Leyden.",
       "The official seat of government in the Netherlands is The Hague."
     ]
   },
@@ -1038,7 +1038,7 @@
       "currency": "Norwegian Krone",
       "population": "5.52 million (2023)",
       "funfact": [
-        "When a new book is published in Norway, at least 1,000 copies are bought by the government and put in libraries across the country.",
+        "When a new book is published in Norway, at least 1,000 copies are bought by the government & put in libraries across the country.",
         "Salmon sushi is not native to Japan - it was introduced to them by Norway.",
         "Norway is home to Europe's biggest herd of wild reindeer.",
         "The longest road tunnel in the world is in Norway: the Lærdalstunnelen which is 24.5km long.",
@@ -1097,10 +1097,10 @@
       "population": "10.53 million (2023)",
       "funfact": [
         "The Bertrand Bookstore in Lisbon, established in 1732, holds the Guinness World Record as the oldest operating bookstore in the world.",
-        "Portugal is home to the Vasco da Gama Bridge, which spans over 17km and crosses the Tagus River in Lisbon.",
-        "Fado, a genre of Portuguese music known for its melancholic tunes and soulful lyrics, is a UNESCO Intangible Cultural Heritage.",
-        "Portugal produces more than 50% of the world's cork. Its vast cork oak forests supply material for wine stoppers and other products.",
-        "In the 1494 Treaty of Tordesillas Portugal and Spain divided the world between them. Portugal was assigned Brazil and parts of Africa and Asia."
+        "Portugal is home to the Vasco da Gama Bridge, which spans over 17km & crosses the Tagus River in Lisbon.",
+        "Fado, a genre of Portuguese music known for its melancholic tunes & soulful lyrics, is a UNESCO Intangible Cultural Heritage.",
+        "Portugal produces more than 50% of the world's cork. Its vast cork oak forests supply material for wine stoppers & other products.",
+        "In the 1494 Treaty of Tordesillas Portugal & Spain divided the world between them. Portugal was assigned Brazil & parts of Africa & Asia."
       ]
     },
     "quiz": [
@@ -1165,12 +1165,12 @@
       {
         "question": "Which of these is a typical Christmas soup in San Marino?",
         "answers": [
-          "Cheese and garlic",
-          "Bean and bacon",
-          "Carrot and chicken",
+          "Cheese & garlic",
+          "Bean & bacon",
+          "Carrot & chicken",
           "Sweet tomato"
         ],
-        "correctAnswer": "Bean and bacon"
+        "correctAnswer": "Bean & bacon"
       },
       {
         "question": "Where is San Marino located?",
@@ -1199,7 +1199,7 @@
       }
     ],
     "quizfacts": [
-      "A typical Christmas soup in San Marino is Bean and Bacon.",
+      "A typical Christmas soup in San Marino is Bean & Bacon.",
       "San Marino is located on the Italian Peninsula.",
       "The Adriatic coast is near San Marino.",
       "San Marino is geographically divided into nine Castelli.",
@@ -1218,10 +1218,10 @@
       "population": "48.37 million (2023)",
       "funfact": [
         "Spanish is the second most widely spoken language in the world.",
-        "\"Tapas\" means \"to cover\". Long ago people started covering their drinks with slices of bread and meat to protect them from dust.",
+        "\"Tapas\" means \"to cover\". Long ago people started covering their drinks with slices of bread & meat to protect them from dust.",
         "Spain claims to have the oldest restaurant in the world: Restaurante Botín in Madrid, which has been open since 1725.",
         "The Spanish national anthem, Marcha Real, has no words - at sporting events the audience normally just hum along.",
-        "Sagrada Familia has been under construction since 1882 and as of 2025 hasn't been finished - but it does have UNESCO World Heritage status."
+        "Sagrada Familia has been under construction since 1882 & as of 2025 hasn't been finished - but it does have UNESCO World Heritage status."
       ]
     },
     "quiz": [
@@ -1251,7 +1251,7 @@
         "correctAnswer": "Pablo Picasso"
       },
       {
-        "question": "What is Spain's national dish made of rice, saffron, and seafood or meat?",
+        "question": "What is Spain's national dish made of rice, saffron, & seafood or meat?",
         "answers": ["Tortilla", "Gazpacho", "Paella", "Churros"],
         "correctAnswer": "Paella"
       },
@@ -1270,7 +1270,7 @@
       "The Spanish festival where participants throw tomatoes at each other is La Tomatina.",
       "Flamenco is the traditional Spanish dance with fast-paced guitar music.",
       "Pablo Picasso, the famous Spanish painter, created \"Guernica.\"",
-      "Spain's national dish, made of rice, saffron, and seafood or meat, is Paella.",
+      "Spain's national dish, made of rice, saffron, & seafood or meat, is Paella.",
       "The famous pilgrimage route in Spain is the Camino de Santiago."
     ]
   },
@@ -1286,7 +1286,7 @@
       "population": "10.54 million (2023)",
       "funfact": [
         "Sweden has approximately 267,000 islands, more than any other country in the world, though only about 1,000 of them are inhabited.",
-        "Sweden grants everyone the \"Right to Roam\": people can hike, camp, and forage freely on public and private land, as long as they respect nature and property.",
+        "Sweden grants everyone the \"Right to Roam\": people can hike, camp, & forage freely on public & private land, as long as they respect nature & property.",
         "The Nobel Prize originated in Sweden. Alfred Nobel, a Swedish inventor, established the awards in his will.",
         "Sweden is home to the world's first ice hotel, located in Jukkasjärvi, which is rebuilt every winter using ice from the Torne River.",
         "October 4th is celebrated as Kanelbullens Dag (Cinnamon Bun Day) in Sweden, dedicated to the beloved Swedish pastry."
@@ -1309,7 +1309,7 @@
         "correctAnswer": "Scandinavian"
       },
       {
-        "question": "What is Sweden's largest and deepest lake?",
+        "question": "What is Sweden's largest & deepest lake?",
         "answers": ["Vättern", "Vänern", "Mälaren", "Hjälmaren"],
         "correctAnswer": "Vänern"
       },
@@ -1323,7 +1323,7 @@
       "Sweden is known for IKEA, a flat-packed furniture company.",
       "The traditional Swedish holiday celebrated in June is Midsummer.",
       "Sweden is part of the Scandinavian group of Nordic countries.",
-      "Sweden's largest and deepest lake is Vänern.",
+      "Sweden's largest & deepest lake is Vänern.",
       "ABBA, the famous Swedish pop group, became internationally renowned in the 1970s."
     ]
   },
@@ -1338,11 +1338,11 @@
       "currency": "Swiss Franc",
       "population": "8.85 million (2023)",
       "funfact": [
-        "The iconic Swiss Army Knife was first produced in 1891 and became a symbol of Swiss craftsmanship and practicality.",
+        "The iconic Swiss Army Knife was first produced in 1891 & became a symbol of Swiss craftsmanship & practicality.",
         "Switzerland doesn't have an official capital. Bern serves as the de facto capital because it hosts the federal government.",
-        "Switzerland has about 1.5 million cows, which are treated with great care and even \"vacation\" in alpine pastures during summer.",
+        "Switzerland has about 1.5 million cows, which are treated with great care & even \"vacation\" in alpine pastures during summer.",
         "Switzerland has remained neutral in international conflicts since the early 19th century, even avoiding involvement in both World Wars.",
-        "Switzerland is home to some of the cleanest cities globally, thanks to its strict recycling laws and commitment to sustainability."
+        "Switzerland is home to some of the cleanest cities globally, thanks to its strict recycling laws & commitment to sustainability."
       ]
     },
     "quiz": [
@@ -1364,12 +1364,12 @@
       {
         "question": "Switzerland is famous for producing which luxury items?",
         "answers": [
-          "Watches and chocolate",
-          "Wine and olive oil",
-          "Silk and spices",
-          "Perfumes and leather goods"
+          "Watches & chocolate",
+          "Wine & olive oil",
+          "Silk & spices",
+          "Perfumes & leather goods"
         ],
-        "correctAnswer": "Watches and chocolate"
+        "correctAnswer": "Watches & chocolate"
       },
       {
         "question": "Which mountain range dominates Switzerland's landscape?",
@@ -1381,7 +1381,7 @@
       "Switzerland is home to the Red Cross, an international organization.",
       "The most famous type of Swiss cheese is Gruyère.",
       "Dutch is not one of Switzerland's four official languages.",
-      "Switzerland is famous for producing watches and chocolate.",
+      "Switzerland is famous for producing watches & chocolate.",
       "The Alps mountain range dominates Switzerland's landscape."
     ]
   },
@@ -1396,23 +1396,23 @@
       "currency": "Turkish Lira",
       "population": "85.33 million (2023)",
       "funfact": [
-        "Istanbul is famously home to thousands of stray cats that are cared for by the community and have become a unique part of the city's culture.",
-        "While tulips are often associated with the Netherlands, they actually originated in Turkey and were brought to Europe during the Ottoman Empire.",
+        "Istanbul is famously home to thousands of stray cats that are cared for by the community & have become a unique part of the city's culture.",
+        "While tulips are often associated with the Netherlands, they actually originated in Turkey & were brought to Europe during the Ottoman Empire.",
         "The Grand Bazaar in Istanbul, built in 1461, is considered the world's first shopping mall. It remains a bustling market with over 4,000 shops.",
-        "Turkey has unique milk-based desserts like \"kazandibi\" (burnt pudding) and \"sütlaç\" (rice pudding), which are beloved across the country.",
-        "Turkey has numerous underground cities. These cities were used for protection during invasions and could house thousands of people."
+        "Turkey has unique milk-based desserts like \"kazandibi\" (burnt pudding) & \"sütlaç\" (rice pudding), which are beloved across the country.",
+        "Turkey has numerous underground cities. These cities were used for protection during invasions & could house thousands of people."
       ]
     },
     "quiz": [
       {
         "question": "What does a kiss on the hand mean in Turkey?",
         "answers": [
-          "A sign of respect and love",
+          "Respect & love",
           "Hello",
           "Goodbye",
           "I am sorry"
         ],
-        "correctAnswer": "A sign of respect and love"
+        "correctAnswer": "Respect & love"
       },
       {
         "question": "Which of these is a famous dish from Turkey?",
@@ -1441,7 +1441,7 @@
       }
     ],
     "quizfacts": [
-      "A kiss on the hand in Turkey is a sign of respect and love.",
+      "A kiss on the hand in Turkey is a sign of respect & love.",
       "A famous dish from Turkey is doner kebab.",
       "The national animal of Turkey is the grey wolf.",
       "The most important building in Turkey is the Hagia Sofia Grand Mosque.",
@@ -1459,11 +1459,11 @@
       "currency": "British Pound",
       "population": "68.35 million (2023)",
       "funfact": [
-        "Alfred the Great, considered by some to be the first King of England, made it a law for everyone to be in bed by 8pm and introduced a curfew bell.",
+        "Alfred the Great, considered by some to be the first King of England, made it a law for everyone to be in bed by 8pm & introduced a curfew bell.",
         "The Penny Black, the world's first public-use adhesive postage stamp, first went on sale in the UK in 1840.",
-        "In the Isle of Man, there's no national speed limit - some roads may be driven at any speed which is safe and appropriate.",
+        "In the Isle of Man, there's no national speed limit - some roads may be driven at any speed which is safe & appropriate.",
         "Two mice fighting over a slice of cheese is London's smallest statue.",
-        "In the UK all horses, donkeys and ponies must have a horse passport."
+        "In the UK all horses, donkeys & ponies must have a horse passport."
       ]
     },
     "quiz": [
@@ -1501,11 +1501,11 @@
         "question": "What is the national dish of the UK often associated with Fridays?",
         "answers": [
           "Shepherd's Pie",
-          "Fish and Chips",
+          "Fish & Chips",
           "Roast Beef",
           "Chicken Tikka Masala"
         ],
-        "correctAnswer": "Fish and Chips"
+        "correctAnswer": "Fish & Chips"
       }
     ],
     "quizfacts": [
@@ -1513,7 +1513,7 @@
       "The river that runs through London is the Thames.",
       "The United Kingdom is made up of four countries.",
       "The famous prehistoric monument in England is Stonehenge.",
-      "The national dish of the UK often associated with Fridays is fish and chips."
+      "The national dish of the UK often associated with Fridays is fish & chips."
     ]
   }
 ]
