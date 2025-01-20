@@ -9,8 +9,14 @@ export class Quiz extends Scene {
   graphics;
 
   create(data) {
+     const quizResults = () => {
+       console.log("yippie");
+     };
+     
     if (data.quizQuestionNum < 5) {
       data.quizQuestionNum += 1;
+    } else if (data.quizQuestionNum >= 5) {
+      quizResults();
     }
 
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
@@ -69,14 +75,11 @@ export class Quiz extends Scene {
       answers: [],
       correctAnswer: "",
     };
-    console.log(data, "data");
     let countryId = data.countryId;
-    // let quizQuestionNum = 1;
     let quizQuestionNum = data.quizQuestionNum;
 
     const makeQuiz = () => {
       getQuiz(countryId, quizQuestionNum).then((quiz) => {
-        console.log(quiz);
         this.quiz = {
           question: quiz.question,
           answers: quiz.answers,
@@ -160,114 +163,16 @@ export class Quiz extends Scene {
 
         //click on button
         const gotoNextQuestion = () => {
-          // quizQuestionNum += 1;
           this.scene.restart();
-          console.log(quizQuestionNum);
         };
         nextButtonGraphics.on("pointerdown", () => {
-          console.log("Next button clicked");
           gotoNextQuestion();
         });
       });
     };
 
+   
+
     makeQuiz();
-    // this.showQuestion();
-
-    // //quiz example placeholder
-    // this.quiz = {
-    //   question: "1. What mountain range is Andorra located in?",
-    //   answers: ["A. Alps", "B. Pyrenees", "C. Carpathians", "D. Apennines"],
-    //   correctAnswer: "Pyrenees",
-    // };
-
-    // this.showQuestion();
   }
-
-  //   showQuestion() {
-  //     const question = this.quiz.question;
-  //     const rectWidth = 200;
-  //     const rectHeight = 50;
-  //     const centerX = this.scale.width / 2;
-  //     const cornerRadius = 16;
-
-  //     const questionText = this.add
-  //       .text(centerX - rectWidth / 2, 130, this.quiz.question, {
-  //         fontSize: "18px",
-  //         fontFamily: "Roboto",
-  //         fill: "#2d2d2d",
-  //         wordWrap: { width: rectWidth },
-  //         align: "left",
-  //       })
-  //       .setOrigin(0, 0);
-
-  //     this.quiz.answers.forEach((option, index) => {
-  //       const y = 250 + index * 70;
-  //       const graphics = this.add.graphics();
-  //       graphics.fillStyle(0x127475, 1);
-  //       graphics.fillRoundedRect(
-  //         centerX - rectWidth / 2,
-  //         y,
-  //         rectWidth,
-  //         rectHeight,
-  //         cornerRadius
-  //       );
-
-  //       this.add
-  //         .text(centerX, y + rectHeight / 2, option, {
-  //           fontSize: "20px",
-  //           fontFamily: "Roboto",
-  //           fill: "#ffffff",
-  //         })
-  //         .setOrigin(0.5, 0.5);
-  //     });
-
-  //     //next button
-  //     const nextButtonY = 240 + this.quiz.answers.length * 70 + 20;
-  //     const nextButtonWidth = 120;
-  //     const nextButtonHeight = 40;
-  //     const nextButtonRadius = 8;
-
-  //     const nextButtonGraphics = this.add.graphics();
-  //     nextButtonGraphics.fillStyle(0x884630, 1);
-  //     nextButtonGraphics.fillRoundedRect(
-  //       centerX - nextButtonWidth / 2,
-  //       nextButtonY,
-  //       nextButtonWidth,
-  //       nextButtonHeight,
-  //       nextButtonRadius
-  //     );
-
-  //     this.add
-  //       .text(centerX, nextButtonY + nextButtonHeight / 2, "NEXT >", {
-  //         fontSize: "16px",
-  //         fontFamily: "Roboto",
-  //         fill: "#ffffff",
-  //       })
-  //       .setOrigin(0.5, 0.5);
-
-  //     nextButtonGraphics.setInteractive(
-  //       new Phaser.Geom.Rectangle(
-  //         centerX - nextButtonWidth / 2,
-  //         nextButtonY,
-  //         nextButtonWidth,
-  //         nextButtonHeight
-  //       ),
-  //       Phaser.Geom.Rectangle.Contains
-  //     );
-
-  //     //click on button
-  //     nextButtonGraphics.on("pointerdown", () => {
-  //       console.log("Next button clicked");
-  //     });
-  //   }
-
-  //   update() {
-  //     //mascot
-  //     this.mascot.y -= 10;
-
-  //     if (this.mascot.y <= 650) {
-  //       this.mascot.y = 650;
-  //     }
-  //   }
 }
