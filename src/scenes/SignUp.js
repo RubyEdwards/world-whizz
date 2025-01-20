@@ -80,12 +80,6 @@ export class SignUp extends Scene {
           else{
             alert("Please enter matching passwords!")
           }
-
-         
-          
-      
-    
-    
       } 
     });
 
@@ -119,3 +113,5 @@ export class SignUp extends Scene {
     }
   }
 }
+
+
