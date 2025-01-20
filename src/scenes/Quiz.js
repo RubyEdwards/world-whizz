@@ -104,13 +104,13 @@ export class Quiz extends Scene {
           graphics.fillRoundedRect(
             centerX - rectWidth / 2,
             y,
-            rectWidth,
+            rectWidth +10,
             rectHeight,
             cornerRadius
           );
 
           this.add
-            .text(centerX, y + rectHeight / 2, option, {
+            .text(centerX +5, y + rectHeight / 2, option, {
               fontSize: "20px",
               fontFamily: "Roboto",
               fill: "#ffffff",
