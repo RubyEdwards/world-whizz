@@ -49,7 +49,6 @@ export async function signIn(req, res) {
           res
             .status(200)
             .json({ message: 'Login successful!', user: { _id, username } });
-          console.log(user.travelJournal);
         } else {
           res.status(401).json({ error: 'Invalid username or password' });
         }
