@@ -20,8 +20,8 @@ const getCountry = (countrycode) => {
   });
 };
 
-const getQuiz = (countrycode) => {
-  return api.get(`/countries/${countrycode}/quiz`).then(({ data }) => {
+const getQuiz = (countrycode, questionNumber) => {
+  return api.get(`/countries/${countrycode}/quiz?question=${questionNumber}`).then(({ data }) => {
     console.log(data);
     return data;
   });

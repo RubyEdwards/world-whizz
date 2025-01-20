@@ -46,8 +46,13 @@ export class MainMenu extends Scene {
     this.wwLogo.preFX.setPadding(18);
     this.wwLogo.preFX.addGlow();
 
+
     this.input.once('pointerdown', () => {
       this.scene.start('Game');
+
+    this.input.once("pointerdown", () => {
+      this.scene.start("Game");
+
     });
   }
 
