@@ -235,7 +235,11 @@ export class Game extends Scene {
 
     //Username example placeholder
     const userData = this.registry.get("currUserData");
-    this.username = userData.username;
+    const newUserData = this.registry.get("newUserData");
+    this.username = newUserData.newUsername ||userData.username;
+
+    
+    
 
     //Speech Bubbles
 
