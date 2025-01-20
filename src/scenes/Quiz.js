@@ -9,10 +9,10 @@ export class Quiz extends Scene {
   graphics;
 
   create(data) {
-     const quizResults = () => {
-       console.log("yippie");
-     };
-     
+    const quizResults = () => {
+      console.log("yippie");
+    };
+
     if (data.quizQuestionNum < 5) {
       data.quizQuestionNum += 1;
     } else if (data.quizQuestionNum >= 5) {
@@ -59,11 +59,61 @@ export class Quiz extends Scene {
     });
 
     //triangles
-    this.add.triangle(125, 110, 0, -15, 0, 15, 25, 0, 0x10c74d);
-    this.add.triangle(148, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
-    this.add.triangle(171, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
-    this.add.triangle(194, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
-    this.add.triangle(214, 110, 0, -15, 0, 15, 25, 0, 0xffffff);
+    const quizPage1Bar = this.add.triangle(
+      125,
+      110,
+      0,
+      -15,
+      0,
+      15,
+      25,
+      0,
+      0x10c74d
+    );
+    const quizPage2Bar = this.add.triangle(
+      148,
+      110,
+      0,
+      -15,
+      0,
+      15,
+      25,
+      0,
+      0xffffff
+    );
+    const quizPage3Bar = this.add.triangle(
+      171,
+      110,
+      0,
+      -15,
+      0,
+      15,
+      25,
+      0,
+      0xffffff
+    );
+    const quizPage4Bar = this.add.triangle(
+      194,
+      110,
+      0,
+      -15,
+      0,
+      15,
+      25,
+      0,
+      0xffffff
+    );
+    const quizPage5Bar = this.add.triangle(
+      214,
+      110,
+      0,
+      -15,
+      0,
+      15,
+      25,
+      0,
+      0xffffff
+    );
 
     //start
     const star = this.add.star(245, 95, 5, 20, 10, 0xffffff, 1);
@@ -110,7 +160,7 @@ export class Quiz extends Scene {
           const y = 250 + index * 70;
           const graphics = this.add.graphics();
           graphics.fillStyle(0x127475, 1);
-          graphics.fillRoundedRect(
+          const quizButtons = graphics.fillRoundedRect(
             centerX - rectWidth / 2,
             y,
             rectWidth + 10,
@@ -125,6 +175,21 @@ export class Quiz extends Scene {
               fill: "#ffffff",
             })
             .setOrigin(0.5, 0.5);
+
+          quizButtons.setInteractive(
+            new Phaser.Geom.Rectangle(
+              centerX - rectWidth / 2,
+              y,
+              rectWidth + 10,
+              rectHeight,
+              cornerRadius
+            ),
+            Phaser.Geom.Rectangle.Contains
+          );
+
+          quizButtons.on("pointerdown", () => {
+            console.log("yoooooo");
+          });
         });
 
         //next button
@@ -170,8 +235,6 @@ export class Quiz extends Scene {
         });
       });
     };
-
-   
 
     makeQuiz();
   }
