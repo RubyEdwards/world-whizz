@@ -73,18 +73,15 @@ export class SignUp extends Scene {
             .then(()=>{
               this.scene.start("Game");
             })
-            .catch(err=>{
-              console.log(err.response.data.error)
+            .catch((err)=>{
+              alert(err.response.data.message)
             })
           }
-          //Password1!
           else{
-            console.log("passwords do not match!")
+            alert("Please enter matching passwords!")
           }
 
-          // console.log(newUsername)   
-          // console.log(newPassword)   
-          // console.log(newPasswordConf)
+         
           
       
     
