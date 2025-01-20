@@ -234,8 +234,8 @@ export class Game extends Scene {
     });
 
     //Username example placeholder
-    const username = "Bob";
-    this.username = username;
+    const userData = this.registry.get("currUserData");
+    this.username = userData.username;
 
     //Speech Bubbles
 
