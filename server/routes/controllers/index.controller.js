@@ -36,7 +36,7 @@ export function getQuiz(req, res) {
       );
       let updatedQuestion = JSON.parse(JSON.stringify(countryquiz));
       updatedQuestion.quiz.answers = answersRandomOrder;
-      delete updatedQuestion.quiz[questionIndex].correctAnswer;
+      // delete updatedQuestion.quiz[questionIndex].correctAnswer;
       res.status(200).send(updatedQuestion.quiz[questionIndex]);
     } else res.status(200).send(countryquiz);
   });

@@ -374,7 +374,8 @@ export class Game extends Scene {
     popupQuizButton.setVisible(false);
 
     popupQuizButton.on("pointerdown", () => {
-      this.scene.start("Quiz", countryId);
+      let quizQuestionNum = 0
+      this.scene.start("Quiz", {countryId, quizQuestionNum});
     });
 
     //Functionality
