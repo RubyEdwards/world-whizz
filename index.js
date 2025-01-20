@@ -1,9 +1,9 @@
 import express from 'express';
-import './loadEnvironment.js';
+import './server/loadEnvironment.js';
 import dotenv from 'dotenv';
-import connectDB from '../server/db/connection.js';
+import connectDB from './server/db/connection.js';
 import cors from 'cors';
-import authRouter from '../server/routes/countries.js';
+import authRouter from './server/routes/countries.js';
 
 dotenv.config();
 const app = express();
