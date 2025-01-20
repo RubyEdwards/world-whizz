@@ -1427,12 +1427,12 @@
       {
         "question": "Which of these is the most important building in Turkey?",
         "answers": [
-          "Hagia Sofia Grand Mosque",
+          "Hagia Sofia",
           "Big Mosque",
           "Grey Castle",
           "White Palace"
         ],
-        "correctAnswer": "Hagia Sofia Grand Mosque"
+        "correctAnswer": "Hagia Sofia"
       },
       {
         "question": "What is the most popular drink in Turkey?",
