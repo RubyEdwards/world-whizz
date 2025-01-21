@@ -4,12 +4,12 @@ const api = axios.create({
   baseURL: `https://world-whizz.onrender.com/world-whizz`,
 });
 
-const baseURL = 'https://world-whizz.onrender.com/world-whizz';
-
 const getCountries = () => {
-  return api.get(`${baseURL}/countries`).then(({ data }) => {
-    console.log(data);
-    return data;
+  return api.get(`/countries`).then(({ data }) => {
+    const sortedData = data.sort((a, b) =>
+      a.countryinfo.countryname.localeCompare(b.countryinfo.countryname)
+    );
+    return sortedData;
   });
 };
 
@@ -21,10 +21,12 @@ const getCountry = (countrycode) => {
 };
 
 const getQuiz = (countrycode, questionNumber) => {
-  return api.get(`/countries/${countrycode}/quiz?question=${questionNumber}`).then(({ data }) => {
-    console.log(data);
-    return data;
-  });
+  return api
+    .get(`/countries/${countrycode}/quiz?question=${questionNumber}`)
+    .then(({ data }) => {
+      console.log(data);
+      return data;
+    });
 };
 
 const getJournal = () => {
