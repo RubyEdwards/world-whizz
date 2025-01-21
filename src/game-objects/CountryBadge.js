@@ -16,10 +16,10 @@ export class CountryBadge extends Phaser.GameObjects.Image {
     });
     let id = ""
     this.on("pointerdown", () => {
-      let countryId = this.texture.key;
-      if (countryId === "badge-andorra") {
-        id="AD"
-      }
+      // let countryId = this.texture.key;
+      // if (countryId === "badge-andorra") {
+      //   id="AD"
+      // }
     });
   }
 }
