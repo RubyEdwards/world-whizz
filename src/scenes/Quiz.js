@@ -1,5 +1,6 @@
 import { Scene } from "phaser";
 import { getQuiz } from "../api";
+import { checkAnswer } from "../../utils/util";
 
 export class Quiz extends Scene {
   constructor() {
@@ -59,7 +60,7 @@ export class Quiz extends Scene {
     });
 
     //triangles
-    const quizPage1Bar = this.add.triangle(
+    let quizPage1Bar = this.add.triangle(
       125,
       110,
       0,
@@ -68,9 +69,9 @@ export class Quiz extends Scene {
       15,
       25,
       0,
-      0x10c74d
+      0xffffff
     );
-    const quizPage2Bar = this.add.triangle(
+    let quizPage2Bar = this.add.triangle(
       148,
       110,
       0,
@@ -81,7 +82,7 @@ export class Quiz extends Scene {
       0,
       0xffffff
     );
-    const quizPage3Bar = this.add.triangle(
+    let quizPage3Bar = this.add.triangle(
       171,
       110,
       0,
@@ -92,7 +93,7 @@ export class Quiz extends Scene {
       0,
       0xffffff
     );
-    const quizPage4Bar = this.add.triangle(
+    let quizPage4Bar = this.add.triangle(
       194,
       110,
       0,
@@ -103,7 +104,7 @@ export class Quiz extends Scene {
       0,
       0xffffff
     );
-    const quizPage5Bar = this.add.triangle(
+    let quizPage5Bar = this.add.triangle(
       214,
       110,
       0,
@@ -114,6 +115,32 @@ export class Quiz extends Scene {
       0,
       0xffffff
     );
+
+    if (data.question1Correct === 2) {
+      quizPage1Bar.setFillStyle(0x10c74d);
+    } else if (data.question1Correct === 1) {
+      quizPage1Bar.setFillStyle(0xf8b5b5);
+    }
+    if (data.question2Correct === 2) {
+      quizPage2Bar.setFillStyle(0x10c74d);
+    } else if (data.question2Correct === 1) {
+      quizPage2Bar.setFillStyle(0xf8b5b5);
+    }
+    if (data.question3Correct === 2) {
+      quizPage3Bar.setFillStyle(0x10c74d);
+    } else if (data.question3Correct === 1) {
+      quizPage3Bar.setFillStyle(0xf8b5b5);
+    }
+    if (data.question4Correct === 2) {
+      quizPage4Bar.setFillStyle(0x10c74d);
+    } else if (data.question4Correct === 1) {
+      quizPage4Bar.setFillStyle(0xf8b5b5);
+    }
+    if (data.question5Correct === 2) {
+      quizPage5Bar.setFillStyle(0x10c74d);
+    } else if (data.question5Correct === 1) {
+      quizPage5Bar.setFillStyle(0xf8b5b5);
+    }
 
     //start
     const star = this.add.star(245, 95, 5, 20, 10, 0xffffff, 1);
@@ -161,34 +188,82 @@ export class Quiz extends Scene {
           const graphics = this.add.graphics();
           graphics.fillStyle(0x127475, 1);
           const quizButtons = graphics.fillRoundedRect(
-            centerX - rectWidth / 2,
-            y,
+            // centerX - rectWidth / 2,
+            // y,
+            0,
+            0,
             rectWidth + 10,
             rectHeight,
             cornerRadius
           );
 
-          this.add
-            .text(centerX + 5, y + rectHeight / 2, option, {
+          const answersText = this.add
+            .text(0, 13, option, {
               fontSize: "20px",
               fontFamily: "Roboto",
               fill: "#ffffff",
+              align: "center",
+              fixedWidth: 210,
+              fixedHeight: 50,
             })
-            .setOrigin(0.5, 0.5);
+            .setOrigin(0)
+            .setInteractive();
 
-          quizButtons.setInteractive(
-            new Phaser.Geom.Rectangle(
-              centerX - rectWidth / 2,
-              y,
-              rectWidth + 10,
-              rectHeight,
-              cornerRadius
-            ),
-            Phaser.Geom.Rectangle.Contains
+          let questionContainer = this.add.container(
+            centerX - rectWidth / 2,
+            y,
+            [quizButtons, answersText]
           );
 
-          quizButtons.on("pointerdown", () => {
-            console.log("yoooooo");
+          questionContainer.name = option;
+
+          answersText.on("pointerdown", () => {
+            if (checkAnswer(quiz, questionContainer.name)) {
+              console.log("we did ittttt");
+              data.totalCorrect += 1;
+              console.log(data.totalCorrect);
+              if (quizQuestionNum === 1) {
+                quizPage1Bar.setFillStyle(0x10c74d);
+                data.question1Correct = 2;
+              }
+              if (quizQuestionNum === 2) {
+                quizPage2Bar.setFillStyle(0x10c74d);
+                data.question2Correct = 2;
+              }
+              if (quizQuestionNum === 3) {
+                quizPage3Bar.setFillStyle(0x10c74d);
+                data.question3Correct = 2;
+              }
+              if (quizQuestionNum === 4) {
+                quizPage4Bar.setFillStyle(0x10c74d);
+                data.question4Correct = 2;
+              }
+              if (quizQuestionNum === 5) {
+                quizPage5Bar.setFillStyle(0x10c74d);
+                data.question5Correct = 2;
+              }
+            } else {
+              if (quizQuestionNum === 1) {
+                quizPage1Bar.setFillStyle(0xf8b5b5);
+                data.question1Correct = 1;
+              }
+              if (quizQuestionNum === 2) {
+                quizPage2Bar.setFillStyle(0xf8b5b5);
+                data.question2Correct = 1;
+              }
+              if (quizQuestionNum === 3) {
+                quizPage3Bar.setFillStyle(0xf8b5b5);
+                data.question3Correct = 1;
+              }
+              if (quizQuestionNum === 4) {
+                quizPage4Bar.setFillStyle(0xf8b5b5);
+                data.question4Correct = 1;
+              }
+              if (quizQuestionNum === 5) {
+                quizPage5Bar.setFillStyle(0xf8b5b5);
+                data.question5Correct = 1;
+              }
+            }
           });
         });
 
