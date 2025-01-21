@@ -10,16 +10,6 @@ export class Quiz extends Scene {
   graphics;
 
   create(data) {
-    const quizResults = () => {
-      console.log("yippie");
-    };
-
-    if (data.quizQuestionNum < 5) {
-      data.quizQuestionNum += 1;
-    } else if (data.quizQuestionNum >= 5) {
-      quizResults();
-    }
-
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.mascot = this.add
@@ -145,6 +135,152 @@ export class Quiz extends Scene {
     //start
     const star = this.add.star(245, 95, 5, 20, 10, 0xffffff, 1);
     star.setRotation(-Math.PI / 1.7);
+
+    const quizResults = () => {
+      star.setFillStyle(0xfff700);
+
+      let resultsMessage = "";
+
+      if (data.totalCorrect >= 5) {
+        console.log("Well done! You nailed it!");
+        resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
+      }
+      if (data.totalCorrect === 4) {
+        console.log("Close but no cigar!");
+        resultsMessage = "You got 4/5 correct!\nClose but no cigar!";
+      }
+      if (data.totalCorrect === 3) {
+        console.log("Middling!");
+        resultsMessage = "You got 3/5 correct!\nMiddling!";
+      }
+      if (data.totalCorrect === 2) {
+        console.log("Room for improvement!");
+        resultsMessage = "You got 2/5 correct!\nRoom for improvement!";
+      }
+      if (data.totalCorrect === 1) {
+        console.log("Let's do better next time!");
+        resultsMessage = "You got 1/5 correct!\nLet's do better next time!";
+      }
+      if (data.totalCorrect === 0) {
+        console.log("Oopsie!");
+        resultsMessage = "You got 0/5 correct!\nOopsie!";
+      }
+
+      const resultsText = this.add
+        .text(75, 130, resultsMessage, {
+          fontSize: "24px",
+          fontFamily: "Roboto",
+          fill: "#2d2d2d",
+          wordWrap: { width: 220 },
+          align: "center",
+        })
+        .setOrigin(0);
+
+      //button to try again
+      const tryAgainGraphics = this.add.graphics();
+      tryAgainGraphics.fillStyle(0x127475, 1);
+      const tryAgainButton = tryAgainGraphics.fillRoundedRect(
+        0,
+        0,
+        210,
+        50,
+        16
+      );
+
+      const tryAgainText = this.add
+        .text(0, 13, "TRY AGAIN", {
+          fontSize: "20px",
+          fontFamily: "Roboto",
+          fill: "#ffffff",
+          align: "center",
+          fixedWidth: 210,
+          fixedHeight: 50,
+        })
+        .setOrigin(0)
+        .setInteractive();
+
+      let tryAgainContainer = this.add.container(
+        this.scale.width / 2 - 100,
+        300,
+        [tryAgainButton, tryAgainText]
+      );
+
+      tryAgainText.on("pointerdown", () => {
+        data.totalCorrect = 0;
+        data.quizQuestionNum = 0;
+        data.question1Correct = 0;
+        data.question2Correct = 0;
+        data.question3Correct = 0;
+        data.question4Correct = 0;
+        data.question5Correct = 0;
+        this.scene.restart();
+      });
+
+      //button to go to map
+      const toMapGraphics = this.add.graphics();
+      toMapGraphics.fillStyle(0xa57261, 1);
+      const toMapButton = toMapGraphics.fillRoundedRect(0, 0, 210, 50, 16);
+
+      const toMapText = this.add
+        .text(0, 13, "TO MAP", {
+          fontSize: "20px",
+          fontFamily: "Roboto",
+          fill: "#ffffff",
+          align: "center",
+          fixedWidth: 210,
+          fixedHeight: 50,
+        })
+        .setOrigin(0)
+        .setInteractive();
+
+      let toMapContainer = this.add.container(this.scale.width / 2 - 100, 380, [
+        toMapButton,
+        toMapText,
+      ]);
+
+      toMapText.on("pointerdown", () => {
+        this.scene.start("Game");
+      });
+
+      //button to go to journal
+      const toJournalGraphics = this.add.graphics();
+      toJournalGraphics.fillStyle(0xa57261, 1);
+      const toJournalButton = toJournalGraphics.fillRoundedRect(
+        0,
+        0,
+        210,
+        50,
+        16
+      );
+
+      const toJournalText = this.add
+        .text(0, 13, "TO JOURNAL", {
+          fontSize: "20px",
+          fontFamily: "Roboto",
+          fill: "#ffffff",
+          align: "center",
+          fixedWidth: 210,
+          fixedHeight: 50,
+        })
+        .setOrigin(0)
+        .setInteractive();
+
+      let toJournalContainer = this.add.container(
+        this.scale.width / 2 - 100,
+        460,
+        [toJournalButton, toJournalText]
+      );
+
+      toJournalText.on("pointerdown", () => {
+        this.scene.start("Journal");
+      });
+    };
+
+    data.quizQuestionNum += 1;
+
+    if (data.quizQuestionNum >= 6) {
+      quizResults();
+    }
 
     //calling quiz from api
     this.quiz = {
@@ -311,6 +447,8 @@ export class Quiz extends Scene {
       });
     };
 
-    makeQuiz();
+    if (data.quizQuestionNum < 6) {
+      makeQuiz();
+    }
   }
 }
