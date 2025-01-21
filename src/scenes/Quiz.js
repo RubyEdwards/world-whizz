@@ -144,8 +144,8 @@ export class Quiz extends Scene {
       if (data.totalCorrect >= 5) {
         console.log("Well done! You nailed it!");
         resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
-        let body = { countryname: data.countryName, username: this.username };
-        changeUser(body);
+        let info = { countryname: data.countryName, username: data.username };
+        changeUser(info);
       }
       if (data.totalCorrect === 4) {
         console.log("Close but no cigar!");

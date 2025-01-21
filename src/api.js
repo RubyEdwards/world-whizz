@@ -57,9 +57,9 @@ const signIn = (userInfo) => {
   });
 };
 
-const changeUser = (body) => {
-  return api.post(`/users`, body).then(() => {
-    console.log("I think it worked?!");
+const changeUser = (info) => {
+  return api.post(`/users`, info).then((result) => {
+    console.log(result);
   });
 };
 
