@@ -1,11 +1,11 @@
-import { Scene } from 'phaser';
-import { CountryBadge } from '../game-objects/CountryBadge';
-import { JournalIcon } from '../game-objects/JournalIcon';
-import { getCountry } from '../api';
+import { Scene } from "phaser";
+import { CountryBadge } from "../game-objects/CountryBadge";
+import { JournalIcon } from "../game-objects/JournalIcon";
+import { getCountry } from "../api";
 
 export class Game extends Scene {
   constructor() {
-    super('Game');
+    super("Game");
   }
 
   create() {
@@ -17,7 +17,7 @@ export class Game extends Scene {
 
     cam.setBounds(3170, 250, 1550, 910);
 
-    this.input.on('pointermove', (pointer) => {
+    this.input.on("pointermove", (pointer) => {
       if (!pointer.isDown) return;
 
       const { x, y } = pointer.velocity;
@@ -27,210 +27,210 @@ export class Game extends Scene {
     });
 
     //Images
-    const worldmap = this.add.image(0, 0, 'worldmap').setOrigin(0).setDepth(0);
+    const worldmap = this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
     let journalicon = this.children.add(
-      new JournalIcon(this, 270, 10, 'journal-icon').setDepth(2)
+      new JournalIcon(this, 270, 10, "journal-icon").setDepth(2)
     );
 
     const mascot = this.add
-      .sprite(0, 500, 'mascot1')
+      .sprite(0, 500, "mascot1")
       .setScale(0.9)
       .setOrigin(0)
       .setScrollFactor(0)
       .setDepth(2)
-      .playAfterDelay('blink', Math.random() * 3000);
+      .playAfterDelay("blink", Math.random() * 3000);
 
     let badgeandorra = this.children.add(
-      new CountryBadge(this, 3725, 920, 'badge-andorra')
+      new CountryBadge(this, 3725, 920, "badge-andorra")
     );
-    badgeandorra.on('pointerdown', () => {
+    badgeandorra.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('AD');
+      makeCountryInfo("AD");
     });
 
     let badgeaustria = this.children.add(
-      new CountryBadge(this, 4020, 795, 'badge-austria')
+      new CountryBadge(this, 4020, 795, "badge-austria")
     );
-    badgeaustria.on('pointerdown', () => {
+    badgeaustria.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('AT');
+      makeCountryInfo("AT");
     });
 
     let badgebelgium = this.children.add(
-      new CountryBadge(this, 3780, 720, 'badge-belgium')
+      new CountryBadge(this, 3780, 720, "badge-belgium")
     );
-    badgebelgium.on('pointerdown', () => {
+    badgebelgium.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('BE');
+      makeCountryInfo("BE");
     });
 
     let badgedenmark = this.children.add(
-      new CountryBadge(this, 3910, 600, 'badge-denmark')
+      new CountryBadge(this, 3910, 600, "badge-denmark")
     );
-    badgedenmark.on('pointerdown', () => {
+    badgedenmark.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('DK');
+      makeCountryInfo("DK");
     });
 
     let badgefinland = this.children.add(
-      new CountryBadge(this, 4300, 400, 'badge-finland')
+      new CountryBadge(this, 4300, 400, "badge-finland")
     );
-    badgefinland.on('pointerdown', () => {
+    badgefinland.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('FI');
+      makeCountryInfo("FI");
     });
 
     let badgefrance = this.children.add(
-      new CountryBadge(this, 3760, 810, 'badge-france')
+      new CountryBadge(this, 3760, 810, "badge-france")
     );
-    badgefrance.on('pointerdown', () => {
+    badgefrance.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('FR');
+      makeCountryInfo("FR");
     });
 
     let badgegermany = this.children.add(
-      new CountryBadge(this, 3920, 700, 'badge-germany')
+      new CountryBadge(this, 3920, 700, "badge-germany")
     );
-    badgegermany.on('pointerdown', () => {
+    badgegermany.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('DE');
+      makeCountryInfo("DE");
     });
 
     let badgegreece = this.children.add(
-      new CountryBadge(this, 4180, 1020, 'badge-greece')
+      new CountryBadge(this, 4180, 1020, "badge-greece")
     );
-    badgegreece.on('pointerdown', () => {
+    badgegreece.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('GR');
+      makeCountryInfo("GR");
     });
 
     let badgeiceland = this.children.add(
-      new CountryBadge(this, 3300, 400, 'badge-iceland')
+      new CountryBadge(this, 3300, 400, "badge-iceland")
     );
-    badgeiceland.on('pointerdown', () => {
+    badgeiceland.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('IC');
+      makeCountryInfo("IC");
     });
 
     let badgeireland = this.children.add(
-      new CountryBadge(this, 3550, 630, 'badge-ireland')
+      new CountryBadge(this, 3550, 630, "badge-ireland")
     );
-    badgeireland.on('pointerdown', () => {
+    badgeireland.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('IR');
+      makeCountryInfo("IR");
     });
 
     let badgeitaly = this.children.add(
-      new CountryBadge(this, 4010, 940, 'badge-italy')
+      new CountryBadge(this, 4010, 940, "badge-italy")
     );
-    badgeitaly.on('pointerdown', () => {
+    badgeitaly.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('IT');
+      makeCountryInfo("IT");
     });
 
     let badgeliechtenstein = this.children.add(
-      new CountryBadge(this, 3930, 810, 'badge-liechtenstein')
+      new CountryBadge(this, 3930, 810, "badge-liechtenstein")
     );
-    badgeliechtenstein.on('pointerdown', () => {
+    badgeliechtenstein.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('LI');
+      makeCountryInfo("LI");
     });
 
     let badgeluxembourg = this.children.add(
-      new CountryBadge(this, 3840, 740, 'badge-luxembourg')
+      new CountryBadge(this, 3840, 740, "badge-luxembourg")
     );
-    badgeluxembourg.on('pointerdown', () => {
+    badgeluxembourg.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('LU');
+      makeCountryInfo("LU");
     });
 
     let badgemalta = this.children.add(
-      new CountryBadge(this, 4000, 1070, 'badge-malta')
+      new CountryBadge(this, 4000, 1070, "badge-malta")
     );
-    badgemalta.on('pointerdown', () => {
+    badgemalta.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('MA');
+      makeCountryInfo("MA");
     });
 
     let badgemonaco = this.children.add(
-      new CountryBadge(this, 3850, 890, 'badge-monaco')
+      new CountryBadge(this, 3850, 890, "badge-monaco")
     );
-    badgemonaco.on('pointerdown', () => {
+    badgemonaco.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('MO');
+      makeCountryInfo("MO");
     });
 
     let badgenetherlands = this.children.add(
-      new CountryBadge(this, 3820, 675, 'badge-netherlands')
+      new CountryBadge(this, 3820, 675, "badge-netherlands")
     );
-    badgenetherlands.on('pointerdown', () => {
+    badgenetherlands.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('NE');
+      makeCountryInfo("NE");
     });
 
     let badgenorway = this.children.add(
-      new CountryBadge(this, 3910, 470, 'badge-norway')
+      new CountryBadge(this, 3910, 470, "badge-norway")
     );
-    badgenorway.on('pointerdown', () => {
+    badgenorway.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('NO');
+      makeCountryInfo("NO");
     });
 
     let badgeportugal = this.children.add(
-      new CountryBadge(this, 3500, 990, 'badge-portugal')
+      new CountryBadge(this, 3500, 990, "badge-portugal")
     );
-    badgeportugal.on('pointerdown', () => {
+    badgeportugal.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('PT');
+      makeCountryInfo("PT");
     });
 
     let badgesanmarino = this.children.add(
-      new CountryBadge(this, 3980, 880, 'badge-sanmarino')
+      new CountryBadge(this, 3980, 880, "badge-sanmarino")
     );
-    badgesanmarino.on('pointerdown', () => {
+    badgesanmarino.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('SM');
+      makeCountryInfo("SM");
     });
 
     let badgespain = this.children.add(
-      new CountryBadge(this, 3620, 970, 'badge-spain')
+      new CountryBadge(this, 3620, 970, "badge-spain")
     );
-    badgespain.on('pointerdown', () => {
+    badgespain.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('ES');
+      makeCountryInfo("ES");
     });
 
     let badgesweden = this.children.add(
-      new CountryBadge(this, 4065, 400, 'badge-sweden')
+      new CountryBadge(this, 4065, 400, "badge-sweden")
     );
-    badgesweden.on('pointerdown', () => {
+    badgesweden.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('SE');
+      makeCountryInfo("SE");
     });
 
     let badgeswitzerland = this.children.add(
-      new CountryBadge(this, 3860, 810, 'badge-switzerland')
+      new CountryBadge(this, 3860, 810, "badge-switzerland")
     );
-    badgeswitzerland.on('pointerdown', () => {
+    badgeswitzerland.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('CH');
+      makeCountryInfo("CH");
     });
 
     let badgeturkey = this.children.add(
-      new CountryBadge(this, 4450, 1000, 'badge-turkey')
+      new CountryBadge(this, 4450, 1000, "badge-turkey")
     );
-    badgeturkey.on('pointerdown', () => {
+    badgeturkey.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('TR');
+      makeCountryInfo("TR");
     });
 
     let badgeunitedkingdom = this.children.add(
-      new CountryBadge(this, 3650, 640, 'badge-unitedkingdom')
+      new CountryBadge(this, 3650, 640, "badge-unitedkingdom")
     );
-    badgeunitedkingdom.on('pointerdown', () => {
+    badgeunitedkingdom.on("pointerdown", () => {
       mascot.setPosition(0, 620);
-      makeCountryInfo('GB');
+      makeCountryInfo("GB");
     });
 
     //Username example placeholder
@@ -246,12 +246,13 @@ export class Game extends Scene {
       340,
       220,
       100,
-      `Welcome, ${this.username || 'stranger'}!\nWhere should we explore today?`
+      `Welcome, ${this.username || "stranger"}!\nWhere should we explore today?`
     ).setScrollFactor(0);
 
     //Get data
     let countryCard = {};
-    let countryId = '';
+    let countryId = "";
+    let countryName = "";
 
   
 
@@ -259,6 +260,7 @@ export class Game extends Scene {
       getCountry(id)
         .then(({ countryinfo }) => {
           countryId = countryinfo.countrycode;
+          countryName = countryinfo.countryname;
           return countryinfo;
         })
         .then((countryinfo) => {
@@ -268,7 +270,7 @@ export class Game extends Scene {
             320,
             400,
             `${countryinfo.greeting}, ${
-              this.username || 'stranger'
+              this.username || "stranger"
             }!\nWelcome to ${countryinfo.countryname}.\n\nCapital: ${
               countryinfo.capital
             }\nCurrency: ${countryinfo.currency}\nPopulation: ${
@@ -313,10 +315,10 @@ export class Game extends Scene {
     backButton.fillStyle(0xa57261, 1);
     backButton.fillRoundedRect(140, 550, 100, 55, 20);
 
-    const backText = this.add.text(158, 565, 'BACK', {
-      fontSize: '24px',
-      fontFamily: 'Roboto',
-      fill: '#ffffff',
+    const backText = this.add.text(158, 565, "BACK", {
+      fontSize: "24px",
+      fontFamily: "Roboto",
+      fill: "#ffffff",
     });
 
     const popupBackButton = this.add.container();
@@ -330,7 +332,7 @@ export class Game extends Scene {
 
     popupBackButton.setVisible(false);
 
-    popupBackButton.on('pointerdown', () => {
+    popupBackButton.on("pointerdown", () => {
       mascot.setPosition(0, 740);
       countryCard.setVisible(false);
       popupBackButton.setVisible(false);
@@ -367,10 +369,10 @@ export class Game extends Scene {
     backButton.fillStyle(0x127475, 1);
     backButton.fillRoundedRect(250, 550, 100, 55, 20);
 
-    const quizText = this.add.text(272, 565, 'QUIZ', {
-      fontSize: '24px',
-      fontFamily: 'Roboto',
-      fill: '#ffffff',
+    const quizText = this.add.text(272, 565, "QUIZ", {
+      fontSize: "24px",
+      fontFamily: "Roboto",
+      fill: "#ffffff",
     });
 
     const popupQuizButton = this.add.container();
@@ -393,6 +395,7 @@ export class Game extends Scene {
       let question5Correct = 0;
       let totalCorrect = 0;
       this.scene.start("Quiz", {
+        countryName,
         countryId,
         quizQuestionNum,
         question1Correct,
@@ -402,7 +405,6 @@ export class Game extends Scene {
         question5Correct,
         totalCorrect,
       });
-
     });
 
     //Functionality
@@ -410,7 +412,7 @@ export class Game extends Scene {
     const tween = this.tweens.add({
       targets: mascot,
       y: 740,
-      ease: 'Power1',
+      ease: "Power1",
       duration: 3000,
       paused: true,
       yoyo: false,
@@ -418,7 +420,7 @@ export class Game extends Scene {
       flipX: false,
     });
 
-    this.input.on('pointerdown', () => {
+    this.input.on("pointerdown", () => {
       if (!tween.isPlaying()) {
         tween.resume();
         greeting.setVisible(false);
@@ -469,10 +471,10 @@ export class Game extends Scene {
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
     const content = this.add.text(0, 0, quote, {
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontSize: 22,
-      color: '#000000',
-      align: 'left',
+      color: "#000000",
+      align: "left",
       wordWrap: { width: bubbleWidth - bubblePadding * 2 },
     });
 
