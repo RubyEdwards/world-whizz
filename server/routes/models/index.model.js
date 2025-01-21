@@ -73,7 +73,7 @@ export async function fetchCountryQuizFacts(req) {
   }
 }
 
-export async function fetchUser(countryname, username) {
+export async function amendUser(countryname, username) {
   try {
     await connectDB(process.env.ATLAS_URI);
     let users = await User.updateOne(
