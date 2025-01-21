@@ -394,7 +394,9 @@ export class Game extends Scene {
       let question4Correct = 0;
       let question5Correct = 0;
       let totalCorrect = 0;
+      let username = this.username;
       this.scene.start("Quiz", {
+        username,
         countryName,
         countryId,
         quizQuestionNum,
