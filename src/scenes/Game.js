@@ -27,7 +27,7 @@ export class Game extends Scene {
     });
 
     //Images
-    const worldmap = this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
+    const worldmap = this.add.image(0, 0, 'worldmap').setOrigin(0).setDepth(0);
 
     let journalicon = this.children.add(
       new JournalIcon(this, 270, 10, "journal-icon").setDepth(2)
