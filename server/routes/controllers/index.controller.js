@@ -1,11 +1,11 @@
 import { answerRandomiser, funFactRandomiser } from "../../../utils/util.js";
 import {
+  amendUser,
   fetchCountries,
   fetchCountry,
   fetchCountryQuizFacts,
   fetchJournal,
   fetchQuiz,
-  fetchUser,
 } from "../models/index.model.js";
 
 export function getCountries(req, res) {
@@ -62,7 +62,7 @@ export function getCountryQuizFacts(req, res) {
 
 export function updateUser(req, res) {
   const { countryname, username } = req.body;
-  fetchUser(countryname, username).then(() => {
+  amendUser(countryname, username).then(() => {
     res.status(200).send({
       msg: `${username}'s ${countryname} isComplete has been updated!`,
     });

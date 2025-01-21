@@ -1,5 +1,5 @@
 import { Scene } from "phaser";
-import { getQuiz } from "../api";
+import { changeUser, getQuiz } from "../api";
 import { checkAnswer } from "../../utils/util";
 
 export class Quiz extends Scene {
@@ -144,6 +144,8 @@ export class Quiz extends Scene {
       if (data.totalCorrect >= 5) {
         console.log("Well done! You nailed it!");
         resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
+        let body = { countryname: data.countryName, username: this.username };
+        changeUser(body);
       }
       if (data.totalCorrect === 4) {
         console.log("Close but no cigar!");

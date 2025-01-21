@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
   baseURL: `https://world-whizz.onrender.com/world-whizz`,
@@ -57,6 +57,12 @@ const signIn = (userInfo) => {
   });
 };
 
+const changeUser = (body) => {
+  return api.post(`/users`, body).then(() => {
+    console.log("I think it worked?!");
+  });
+};
+
 export {
   getCountries,
   getCountry,
@@ -65,4 +71,5 @@ export {
   getCountryQuizFacts,
   signUp,
   signIn,
+  changeUser,
 };
