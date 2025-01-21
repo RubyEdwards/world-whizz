@@ -1,8 +1,11 @@
-import mongoose from 'mongoose';
-import connectDB from '../../db/connection.js';
+import mongoose, { connect } from "mongoose";
+import connectDB from "../../db/connection.js";
+import User from "../../validator/user-schema.js";
 
-const countrySchema = new mongoose.Schema({}, { collection: 'countries' });
-const Country = mongoose.model('Country', countrySchema);
+const countrySchema = new mongoose.Schema({}, { collection: "countries" });
+const Country = mongoose.model("Country", countrySchema);
+// const userSchema = new mongoose.Schema({}, { collection: "users" });
+// const User = mongoose.model("User", userSchema);
 
 export async function fetchCountries() {
   try {
@@ -10,7 +13,7 @@ export async function fetchCountries() {
     let results = await Country.find({}, { _id: 0 });
     return results;
   } catch (err) {
-    console.error('Error fetching countries: ', err);
+    console.error("Error fetching countries: ", err);
     throw err;
   }
 }
@@ -22,7 +25,7 @@ export async function fetchCountry(req) {
     let country = await Country.findOne(query, { countryinfo: 1, _id: 0 });
     return country;
   } catch (err) {
-    console.error('Error fetching country: ', err);
+    console.error("Error fetching country: ", err);
     throw err;
   }
 }
@@ -34,7 +37,7 @@ export async function fetchQuiz(req) {
     let countryquiz = await Country.findOne(param, { quiz: 1, _id: 0 });
     return countryquiz;
   } catch (err) {
-    console.error('Error displaying country quiz: ', err);
+    console.error("Error displaying country quiz: ", err);
     throw err;
   }
 }
@@ -45,7 +48,7 @@ export async function fetchJournal() {
     let countryNames = await Country.find({}, { countryname: 1, _id: 0 });
     return { countryNames };
   } catch (err) {
-    console.error('Error fetching Journal: ', err);
+    console.error("Error fetching Journal: ", err);
     throw err;
   }
 }
@@ -55,9 +58,9 @@ export async function fetchCountryQuizFacts(req) {
     await connectDB(process.env.ATLAS_URI);
     let { countryname } = req.params;
     let upperVersion = countryname
-      .split('')
+      .split("")
       .map((char, index) => (index === 0 ? char.toUpperCase() : char))
-      .join('');
+      .join("");
     let query = { countryname: upperVersion };
     let countryQuizFacts = await Country.findOne(query, {
       quizfacts: 1,
@@ -65,7 +68,25 @@ export async function fetchCountryQuizFacts(req) {
     });
     return countryQuizFacts;
   } catch (err) {
-    console.error('Error loading quiz facts: ', err);
+    console.error("Error loading quiz facts: ", err);
     throw err;
+  }
+}
+
+export async function fetchUser(countryname, username) {
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let users = await User.updateOne(
+      { username: username },
+      { $set: { "travelJournal.$[x].isComplete": true } },
+      {
+        arrayFilters: [
+          { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+        ],
+      }
+    );
+    return users;
+  } catch (err) {
+    console.error("Error fetching User: ", err);
   }
 }

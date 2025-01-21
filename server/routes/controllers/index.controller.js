@@ -1,11 +1,12 @@
-import { answerRandomiser, funFactRandomiser } from '../../../utils/util.js';
+import { answerRandomiser, funFactRandomiser } from "../../../utils/util.js";
 import {
   fetchCountries,
   fetchCountry,
   fetchCountryQuizFacts,
   fetchJournal,
   fetchQuiz,
-} from '../models/index.model.js';
+  fetchUser,
+} from "../models/index.model.js";
 
 export function getCountries(req, res) {
   fetchCountries().then((countries) => {
@@ -15,7 +16,7 @@ export function getCountries(req, res) {
 
 export function getCountry(req, res) {
   fetchCountry(req).then((country) => {
-    if (!country) res.status(404).send('Not found');
+    if (!country) res.status(404).send("Not found");
     else {
       let randomFact = funFactRandomiser(country);
       let updatedCountry = JSON.parse(JSON.stringify(country));
@@ -28,7 +29,7 @@ export function getCountry(req, res) {
 export function getQuiz(req, res) {
   const { question } = req.query;
   fetchQuiz(req).then((countryquiz) => {
-    if (!countryquiz) res.status(404).send('Not found');
+    if (!countryquiz) res.status(404).send("Not found");
     if (question) {
       const questionIndex = question - 1;
       const answersRandomOrder = answerRandomiser(
@@ -56,5 +57,14 @@ export function getJournal(req, res) {
 export function getCountryQuizFacts(req, res) {
   fetchCountryQuizFacts(req).then((quizfacts) => {
     res.status(200).send(quizfacts);
+  });
+}
+
+export function updateUser(req, res) {
+  const { countryname, username } = req.body;
+  fetchUser(countryname, username).then(() => {
+    res.status(200).send({
+      msg: `${username}'s ${countryname} isComplete has been updated!`,
+    });
   });
 }
