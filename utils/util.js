@@ -20,12 +20,12 @@ export function answerRandomiser(data) {
 }
 
 export function checkAnswer(data, userInput) {
-  const correctAnswer = data._doc.correctAnswer;
+  const correctAnswer = data.correctAnswer;
   let isCorrect = false;
   if (userInput.toLowerCase() !== correctAnswer.toLowerCase()) {
-    return 'Incorrect';
+    return isCorrect;
   } else {
     isCorrect = true;
-    return 'Correct';
+    return isCorrect;
   }
 }

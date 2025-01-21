@@ -234,8 +234,9 @@ export class Game extends Scene {
     });
 
     //Username example placeholder
-    const userData = this.registry.get('currUserData');
-    const newUserData = this.registry.get('newUserData');
+    const userData = this.registry.get("currUserData");
+    const newUserData = this.registry.get("newUserData");
+
     this.username = newUserData.newUsername || userData.username;
 
     //Speech Bubbles
@@ -251,6 +252,8 @@ export class Game extends Scene {
     //Get data
     let countryCard = {};
     let countryId = '';
+
+    // const blurmap = container.postFX.addBlur(1, 0, 0, 0, 0xffffff, 6);
 
     const makeCountryInfo = (id) => {
       getCountry(id)
@@ -300,6 +303,7 @@ export class Game extends Scene {
       badgeswitzerland.setVisible(false);
       badgeturkey.setVisible(false);
       badgeunitedkingdom.setVisible(false);
+
       return countryCard;
     };
 
@@ -380,9 +384,25 @@ export class Game extends Scene {
 
     popupQuizButton.setVisible(false);
 
-    popupQuizButton.on('pointerdown', () => {
+    popupQuizButton.on("pointerdown", () => {
       let quizQuestionNum = 0;
-      this.scene.start('Quiz', { countryId, quizQuestionNum });
+      let question1Correct = 0;
+      let question2Correct = 0;
+      let question3Correct = 0;
+      let question4Correct = 0;
+      let question5Correct = 0;
+      let totalCorrect = 0;
+      this.scene.start("Quiz", {
+        countryId,
+        quizQuestionNum,
+        question1Correct,
+        question2Correct,
+        question3Correct,
+        question4Correct,
+        question5Correct,
+        totalCorrect,
+      });
+
     });
 
     //Functionality
