@@ -30,19 +30,27 @@ export class Journal extends Scene {
     graphics.lineStyle(2, 0x8c0e00, 1);
     graphics.strokeRoundedRect(56, margin + 24, 252, cardHeight - 48, 8);
 
+    const userData = this.registry.get('currUserData');
+    const newUserData = this.registry.get('newUserData');
+    this.username = newUserData.newUsername || userData.username;
+
     //username
-    const username = 'BOB';
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
     this.add
-      .text(centerX - rectWidth / 2 + 8, 90, `${username}'s Travel Journal`, {
-        fontSize: '22px',
-        fontFamily: 'Patrick Hand',
-        fill: '#2d2d2d',
-        wordWrap: { width: rectWidth },
-        align: 'center',
-      })
+      .text(
+        centerX - rectWidth / 2 + 8,
+        90,
+        `${this.username || 'Stranger'}'s Travel Journal`,
+        {
+          fontSize: '22px',
+          fontFamily: 'Patrick Hand',
+          fill: '#2d2d2d',
+          wordWrap: { width: rectWidth },
+          align: 'center',
+        }
+      )
       .setOrigin(0, 0);
 
     //countries list from database
