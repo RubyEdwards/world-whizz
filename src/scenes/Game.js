@@ -27,6 +27,7 @@ export class Game extends Scene {
     });
 
     //Images
+
     this.add.image(0, 0, "worldmap").setOrigin(0).setDepth(0);
 
     let journalicon = this.children.add(
@@ -254,7 +255,7 @@ export class Game extends Scene {
     let countryId = "";
     let countryName = "";
 
-    // const blurmap = container.postFX.addBlur(1, 0, 0, 0, 0xffffff, 6);
+  
 
     const makeCountryInfo = (id) => {
       getCountry(id)
