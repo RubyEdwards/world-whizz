@@ -197,7 +197,7 @@ export class Quiz extends Scene {
           fixedHeight: 50,
         })
         .setOrigin(0)
-        .setInteractive();
+        .setInteractive({ useHandCursor: true });
 
       let tryAgainContainer = this.add.container(
         this.scale.width / 2 - 100,
@@ -231,7 +231,7 @@ export class Quiz extends Scene {
           fixedHeight: 50,
         })
         .setOrigin(0)
-        .setInteractive();
+        .setInteractive({ useHandCursor: true });
 
       let toMapContainer = this.add.container(this.scale.width / 2 - 100, 380, [
         toMapButton,
@@ -263,7 +263,7 @@ export class Quiz extends Scene {
           fixedHeight: 50,
         })
         .setOrigin(0)
-        .setInteractive();
+        .setInteractive({ useHandCursor: true });
 
       let toJournalContainer = this.add.container(
         this.scale.width / 2 - 100,
@@ -343,7 +343,7 @@ export class Quiz extends Scene {
               fixedHeight: 50,
             })
             .setOrigin(0)
-            .setInteractive();
+            .setInteractive({ useHandCursor: true });
 
           let questionContainer = this.add.container(
             centerX - rectWidth / 2,

@@ -1,5 +1,3 @@
-import { getCountry } from "../api";
-
 export class CountryBadge extends Phaser.GameObjects.Image {
   constructor(scene, x, y, texture) {
     super(scene, x, y, texture);
@@ -22,8 +20,6 @@ export class CountryBadge extends Phaser.GameObjects.Image {
       if (countryId === "badge-andorra") {
         id="AD"
       }
-      // makeCountryInfo(id)
-      // console.log(countryId)
     });
   }
 }
