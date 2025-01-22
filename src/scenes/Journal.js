@@ -42,7 +42,8 @@ export class Journal extends Scene {
 
     graphics.lineStyle(2, 0x8c0e00, 1);
     graphics.strokeRoundedRect(56, margin + 24, 252, cardHeight - 48, 8);
-
+    
+    //user data
     const userData = this.registry.get("currUserData");
     const newUserData = this.registry.get("newUserData");
     this.username = newUserData.newUsername || userData.username;
