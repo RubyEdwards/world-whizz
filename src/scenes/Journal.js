@@ -81,19 +81,18 @@ export class Journal extends Scene {
           const positionY = positionYStart + heightIndex * lineHeight;
 
           //badge
-
           getUserProfile(this.username, country.countryinfo.countryname).then(
             (result) => {
               if (result === true) {
                 this.add
                   .image(
-                    centerX - rectWidth / 2 + 20,
-                    positionY,
+                    centerX - rectWidth / 2 + 24,
+                    positionY + 2,
                     `badge-${country.countryinfo.countryname
                       .replace(/ /g, "")
                       .toLowerCase()}`
                   )
-                  .setScale(0.5);
+                  .setScale(0.7);
               } else {
                 this.add
             .image(centerX - rectWidth / 2 + 24, positionY + 2, "badgeempty")
@@ -101,11 +100,6 @@ export class Journal extends Scene {
               }
             }
           );
-
-          // this.add
-          //   .image(centerX - rectWidth / 2 + 20, positionY, "badgeempty")
-          //   .setScale(0.5);
-
 
           const countryText = this.add.text(
             centerX - rectWidth / 2 + 60,
@@ -144,11 +138,11 @@ export class Journal extends Scene {
       buttonHeight - 5,
       buttonRadius,
       this.add
-        .text(centerX, pageButtonY + buttonHeight / 2, "<  >", {
-          fontSize: "28px",
+        .text(centerX, pageButtonY + buttonHeight / 2, "⇆", {
+          fontSize: "30px",
           fontFamily: "Roboto",
           fill: "#ffffff",
-          align: "center"
+          align: "center",
         })
         .setOrigin(0.5, 0.5)
     );
