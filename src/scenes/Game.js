@@ -109,12 +109,12 @@ export class Game extends Scene {
     let badgeiceland = this.children.add(
       new CountryBadge(this, 3300, 400, "badge-iceland")
     );
-    const icelandtrack = this.sound.add("iceland");
-    badgeiceland.on("pointerdown", () => {
-      icelandtrack.play();
-      mascot.setPosition(0, 620);
-      makeCountryInfo("IC");
-    });
+    // const icelandtrack = this.sound.add("iceland");
+    // badgeiceland.on("pointerdown", () => {
+    //   icelandtrack.play();
+    //   mascot.setPosition(0, 620);
+    //   makeCountryInfo("IC");
+    // });
 
     let badgeireland = this.children.add(
       new CountryBadge(this, 3550, 630, "badge-ireland")

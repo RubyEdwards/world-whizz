@@ -57,10 +57,18 @@ const signIn = (userInfo) => {
   });
 };
 
-const changeUser = (info) => {
-  return api.post(`/users`, info).then((result) => {
+const changeUserCountryStatus = (info) => {
+  return api.post(`/user/country`, info).then((result) => {
     console.log(result);
   });
+};
+
+const changeUserQuestionStatus = (info) => {
+  return api
+    .post(`/user/country?question=${info.question}`, info)
+    .then((result) => {
+      console.log(result);
+    });
 };
 
 export {
@@ -71,5 +79,6 @@ export {
   getCountryQuizFacts,
   signUp,
   signIn,
-  changeUser,
+  changeUserCountryStatus,
+  changeUserQuestionStatus,
 };

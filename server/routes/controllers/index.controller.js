@@ -1,6 +1,7 @@
 import { answerRandomiser, funFactRandomiser } from "../../../utils/util.js";
 import {
-  amendUser,
+  amendUserCountryStatus,
+  amendUserQuestionStatus,
   fetchCountries,
   fetchCountry,
   fetchCountryQuizFacts,
@@ -60,11 +61,21 @@ export function getCountryQuizFacts(req, res) {
   });
 }
 
-export function updateUser(req, res) {
+export function updateUserCountryStatus(req, res) {
   const { countryname, username } = req.body;
-  amendUser(countryname, username).then(() => {
+  amendUserCountryStatus(countryname, username).then(() => {
     res.status(200).send({
       msg: `${username}'s ${countryname} isComplete has been updated!`,
+    });
+  });
+}
+
+export function updateUserQuestionStatus(req, res) {
+  const { countryname, username } = req.body;
+  const { question } = req.query;
+  amendUserQuestionStatus(countryname, username, question).then(() => {
+    res.stats(200).send({
+      msg: `${username}'s ${countryname} has been updated to reflect which questions are correct!`,
     });
   });
 }
