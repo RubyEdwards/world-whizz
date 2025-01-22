@@ -1,5 +1,9 @@
 import { Scene } from "phaser";
-import { changeUser, getQuiz } from "../api";
+import {
+  changeUserCountryStatus,
+  changeUserQuestionStatus,
+  getQuiz,
+} from "../api";
 import { checkAnswer } from "../../utils/util";
 
 export class Quiz extends Scene {
@@ -108,6 +112,12 @@ export class Quiz extends Scene {
 
     if (data.question1Correct === 2) {
       quizPage1Bar.setFillStyle(0x10c74d);
+      let info = {
+        countryname: data.countryName,
+        username: data.username,
+        question: "question1correct",
+      };
+      changeUserQuestionStatus(info);
     } else if (data.question1Correct === 1) {
       quizPage1Bar.setFillStyle(0xf8b5b5);
     }
@@ -145,7 +155,7 @@ export class Quiz extends Scene {
         console.log("Well done! You nailed it!");
         resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
         let info = { countryname: data.countryName, username: data.username };
-        changeUser(info);
+        changeUserCountryStatus(info);
       }
       if (data.totalCorrect === 4) {
         console.log("Close but no cigar!");

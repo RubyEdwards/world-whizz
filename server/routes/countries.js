@@ -5,7 +5,9 @@ import {
   getCountryQuizFacts,
   getJournal,
   getQuiz,
-  updateUser,
+  getUser,
+  updateUserCountryStatus,
+  updateUserQuestionStatus,
 } from "./controllers/index.controller.js";
 import {
   isRequestValidated,
@@ -30,6 +32,10 @@ router.post("/signup", validateSignUpRequest, isRequestValidated, signUp);
 // world-whizz/signup - POSTs new user to the Users database after being given a body ("usename": "RubyRubyRubyRuby", "password": AaAaAaAa@!1)
 router.post("/signin", validateSignInRequest, isRequestValidated, signIn);
 // world-whizz/signin - POSTs a request to sign into a user if their info is in the database already.
-router.post("/users", updateUser);
-
+router.post("/user/country", updateUserCountryStatus);
+// world-whizz/user/country - POSTs to the Users database to update specified country isComplete to true
+router.post("/user/questions", updateUserQuestionStatus);
+// world-whizz/user/questions (with query!) - POSTs to the Users database to update specific country's question to true
+router.get("/user/:username", getUser);
+// world-whizz/user - GETs the whole user profile
 export default router;
