@@ -158,3 +158,14 @@ export async function amendUserQuestionStatus(countryname, username, question) {
     console.error("Error fetching User: ", err);
   }
 }
+
+export async function fetchUser(username) {
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    let query = { username: username };
+    let user = await User.findOne(query, { travelJournal: 1, _id: 0 });
+    return user;
+  } catch (err) {
+    console.error("Error fetching User: ", err);
+  }
+}
