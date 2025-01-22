@@ -984,14 +984,14 @@
         "correctAnswer": "Clog"
       },
       {
-        "question": "What is the traditional Dutch wooden shoe called?",
-        "answers": ["Moccasin", "Sabot", "Clog", "Espadrille"],
-        "correctAnswer": "Clog"
-      },
-      {
         "question": "The Netherlands is famous for its cheese. Which of these is NOT a Dutch cheese?",
         "answers": ["Gouda", "Edam", "Brie", "Leyden"],
         "correctAnswer": "Brie"
+      },
+      {
+        "question": "What is the official seat of government in the Netherlands?",
+        "answers": ["The Hague", "Amsterdam", "Rotterdam", "Utrecht"],
+        "correctAnswer": "The Hague"
       }
     ],
     "quizfacts": [
