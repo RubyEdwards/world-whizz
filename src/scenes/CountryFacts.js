@@ -77,10 +77,10 @@ export class CountryFacts extends Scene {
       .setOrigin(0, 0);
 
     //country detauls
-    this.showCountryDetails(selectedCountry);
+    this.showCountryDetails(selectedCountry, data);
   }
 
-  showCountryDetails(country) {
+  showCountryDetails(country, data) {
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
     const marginLeft = (this.cardWidth - rectWidth) / 2;
@@ -110,23 +110,37 @@ export class CountryFacts extends Scene {
     const factsStartY = positionY + 50;
     const factLineHeight = 90;
 
-    getUserProfile(this.username, country.name).then((result) => {
-      console.log(result);
-    });
     country.facts.forEach((fact, index) => {
-      // if results.travelJournal.THECURRENTCOUNTRY.isComplete === true
-      this.add.text(
-        centerX - rectWidth / 2 + marginLeft - 30,
-        factsStartY + index * factLineHeight,
-        `${index + 1}. ${fact}`,
-        {
-          fontSize: "18px",
-          fontFamily: "Patrick Hand",
-          fill: "#2d2d2d",
-          wordWrap: { width: this.cardWidth - 2 * marginLeft },
-          align: "left",
+      getUserProfile(this.username, country.name).then((result) => {
+        if (result === true) {
+          this.add.text(
+            centerX - rectWidth / 2 + marginLeft - 30,
+            factsStartY + index * factLineHeight,
+            `${index + 1}. ${fact}`,
+            {
+              fontSize: "18px",
+              fontFamily: "Patrick Hand",
+              fill: "#2d2d2d",
+              wordWrap: { width: this.cardWidth - 2 * marginLeft },
+              align: "left",
+            }
+          );
+        } else {
+          this.add.text(
+            centerX - rectWidth / 2 + marginLeft - 30,
+            factsStartY + index * factLineHeight,
+            `${index + 1}. ???`,
+            {
+              fontSize: "18px",
+              fontFamily: "Patrick Hand",
+              fill: "#2d2d2d",
+              wordWrap: { width: this.cardWidth - 2 * marginLeft },
+              align: "left",
+            }
+          );
         }
-      );
+      });
+      // if results.travelJournal.THECURRENTCOUNTRY.isComplete === true
     });
 
     //button back to journal

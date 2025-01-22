@@ -1,5 +1,5 @@
-import mongoose, { Schema } from 'mongoose';
-import bcrypt from 'bcrypt';
+import mongoose, { Schema } from "mongoose";
+import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
   {
@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: Array,
       default: [
         {
-          countryname: 'andorra',
+          countryname: "andorra",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -31,7 +31,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'austria',
+          countryname: "austria",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -40,7 +40,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'belgium',
+          countryname: "belgium",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -49,7 +49,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'denmark',
+          countryname: "denmark",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -58,7 +58,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'finland',
+          countryname: "finland",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -67,7 +67,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'france',
+          countryname: "france",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -76,7 +76,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'germany',
+          countryname: "germany",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -85,7 +85,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'greece',
+          countryname: "greece",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -94,7 +94,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'iceland',
+          countryname: "iceland",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -103,7 +103,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'ireland',
+          countryname: "ireland",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -112,7 +112,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'italy',
+          countryname: "italy",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -121,7 +121,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'liechenstein',
+          countryname: "liechtenstein",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -130,7 +130,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'luxembourg',
+          countryname: "luxembourg",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -139,7 +139,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'malta',
+          countryname: "malta",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -148,7 +148,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'monaco',
+          countryname: "monaco",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -157,7 +157,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'netherlands',
+          countryname: "netherlands",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -166,7 +166,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'norway',
+          countryname: "norway",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -175,7 +175,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'portugal',
+          countryname: "portugal",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -184,7 +184,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'sanmarino',
+          countryname: "sanmarino",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -193,7 +193,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'spain',
+          countryname: "spain",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -202,7 +202,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'sweden',
+          countryname: "sweden",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -211,7 +211,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'switzerland',
+          countryname: "switzerland",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -220,7 +220,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'turkey',
+          countryname: "turkey",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -229,7 +229,7 @@ const userSchema = new Schema(
           question5Correct: false,
         },
         {
-          countryname: 'unitedkingdom',
+          countryname: "unitedkingdom",
           isComplete: false,
           question1Correct: false,
           question2Correct: false,
@@ -249,4 +249,4 @@ userSchema.method({
   },
 });
 
-export default mongoose.model('User', userSchema, 'users');
+export default mongoose.model("User", userSchema, "users");
