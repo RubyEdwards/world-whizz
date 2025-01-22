@@ -7,6 +7,15 @@ export class CountryFacts extends Scene {
   }
 
   create(data) {
+    //rersize to client screen
+    window.addEventListener("resize", () => {
+      game.scale.resize(
+        document.documentElement.clientWidth,
+        document.documentElement.clientHeight
+      );
+    });
+
+    //selected country
     const selectedCountry = {
       name: `${data.countryinfo.countryname}`,
       badge: `badge-${data.countryinfo.countryname
@@ -20,7 +29,7 @@ export class CountryFacts extends Scene {
 
     //mascot
     this.mascot = this.add
-      .sprite(210, 700, "mascot1")
+      .sprite(210, this.scale.height * 0.83, "mascot1")
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
@@ -31,9 +40,10 @@ export class CountryFacts extends Scene {
     sfxjournalopen.play();
 
     //card journal
-    const screenHeight = this.scale.height;
+    const screenHeight = document.documentElement.clientHeight;
     const margin = 32;
     this.cardWidth = 300;
+    const marginY = this.scale.height * 0.09;
     const cardHeight = screenHeight - margin * 2;
     const graphics = this.add.graphics();
 
