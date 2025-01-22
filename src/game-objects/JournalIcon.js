@@ -6,8 +6,8 @@ export class JournalIcon extends Phaser.GameObjects.Image {
       .setInteractive({ useHandCursor: true })
       .setPosition(x, y)
       .setScrollFactor(0);
-      this.preFX.setPadding(18);
-      this.preFX.addGlow();
+    this.preFX.setPadding(18);
+    this.preFX.addGlow();
     this.on("pointerover", () => {
       this.clearFX();
       this.preFX.setPadding(18);
@@ -19,7 +19,9 @@ export class JournalIcon extends Phaser.GameObjects.Image {
       this.preFX.addGlow();
     });
     this.on("pointerdown", () => {
-      this.scene.scene.start("Journal");
+      let startIndex = 0;
+      let endIndex = 11;
+      this.scene.scene.start("Journal", { startIndex, endIndex });
     });
   }
 }
