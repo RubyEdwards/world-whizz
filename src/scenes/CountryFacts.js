@@ -1,5 +1,5 @@
 import { Scene } from "phaser";
-import { getCountries } from "../api";
+import { getUserProfile } from "../api";
 
 export class CountryFacts extends Scene {
   constructor() {
@@ -50,18 +50,30 @@ export class CountryFacts extends Scene {
     );
 
     //username
-    const username = "BOB";
+
+    const userData = this.registry.get("currUserData");
+    const newUserData = this.registry.get("newUserData");
+
+    this.username = newUserData.newUsername || userData.username;
+
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
     this.add
-      .text(centerX - rectWidth / 2 + 8, 90, `${username}'s Travel Journal`, {
-        fontSize: "22px",
-        fontFamily: "Patrick Hand",
-        fill: "#2d2d2d",
-        wordWrap: { width: rectWidth },
-        align: "center",
-      })
+
+      .text(
+        centerX - rectWidth / 2 + 8,
+        90,
+        `${this.username || "Stranger"}'s Travel Journal`,
+        {
+          fontSize: "22px",
+          fontFamily: "Patrick Hand",
+          fill: "#2d2d2d",
+          wordWrap: { width: rectWidth },
+          align: "center",
+        }
+      )
+
       .setOrigin(0, 0);
 
     //country detauls
@@ -98,7 +110,11 @@ export class CountryFacts extends Scene {
     const factsStartY = positionY + 50;
     const factLineHeight = 90;
 
+    getUserProfile(this.username, country.name).then((result) => {
+      console.log(result);
+    });
     country.facts.forEach((fact, index) => {
+      // if results.travelJournal.THECURRENTCOUNTRY.isComplete === true
       this.add.text(
         centerX - rectWidth / 2 + marginLeft - 30,
         factsStartY + index * factLineHeight,

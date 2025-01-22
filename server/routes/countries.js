@@ -36,6 +36,6 @@ router.post("/user/country", updateUserCountryStatus);
 // world-whizz/user/country - POSTs to the Users database to update specified country isComplete to true
 router.post("/user/questions", updateUserQuestionStatus);
 // world-whizz/user/questions (with query!) - POSTs to the Users database to update specific country's question to true
-router.get("/user/:username", getUser);
+router.get("/user/:username/:countryname", getUser);
 // world-whizz/user - GETs the whole user profile
 export default router;
