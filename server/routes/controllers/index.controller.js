@@ -74,7 +74,7 @@ export function updateUserQuestionStatus(req, res) {
   const { countryname, username } = req.body;
   const { question } = req.query;
   amendUserQuestionStatus(countryname, username, question).then(() => {
-    res.stats(200).send({
+    res.status(200).send({
       msg: `${username}'s ${countryname} has been updated to reflect which questions are correct!`,
     });
   });
