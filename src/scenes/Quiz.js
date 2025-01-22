@@ -138,7 +138,7 @@ export class Quiz extends Scene {
       quizPage5Bar.setFillStyle(0xf8b5b5);
     }
 
-    //start
+    //star
     const star = this.add.star(245, 95, 5, 20, 10, 0xffffff, 1);
     star.setRotation(-Math.PI / 1.7);
 
