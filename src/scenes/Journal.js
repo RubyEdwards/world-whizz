@@ -20,7 +20,7 @@ export class Journal extends Scene {
 
     //mascot
     this.mascot = this.add
-      .sprite(210, this.scale.height * 0.8, "mascot1")
+      .sprite(210, this.scale.height * 0.83, "mascot1")
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
@@ -33,7 +33,7 @@ export class Journal extends Scene {
     //card journal
     const screenHeight = document.documentElement.clientHeight;
     const margin = 32;
-    const marginY = this.scale.height * 0.08;
+    const marginY = this.scale.height * 0.09;
     const cardHeight = screenHeight - margin * 2;
     const graphics = this.add.graphics();
 
@@ -69,18 +69,10 @@ export class Journal extends Scene {
     //countries list from database
     this.countriesList(centerX, rectWidth, data);
   }
-  // store startInd and endInd to be 0 and 11
-  // make a function that just displays startInd and endInd
-  // make an if statement which checks if endInd is less than 24,
-  // and if it is, then it invoked the display function
-  // inside display function make next button
-  // on next button click do scene restart
-  // before display function increment endIndex by 12
-  //in the else statement for >24 replace next button with back button
-
+  
   countriesList(centerX, rectWidth, data) {
-    const positionYStart = this.scale.height * 0.13;
-    const lineHeight = 22;
+    const positionYStart = this.scale.height * 0.11;
+    const lineHeight = 34;
     let heightIndex = 0;
     getCountries().then((countries) => {
       countries.forEach((country, index) => {
@@ -90,15 +82,15 @@ export class Journal extends Scene {
 
           //badge
           this.add
-            .image(centerX - rectWidth / 2 + 20, positionY, "badgeempty")
-            .setScale(0.5);
+            .image(centerX - rectWidth / 2 + 24, positionY + 2, "badgeempty")
+            .setScale(0.7);
 
           const countryText = this.add.text(
-            centerX - rectWidth / 2 + 40,
-            positionY - 7,
+            centerX - rectWidth / 2 + 60,
+            positionY - 9,
             country.countryinfo.countryname,
             {
-              fontSize: "16px",
+              fontSize: "20px",
               fontFamily: "Patrick Hand",
               fill: "#2d2d2d",
             }
@@ -120,20 +112,21 @@ export class Journal extends Scene {
 
     //page button
 
-    const pageButtonY = this.scale.height * 0.48;
+    const pageButtonY = this.scale.height * 0.67;
     const pageButtonGraphics = this.add.graphics();
     pageButtonGraphics.fillStyle(0x884630, 1);
     pageButtonGraphics.fillRoundedRect(
-      centerX - buttonWidth / 2,
+      centerX - buttonWidth + 160 / 2,
       pageButtonY,
-      buttonWidth,
-      buttonHeight,
+      buttonWidth - 40,
+      buttonHeight - 5,
       buttonRadius,
       this.add
-        .text(centerX, pageButtonY + buttonHeight / 2, "Change Page", {
-          fontSize: "16px",
+        .text(centerX, pageButtonY + buttonHeight / 2, "<  >", {
+          fontSize: "28px",
           fontFamily: "Roboto",
           fill: "#ffffff",
+          align: "center"
         })
         .setOrigin(0.5, 0.5)
     );
@@ -183,7 +176,7 @@ export class Journal extends Scene {
       changePage();
     });
     //back to map button
-    const mapButtonY = this.scale.height * 0.68;
+    const mapButtonY = this.scale.height * 0.74;
     const mapButtonWidth = 160;
     const mapButtonHeight = 40;
     const mapButtonRadius = 8;
