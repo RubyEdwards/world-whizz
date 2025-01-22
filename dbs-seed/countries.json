@@ -40,12 +40,7 @@
       },
       {
         "question": "Which of these is a national symbol of Andorra?",
-        "answers": [
-          "Eagle",
-          "Lion",
-          "Bear",
-          "Cow"
-        ],
+        "answers": ["Eagle", "Lion", "Bear", "Cow"],
         "correctAnswer": "Lion"
       },
       {
@@ -93,12 +88,7 @@
       },
       {
         "question": "Austria is home to the headquarters of which international organization?",
-        "answers": [
-          "NATO",
-          "OPEC",
-          "UN",
-          "WHO"
-        ],
+        "answers": ["NATO", "OPEC", "UN", "WHO"],
         "correctAnswer": "OPEC"
       },
       {
@@ -282,12 +272,7 @@
       },
       {
         "question": "Finland is famous for which natural phenomenon?",
-        "answers": [
-          "Aurora Borealis",
-          "Volcanos",
-          "Hurricanes",
-          "Geysers"
-        ],
+        "answers": ["Aurora Borealis", "Volcanos", "Hurricanes", "Geysers"],
         "correctAnswer": "Aurora Borealis"
       },
       {
@@ -743,12 +728,7 @@
       },
       {
         "question": "Liechtenstein is part of which economic agreement, despite not being in the European Union?",
-        "answers": [
-          "EEA",
-          "Schengen Agreement",
-          "NAFTA",
-          "Eurozone"
-        ],
+        "answers": ["EEA", "Schengen Agreement", "NAFTA", "Eurozone"],
         "correctAnswer": "EEA"
       },
       {
@@ -868,9 +848,9 @@
           "Hal Saflieni Hypogeum",
           "Megalithic Temples",
           "Tarxien Temples",
-          "All of the above"
+          "All mentioned"
         ],
-        "correctAnswer": "All of the above"
+        "correctAnswer": "All mentioned"
       },
       {
         "question": "What is Malta's largest island?",
@@ -957,12 +937,7 @@
       },
       {
         "question": "What is the official title of Monaco's head of state?",
-        "answers": [
-          "King",
-          "President",
-          "Prince",
-          "Duke"
-        ],
+        "answers": ["King", "President", "Prince", "Duke"],
         "correctAnswer": "Prince"
       }
     ],
@@ -1406,12 +1381,7 @@
     "quiz": [
       {
         "question": "What does a kiss on the hand mean in Turkey?",
-        "answers": [
-          "Respect & love",
-          "Hello",
-          "Goodbye",
-          "I am sorry"
-        ],
+        "answers": ["Respect & love", "Hello", "Goodbye", "I am sorry"],
         "correctAnswer": "Respect & love"
       },
       {
@@ -1426,12 +1396,7 @@
       },
       {
         "question": "Which of these is the most important building in Turkey?",
-        "answers": [
-          "Hagia Sofia",
-          "Big Mosque",
-          "Grey Castle",
-          "White Palace"
-        ],
+        "answers": ["Hagia Sofia", "Big Mosque", "Grey Castle", "White Palace"],
         "correctAnswer": "Hagia Sofia"
       },
       {
