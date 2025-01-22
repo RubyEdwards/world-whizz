@@ -14,6 +14,11 @@ export class Quiz extends Scene {
   graphics;
 
   create(data) {
+    const sfxcorrect = this.sound.add("sfx-correct");
+    const sfxwrong = this.sound.add("sfx-wrong");
+    const sfxapplause = this.sound.add("sfx-applause");
+    const sfxfail = this.sound.add("sfx-fail");
+
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.mascot = this.add
@@ -152,6 +157,7 @@ export class Quiz extends Scene {
       let resultsMessage = "";
 
       if (data.totalCorrect >= 5) {
+        sfxapplause.play();
         console.log("Well done! You nailed it!");
         resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
         let info = { countryname: data.countryName, username: data.username };
@@ -174,6 +180,7 @@ export class Quiz extends Scene {
         resultsMessage = "You got 1/5 correct!\nLet's do better next time!";
       }
       if (data.totalCorrect === 0) {
+        sfxfail.play();
         console.log("Oopsie!");
         resultsMessage = "You got 0/5 correct!\nOopsie!";
       }
@@ -368,6 +375,7 @@ export class Quiz extends Scene {
           answersText.once("pointerdown", () => {
             if (quizButtonsToggle) {
               if (checkAnswer(quiz, questionContainer.name)) {
+                sfxcorrect.play();
                 console.log(quizButtonColour, "quizButtonColour");
                 console.log(quizButtonColour.id, "quizButtonColour");
                 data.totalCorrect += 1;
@@ -403,6 +411,7 @@ export class Quiz extends Scene {
                   data.question5Correct = 2;
                 }
               } else {
+                sfxwrong.play();
                 quizButtonColour = graphics.fillStyle(0xf8b5b5, 1);
                 quizButtons = graphics.fillRoundedRect(
                   0,
