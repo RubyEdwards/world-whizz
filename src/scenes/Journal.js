@@ -1,5 +1,5 @@
 import { Scene } from "phaser";
-import { getCountries } from "../api";
+import { getCountries, getUserProfile } from "../api";
 
 export class Journal extends Scene {
   constructor() {
@@ -81,9 +81,31 @@ export class Journal extends Scene {
           const positionY = positionYStart + heightIndex * lineHeight;
 
           //badge
-          this.add
+
+          getUserProfile(this.username, country.countryinfo.countryname).then(
+            (result) => {
+              if (result === true) {
+                this.add
+                  .image(
+                    centerX - rectWidth / 2 + 20,
+                    positionY,
+                    `badge-${country.countryinfo.countryname
+                      .replace(/ /g, "")
+                      .toLowerCase()}`
+                  )
+                  .setScale(0.5);
+              } else {
+                this.add
             .image(centerX - rectWidth / 2 + 24, positionY + 2, "badgeempty")
             .setScale(0.7);
+              }
+            }
+          );
+
+          // this.add
+          //   .image(centerX - rectWidth / 2 + 20, positionY, "badgeempty")
+          //   .setScale(0.5);
+
 
           const countryText = this.add.text(
             centerX - rectWidth / 2 + 60,

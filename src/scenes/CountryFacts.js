@@ -1,5 +1,5 @@
 import { Scene } from "phaser";
-import { getCountries } from "../api";
+import { getUserProfile } from "../api";
 
 export class CountryFacts extends Scene {
   constructor() {
@@ -50,25 +50,37 @@ export class CountryFacts extends Scene {
     );
 
     //username
-    const username = "BOB";
+
+    const userData = this.registry.get("currUserData");
+    const newUserData = this.registry.get("newUserData");
+
+    this.username = newUserData.newUsername || userData.username;
+
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
     this.add
-      .text(centerX - rectWidth / 2 + 8, 90, `${username}'s Travel Journal`, {
-        fontSize: "22px",
-        fontFamily: "Patrick Hand",
-        fill: "#2d2d2d",
-        wordWrap: { width: rectWidth },
-        align: "center",
-      })
+
+      .text(
+        centerX - rectWidth / 2 + 8,
+        90,
+        `${this.username || "Stranger"}'s Travel Journal`,
+        {
+          fontSize: "22px",
+          fontFamily: "Patrick Hand",
+          fill: "#2d2d2d",
+          wordWrap: { width: rectWidth },
+          align: "center",
+        }
+      )
+
       .setOrigin(0, 0);
 
     //country detauls
-    this.showCountryDetails(selectedCountry);
+    this.showCountryDetails(selectedCountry, data);
   }
 
-  showCountryDetails(country) {
+  showCountryDetails(country, data) {
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
     const marginLeft = (this.cardWidth - rectWidth) / 2;
@@ -99,18 +111,36 @@ export class CountryFacts extends Scene {
     const factLineHeight = 90;
 
     country.facts.forEach((fact, index) => {
-      this.add.text(
-        centerX - rectWidth / 2 + marginLeft - 30,
-        factsStartY + index * factLineHeight,
-        `${index + 1}. ${fact}`,
-        {
-          fontSize: "18px",
-          fontFamily: "Patrick Hand",
-          fill: "#2d2d2d",
-          wordWrap: { width: this.cardWidth - 2 * marginLeft },
-          align: "left",
+      getUserProfile(this.username, country.name).then((result) => {
+        if (result === true) {
+          this.add.text(
+            centerX - rectWidth / 2 + marginLeft - 30,
+            factsStartY + index * factLineHeight,
+            `${index + 1}. ${fact}`,
+            {
+              fontSize: "18px",
+              fontFamily: "Patrick Hand",
+              fill: "#2d2d2d",
+              wordWrap: { width: this.cardWidth - 2 * marginLeft },
+              align: "left",
+            }
+          );
+        } else {
+          this.add.text(
+            centerX - rectWidth / 2 + marginLeft - 30,
+            factsStartY + index * factLineHeight,
+            `${index + 1}. ???`,
+            {
+              fontSize: "18px",
+              fontFamily: "Patrick Hand",
+              fill: "#2d2d2d",
+              wordWrap: { width: this.cardWidth - 2 * marginLeft },
+              align: "left",
+            }
+          );
         }
-      );
+      });
+      // if results.travelJournal.THECURRENTCOUNTRY.isComplete === true
     });
 
     //button back to journal

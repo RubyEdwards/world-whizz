@@ -163,7 +163,7 @@ export async function fetchUser(username) {
   try {
     await connectDB(process.env.ATLAS_URI);
     let query = { username: username };
-    let user = await User.findOne(query, { travelJournal: 1, _id: 0 });
+    let user = await User.findOne(query);
     return user;
   } catch (err) {
     console.error("Error fetching User: ", err);
