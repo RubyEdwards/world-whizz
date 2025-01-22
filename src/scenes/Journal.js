@@ -66,41 +66,103 @@ export class Journal extends Scene {
     //countries list from database
     this.countriesList(centerX, rectWidth);
   }
+// store startInd and endInd to be 0 and 11
+// make a function that just displays startInd and endInd
+// make an if statement which checks if endInd is less than 24, 
+// and if it is, then it invoked the display function
+// inside display function make next button 
+// on next button click do scene restart
+// before display function increment endIndex by 12
+//in the else statement for >24 replace next button with back button
 
-  countriesList(centerX, rectWidth) {
+
+
+
+countriesList(centerX, rectWidth) {
     const positionYStart = this.scale.height * 0.13;
     const lineHeight = 22;
 
     getCountries().then((countries) => {
-      countries.forEach((country, index) => {
-        const positionY = positionYStart + index * lineHeight;
+      console.log(countries)
+      let startIndex = 0;
+      let endIndex = 11;
+        countries.forEach((country, index) => {
+          if( index >= startIndex && index <= endIndex) {
+          const positionY = positionYStart + index * lineHeight;
+  
+          //badge
+          this.add
+            .image(centerX - rectWidth / 2 + 20, positionY, 'badgeempty')
+            .setScale(0.5);
+  
+          const countryText = this.add.text(
+            centerX - rectWidth / 2 + 40,
+            positionY - 7,
+            country.countryinfo.countryname,
+            {
+              fontSize: '16px',
+              fontFamily: 'Patrick Hand',
+              fill: '#2d2d2d',
+            }
+          
+          );
+  
+          //click on country name to go to country facts
+          countryText.setInteractive();
+          countryText.on('pointerdown', () => {
+            this.scene.start('CountryFacts', country);
+          });
 
-        //badge
-        this.add
-          .image(centerX - rectWidth / 2 + 20, positionY, 'badgeempty')
-          .setScale(0.5);
+          //next button
+        
+        const nextButtonY =  this.scale.height * 0.48;
+        const nextButtonWidth = 120;
+        const nextButtonHeight = 40;
+        const nextButtonRadius = 8;
 
-        const countryText = this.add.text(
-          centerX - rectWidth / 2 + 40,
-          positionY - 7,
-          country.countryinfo.countryname,
-          {
-            fontSize: '16px',
-            fontFamily: 'Patrick Hand',
-            fill: '#2d2d2d',
-          }
+        const nextButtonGraphics = this.add.graphics();
+        nextButtonGraphics.fillStyle(0x884630, 1);
+        nextButtonGraphics.fillRoundedRect(
+          centerX - nextButtonWidth / 2,
+          nextButtonY,
+          nextButtonWidth,
+          nextButtonHeight,
+          nextButtonRadius
         );
 
-        //click on country name to go to country facts
-        countryText.setInteractive();
-        countryText.on('pointerdown', () => {
-          this.scene.start('CountryFacts', country);
+        this.add
+          .text(centerX, nextButtonY + nextButtonHeight / 2, "NEXT >", {
+            fontSize: "16px",
+            fontFamily: "Roboto",
+            fill: "#ffffff",
+          })
+          .setOrigin(0.5, 0.5);
+
+        nextButtonGraphics.setInteractive(
+          new Phaser.Geom.Rectangle(
+            centerX - nextButtonWidth / 2,
+            nextButtonY,
+            nextButtonWidth,
+            nextButtonHeight
+          ),
+          Phaser.Geom.Rectangle.Contains
+        );
+
+        //click on button
+        const gotoNextPage = () => {
+          this.scene.restart();
+        };
+        nextButtonGraphics.on("pointerdown", () => {
+          gotoNextPage();
         });
-      });
+
+        } 
+        });
+
     });
 
     //back to map button
-    const mapButtonY = this.scale.height * 0.78;;
+    const mapButtonY = this.scale.height * 0.68;;
     const mapButtonWidth = 160;
     const mapButtonHeight = 40;
     const mapButtonRadius = 8;
@@ -137,4 +199,12 @@ export class Journal extends Scene {
       this.scene.start('Game');
     });
   }
+  // update() {
+  //   //mascot updated
+  //   this.mascot.y -= 10;
+
+  //   if (this.mascot.y <= 720) {
+  //     this.mascot.y = 720;
+  //   }
+  // }
 }
