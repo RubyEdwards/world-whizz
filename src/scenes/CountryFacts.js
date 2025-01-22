@@ -1,5 +1,5 @@
 import { Scene } from "phaser";
-import { getCountries, getUserProfile } from "../api";
+import { getUserProfile } from "../api";
 
 export class CountryFacts extends Scene {
   constructor() {
@@ -26,6 +26,10 @@ export class CountryFacts extends Scene {
       .setDepth(1)
       .playAfterDelay("blink", Math.random() * 3000);
 
+    //page sound effect
+    const sfxjournalopen = this.sound.add("sfx-journalopen");
+    sfxjournalopen.play();
+
     //card journal
     const screenHeight = this.scale.height;
     const margin = 32;
@@ -46,15 +50,17 @@ export class CountryFacts extends Scene {
     );
 
     //username
-    // const username = 'BOB';
+
     const userData = this.registry.get("currUserData");
     const newUserData = this.registry.get("newUserData");
 
     this.username = newUserData.newUsername || userData.username;
+
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
     this.add
+
       .text(
         centerX - rectWidth / 2 + 8,
         90,
@@ -67,6 +73,7 @@ export class CountryFacts extends Scene {
           align: "center",
         }
       )
+
       .setOrigin(0, 0);
 
     //country detauls
