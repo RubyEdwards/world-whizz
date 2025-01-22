@@ -7,20 +7,30 @@ export class Journal extends Scene {
   }
 
   create() {
+
+    //rersize to client screen
+    window.addEventListener("resize", () => {
+      game.scale.resize(
+        document.documentElement.clientWidth,
+        document.documentElement.clientHeight
+      );
+    });
+
     //background
     this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
 
     //mascot
     this.mascot = this.add
-      .sprite(210, 700, 'mascot1')
+      .sprite(210, this.scale.height * 0.8, 'mascot1')
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
       .playAfterDelay('blink', Math.random() * 3000);
 
     //card journal
-    const screenHeight = this.scale.height;
+    const screenHeight = document.documentElement.clientHeight;
     const margin = 32;
+    const marginY = this.scale.height * 0.08;
     const cardHeight = screenHeight - margin * 2;
     const graphics = this.add.graphics();
 
@@ -37,11 +47,11 @@ export class Journal extends Scene {
     //username
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
-
+    
     this.add
       .text(
         centerX - rectWidth / 2 + 8,
-        90,
+        marginY,
         `${this.username || 'Stranger'}'s Travel Journal`,
         {
           fontSize: '22px',
@@ -58,7 +68,7 @@ export class Journal extends Scene {
   }
 
   countriesList(centerX, rectWidth) {
-    const positionYStart = 130;
+    const positionYStart = this.scale.height * 0.13;
     const lineHeight = 22;
 
     getCountries().then((countries) => {
@@ -90,7 +100,7 @@ export class Journal extends Scene {
     });
 
     //back to map button
-    const mapButtonY = this.scale.height - 140;
+    const mapButtonY = this.scale.height * 0.78;;
     const mapButtonWidth = 160;
     const mapButtonHeight = 40;
     const mapButtonRadius = 8;
@@ -126,14 +136,5 @@ export class Journal extends Scene {
     mapButtonGraphics.on('pointerdown', () => {
       this.scene.start('Game');
     });
-  }
-
-  update() {
-    //mascot updated
-    this.mascot.y -= 10;
-
-    if (this.mascot.y <= 720) {
-      this.mascot.y = 720;
-    }
   }
 }
