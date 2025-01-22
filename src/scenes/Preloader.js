@@ -71,6 +71,7 @@ export class Preloader extends Scene {
     this.load.audio("sfx-wrong", "sfx-wrong.mp3");
     this.load.audio("sfx-applause", "sfx-applause.mp3");
     this.load.audio("sfx-fail", "sfx-fail.mp3");
+    this.load.audio("sfx-journalopen", "sfx-journalopen.mp3");
 
     //HTML
     this.load.html("loginform", "text/loginform.html");

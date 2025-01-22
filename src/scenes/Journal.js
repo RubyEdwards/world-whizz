@@ -1,14 +1,14 @@
-import { Scene } from 'phaser';
-import { getCountries } from '../api';
+import { Scene } from "phaser";
+import { getCountries } from "../api";
 
 export class Journal extends Scene {
   constructor() {
-    super('Journal');
+    super("Journal");
   }
 
   create(data) {
     //rersize to client screen
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       game.scale.resize(
         document.documentElement.clientWidth,
         document.documentElement.clientHeight
@@ -16,15 +16,19 @@ export class Journal extends Scene {
     });
 
     //background
-    this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
+    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     //mascot
     this.mascot = this.add
-      .sprite(210, this.scale.height * 0.8, 'mascot1')
+      .sprite(210, this.scale.height * 0.8, "mascot1")
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
-      .playAfterDelay('blink', Math.random() * 3000);
+      .playAfterDelay("blink", Math.random() * 3000);
+
+    //page sound effect
+    const sfxjournalopen = this.sound.add("sfx-journalopen");
+    sfxjournalopen.play();
 
     //card journal
     const screenHeight = document.documentElement.clientHeight;
@@ -39,8 +43,8 @@ export class Journal extends Scene {
     graphics.lineStyle(2, 0x8c0e00, 1);
     graphics.strokeRoundedRect(56, margin + 24, 252, cardHeight - 48, 8);
 
-    const userData = this.registry.get('currUserData');
-    const newUserData = this.registry.get('newUserData');
+    const userData = this.registry.get("currUserData");
+    const newUserData = this.registry.get("newUserData");
     this.username = newUserData.newUsername || userData.username;
 
     //username
@@ -51,13 +55,13 @@ export class Journal extends Scene {
       .text(
         centerX - rectWidth / 2 + 8,
         marginY,
-        `${this.username || 'Stranger'}'s Travel Journal`,
+        `${this.username || "Stranger"}'s Travel Journal`,
         {
-          fontSize: '22px',
-          fontFamily: 'Patrick Hand',
-          fill: '#2d2d2d',
+          fontSize: "22px",
+          fontFamily: "Patrick Hand",
+          fill: "#2d2d2d",
           wordWrap: { width: rectWidth },
-          align: 'center',
+          align: "center",
         }
       )
       .setOrigin(0, 0);
@@ -86,7 +90,7 @@ export class Journal extends Scene {
 
           //badge
           this.add
-            .image(centerX - rectWidth / 2 + 20, positionY, 'badgeempty')
+            .image(centerX - rectWidth / 2 + 20, positionY, "badgeempty")
             .setScale(0.5);
 
           const countryText = this.add.text(
@@ -94,16 +98,16 @@ export class Journal extends Scene {
             positionY - 7,
             country.countryinfo.countryname,
             {
-              fontSize: '16px',
-              fontFamily: 'Patrick Hand',
-              fill: '#2d2d2d',
+              fontSize: "16px",
+              fontFamily: "Patrick Hand",
+              fill: "#2d2d2d",
             }
           );
 
           //click on country name to go to country facts
           countryText.setInteractive();
-          countryText.on('pointerdown', () => {
-            this.scene.start('CountryFacts', country);
+          countryText.on("pointerdown", () => {
+            this.scene.start("CountryFacts", country);
           });
         }
       });
@@ -126,10 +130,10 @@ export class Journal extends Scene {
       buttonHeight,
       buttonRadius,
       this.add
-        .text(centerX, pageButtonY + buttonHeight / 2, 'Change Page', {
-          fontSize: '16px',
-          fontFamily: 'Roboto',
-          fill: '#ffffff',
+        .text(centerX, pageButtonY + buttonHeight / 2, "Change Page", {
+          fontSize: "16px",
+          fontFamily: "Roboto",
+          fill: "#ffffff",
         })
         .setOrigin(0.5, 0.5)
     );
@@ -148,10 +152,10 @@ export class Journal extends Scene {
     const changePage = () => {
       if (data.currentPage === 1) {
         this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, 'NEXT >', {
-            fontSize: '16px',
-            fontFamily: 'Roboto',
-            fill: '#ffffff',
+          .text(centerX, pageButtonY + buttonHeight / 2, "NEXT >", {
+            fontSize: "16px",
+            fontFamily: "Roboto",
+            fill: "#ffffff",
           })
           .setOrigin(0.5, 0.5);
         data.startIndex += 12;
@@ -161,10 +165,10 @@ export class Journal extends Scene {
         this.scene.restart();
       } else {
         this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, '< BACK', {
-            fontSize: '16px',
-            fontFamily: 'Roboto',
-            fill: '#ffffff',
+          .text(centerX, pageButtonY + buttonHeight / 2, "< BACK", {
+            fontSize: "16px",
+            fontFamily: "Roboto",
+            fill: "#ffffff",
           })
           .setOrigin(0.5, 0.5);
         data.startIndex -= 12;
@@ -174,7 +178,7 @@ export class Journal extends Scene {
         this.scene.restart();
       }
     };
-    pageButtonGraphics.on('pointerdown', () => {
+    pageButtonGraphics.on("pointerdown", () => {
       pageButtonGraphics.disableInteractive();
       changePage();
     });
@@ -195,10 +199,10 @@ export class Journal extends Scene {
     );
 
     this.add
-      .text(centerX, mapButtonY + mapButtonHeight / 2, 'BACK TO MAP', {
-        fontSize: '16px',
-        fontFamily: 'Roboto',
-        fill: '#ffffff',
+      .text(centerX, mapButtonY + mapButtonHeight / 2, "BACK TO MAP", {
+        fontSize: "16px",
+        fontFamily: "Roboto",
+        fill: "#ffffff",
       })
       .setOrigin(0.5, 0.5);
 
@@ -212,8 +216,8 @@ export class Journal extends Scene {
       Phaser.Geom.Rectangle.Contains
     );
 
-    mapButtonGraphics.on('pointerdown', () => {
-      this.scene.start('Game');
+    mapButtonGraphics.on("pointerdown", () => {
+      this.scene.start("Game");
     });
   }
   // update() {
