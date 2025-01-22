@@ -7,6 +7,7 @@ import {
   fetchCountryQuizFacts,
   fetchJournal,
   fetchQuiz,
+  fetchUser,
 } from "../models/index.model.js";
 
 export function getCountries(req, res) {
@@ -77,5 +78,13 @@ export function updateUserQuestionStatus(req, res) {
     res.status(200).send({
       msg: `${username}'s ${countryname} has been updated to reflect which questions are correct!`,
     });
+  });
+}
+
+export function getUser(req, res) {
+  const { username } = req.params;
+  fetchUser(username).then((user) => {
+    console.log(user);
+    res.status(200).send(user);
   });
 }

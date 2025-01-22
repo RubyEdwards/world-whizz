@@ -1,5 +1,9 @@
 import { Scene } from "phaser";
-import { changeUserQuestionStatus, getQuiz } from "../api";
+import {
+  changeUserCountryStatus,
+  changeUserQuestionStatus,
+  getQuiz,
+} from "../api";
 import { checkAnswer } from "../../utils/util";
 
 export class Quiz extends Scene {

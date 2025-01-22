@@ -71,6 +71,13 @@ const changeUserQuestionStatus = (info) => {
     });
 };
 
+const getUserProfile = (username) => {
+  return api.get(`/user/${username}`).then(({ data }) => {
+    console.log(data);
+    return data;
+  });
+};
+
 export {
   getCountries,
   getCountry,
@@ -81,4 +88,5 @@ export {
   signIn,
   changeUserCountryStatus,
   changeUserQuestionStatus,
+  getUserProfile,
 };
