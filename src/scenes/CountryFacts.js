@@ -73,7 +73,7 @@ export class CountryFacts extends Scene {
 
       .text(
         centerX - rectWidth / 2 + 8,
-        90,
+        marginY,
         `${this.username || "Stranger"}'s Travel Journal`,
         {
           fontSize: "22px",
@@ -86,7 +86,7 @@ export class CountryFacts extends Scene {
 
       .setOrigin(0, 0);
 
-    //country detauls
+    //country details
     this.showCountryDetails(selectedCountry, data);
   }
 
@@ -96,7 +96,7 @@ export class CountryFacts extends Scene {
     const marginLeft = (this.cardWidth - rectWidth) / 2;
 
     //country badge & name
-    const positionY = 154;
+    const positionY = this.scale.height * 0.15
     this.add
       .image(
         centerX - this.cardWidth / 2 + marginLeft + 30,
@@ -117,8 +117,8 @@ export class CountryFacts extends Scene {
     );
 
     //country facts
-    const factsStartY = positionY + 50;
-    const factLineHeight = 90;
+    const factsStartY = positionY + 40;
+    const factLineHeight = 85;
 
     country.facts.forEach((fact, index) => {
       getUserProfile(this.username, country.name).then((result) => {
@@ -128,7 +128,7 @@ export class CountryFacts extends Scene {
             factsStartY + index * factLineHeight,
             `${index + 1}. ${fact}`,
             {
-              fontSize: "18px",
+              fontSize: "17px",
               fontFamily: "Patrick Hand",
               fill: "#2d2d2d",
               wordWrap: { width: this.cardWidth - 2 * marginLeft },
@@ -154,7 +154,7 @@ export class CountryFacts extends Scene {
     });
 
     //button back to journal
-    const backButtonY = this.scale.height - 140;
+    const backButtonY = this.scale.height * 0.74;
     const backButtonWidth = 160;
     const backButtonHeight = 40;
     const backButtonRadius = 8;
