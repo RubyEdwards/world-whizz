@@ -65,7 +65,7 @@ const changeUserCountryStatus = (info) => {
 
 const changeUserQuestionStatus = (info) => {
   return api
-    .post(`/user/country?question=${info.question}`, info)
+    .post(`/user/questions?question=${info.question}`, info)
     .then((result) => {
       console.log(result);
     });

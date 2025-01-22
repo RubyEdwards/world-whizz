@@ -33,6 +33,6 @@ router.post("/signin", validateSignInRequest, isRequestValidated, signIn);
 // world-whizz/signin - POSTs a request to sign into a user if their info is in the database already.
 router.post("/user/country", updateUserCountryStatus);
 // world-whizz/user/country - POSTs to the Users database to update specified country isComplete to true
-router.post("/user/question", updateUserQuestionStatus);
+router.post("/user/questions", updateUserQuestionStatus);
 // world-whizz/user/questions (with query!) - POSTs to the Users database to update specific country's question to true
 export default router;
