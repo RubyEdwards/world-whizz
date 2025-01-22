@@ -67,7 +67,10 @@ export class Preloader extends Scene {
     this.load.image("badge-unitedkingdom", "badge-unitedkingdom.png");
 
     //Audio
-    // this.load.audio("iceland", "iceland.mp3");
+    this.load.audio("sfx-correct", "sfx-correct.mp3");
+    this.load.audio("sfx-wrong", "sfx-wrong.mp3");
+    this.load.audio("sfx-applause", "sfx-applause.mp3");
+    this.load.audio("sfx-fail", "sfx-fail.mp3");
 
     //HTML
     this.load.html("loginform", "text/loginform.html");
