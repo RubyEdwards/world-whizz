@@ -99,7 +99,7 @@
           "UN",
           "WHO"
         ],
-        "correctAnswer": "Organization of the Petroleum Exporting Countires (OPEC)"
+        "correctAnswer": "OPEC"
       },
       {
         "question": "Austria shares its longest border with which country?",
@@ -215,7 +215,7 @@
           "J.R.R. Tolkien",
           "Brothers Grimm"
         ],
-        "correctAnswer": "Hans Christian Andersen"
+        "correctAnswer": "H.C. Andersen"
       },
       {
         "question": "Denmark is known for pioneering which environmental initiative?",
@@ -288,7 +288,7 @@
           "Hurricanes",
           "Geysers"
         ],
-        "correctAnswer": "Northern Lights (Aurora Borealis)"
+        "correctAnswer": "Aurora Borealis"
       },
       {
         "question": "Which of these is a traditional Finnish sauna feature?",
@@ -301,14 +301,14 @@
         "correctAnswer": "Steam & Birch Twigs"
       },
       {
-        "question": "What is Finland’s nickname due to its geography? Land of...",
+        "question": "What is Finland's nickname due to its geography? Land of...",
         "answers": [
           "...Fire & Ice",
           "...a Thousand Lakes",
           "...the Midnight Sun",
           "...Mountains"
         ],
-        "correctAnswer": "Land of a Thousand Lakes"
+        "correctAnswer": "...a Thousand Lakes"
       },
       {
         "question": "Finland is consistently ranked among the top countries in the world for which quality of life factor?",
@@ -600,10 +600,10 @@
         "answers": [
           "Flamenco",
           "Riverdance",
-          "Ceili dancing",
+          "Céilí dancing",
           "Highland dancing"
         ],
-        "correctAnswer": "Ceili dancing"
+        "correctAnswer": "Céilí dancing"
       },
       {
         "question": "What is the name of the famous stone at Blarney Castle?",
@@ -623,7 +623,7 @@
           "Emerald exports",
           "National flag color"
         ],
-        "correctAnswer": "Its lush green landscapes"
+        "correctAnswer": "Lush green landscape"
       }
     ],
     "quizfacts": [
@@ -749,7 +749,7 @@
           "NAFTA",
           "Eurozone"
         ],
-        "correctAnswer": "European Economic Area (EEA)"
+        "correctAnswer": "EEA"
       },
       {
         "question": "What is the official language of Liechtenstein?",
@@ -822,7 +822,7 @@
           "Export of diamonds",
           "Largest stock market"
         ],
-        "correctAnswer": "string"
+        "correctAnswer": "Low tax rates"
       }
     ],
     "quizfacts": [
@@ -860,7 +860,7 @@
           "Cave concerts",
           "Balloon rides"
         ],
-        "correctAnswer": "Firework festivals in every village"
+        "correctAnswer": "Firework festivals"
       },
       {
         "question": "Which ancient structures in Malta are older than the Pyramids of Egypt?",
