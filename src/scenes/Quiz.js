@@ -303,7 +303,7 @@ export class Quiz extends Scene {
           correctAnswer: quiz.correctAnswer,
         };
         const question = this.quiz.question;
-        const rectWidth = 200;
+        const rectWidth = 220;
         const rectHeight = 50;
         const centerX = this.scale.width / 2;
         const cornerRadius = 16;
@@ -326,11 +326,11 @@ export class Quiz extends Scene {
         this.quiz.answers.forEach((option, index) => {
           const y = 250 + index * 70;
           const graphics = this.add.graphics();
-          graphics.fillStyle(0x127475, 1);
-          const quizButtons = graphics.fillRoundedRect(
+          let quizButtonColour = graphics.fillStyle(0x127475, 1);
+          let quizButtons = graphics.fillRoundedRect(
             0,
             0,
-            rectWidth + 10,
+            rectWidth,
             rectHeight,
             cornerRadius
           );
@@ -341,7 +341,7 @@ export class Quiz extends Scene {
               fontFamily: "Roboto",
               fill: "#ffffff",
               align: "center",
-              fixedWidth: 210,
+              fixedWidth: 220,
               fixedHeight: 50,
             })
             .setOrigin(0)
@@ -358,8 +358,20 @@ export class Quiz extends Scene {
           answersText.once("pointerdown", () => {
             if (quizButtonsToggle) {
               if (checkAnswer(quiz, questionContainer.name)) {
+                console.log(quizButtonColour, "quizButtonColour");
+                console.log(quizButtonColour.id, "quizButtonColour");
                 data.totalCorrect += 1;
                 console.log(data.totalCorrect);
+
+                quizButtonColour = graphics.fillStyle(0x10c74d, 1);
+                quizButtons = graphics.fillRoundedRect(
+                  0,
+                  0,
+                  rectWidth,
+                  rectHeight,
+                  cornerRadius
+                );
+
                 if (quizQuestionNum === 1) {
                   quizPage1Bar.setFillStyle(0x10c74d);
                   data.question1Correct = 2;
@@ -381,6 +393,14 @@ export class Quiz extends Scene {
                   data.question5Correct = 2;
                 }
               } else {
+                quizButtonColour = graphics.fillStyle(0xf8b5b5, 1);
+                quizButtons = graphics.fillRoundedRect(
+                  0,
+                  0,
+                  rectWidth,
+                  rectHeight,
+                  cornerRadius
+                );
                 if (quizQuestionNum === 1) {
                   quizPage1Bar.setFillStyle(0xf8b5b5);
                   data.question1Correct = 1;
