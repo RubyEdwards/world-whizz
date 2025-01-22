@@ -73,10 +73,10 @@ export async function fetchCountryQuizFacts(req) {
   }
 }
 
-export async function amendUser(countryname, username) {
+export async function amendUserCountryStatus(countryname, username) {
   try {
     await connectDB(process.env.ATLAS_URI);
-    let users = await User.updateOne(
+    let updatedUser = await User.updateOne(
       { username: username },
       { $set: { "travelJournal.$[x].isComplete": true } },
       {
@@ -85,7 +85,75 @@ export async function amendUser(countryname, username) {
         ],
       }
     );
-    return users;
+    return updatedUser;
+  } catch (err) {
+    console.error("Error fetching User: ", err);
+  }
+}
+
+export async function amendUserQuestionStatus(countryname, username, question) {
+  try {
+    await connectDB(process.env.ATLAS_URI);
+    if (question === "question1Correct") {
+      let updatedUser = await User.updateOne(
+        { username: username },
+        { $set: { "travelJournalJournal.$[x].question1Correct": true } },
+        {
+          arrayFilters: [
+            { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+          ],
+        }
+      );
+      return updatedUser;
+    }
+    if (question === "question2Correct") {
+      let updatedUser = await User.updateOne(
+        { username: username },
+        { $set: { "travelJournalJournal.$[x].question2Correct": true } },
+        {
+          arrayFilters: [
+            { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+          ],
+        }
+      );
+      return updatedUser;
+    }
+    if (question === "question3Correct") {
+      let updatedUser = await User.updateOne(
+        { username: username },
+        { $set: { "travelJournalJournal.$[x].question3Correct": true } },
+        {
+          arrayFilters: [
+            { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+          ],
+        }
+      );
+      return updatedUser;
+    }
+    if (question === "question4Correct") {
+      let updatedUser = await User.updateOne(
+        { username: username },
+        { $set: { "travelJournalJournal.$[x].question4Correct": true } },
+        {
+          arrayFilters: [
+            { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+          ],
+        }
+      );
+      return updatedUser;
+    }
+    if (question === "question5Correct") {
+      let updatedUser = await User.updateOne(
+        { username: username },
+        { $set: { "travelJournalJournal.$[x].question5Correct": true } },
+        {
+          arrayFilters: [
+            { "x.countryname": countryname.replace(/ /g, "").toLowerCase() },
+          ],
+        }
+      );
+      return updatedUser;
+    }
   } catch (err) {
     console.error("Error fetching User: ", err);
   }
