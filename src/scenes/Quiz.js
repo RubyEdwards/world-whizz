@@ -237,7 +237,7 @@ export class Quiz extends Scene {
 
       //button to go to map
       const toMapGraphics = this.add.graphics();
-      toMapGraphics.fillStyle(0x884630, 1);
+      toMapGraphics.fillStyle(0x49b2ec, 1);
       const toMapButton = toMapGraphics.fillRoundedRect(0, 0, 210, 50, 16);
 
       const toMapText = this.add
