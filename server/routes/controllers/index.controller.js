@@ -82,9 +82,15 @@ export function updateUserQuestionStatus(req, res) {
 }
 
 export function getUser(req, res) {
-  const { username } = req.params;
-  fetchUser(username).then((user) => {
-    console.log(user);
-    res.status(200).send(user);
+  const { username, countryname } = req.params;
+  fetchUser(username).then(({ travelJournal }) => {
+    let specificCountry;
+    for (let i = 0; i < travelJournal.length; i++) {
+      if (travelJournal[i].countryname === countryname) {
+        specificCountry = travelJournal[i].isComplete;
+        res.status(200).send(specificCountry);
+        // return specificCountry;
+      }
+    }
   });
 }

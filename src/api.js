@@ -71,11 +71,13 @@ const changeUserQuestionStatus = (info) => {
     });
 };
 
-const getUserProfile = (username) => {
-  return api.get(`/user/${username}`).then(({ data }) => {
-    console.log(data);
-    return data;
-  });
+const getUserProfile = (username, countryname) => {
+  return api
+    .get(`/user/${username}/${countryname.replace(/ /g, "").toLowerCase()}`)
+    .then(({ data }) => {
+      console.log(data);
+      return data;
+    });
 };
 
 export {

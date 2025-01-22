@@ -1,30 +1,30 @@
-import { Scene } from 'phaser';
-import { getCountries } from '../api';
+import { Scene } from "phaser";
+import { getCountries, getUserProfile } from "../api";
 
 export class CountryFacts extends Scene {
   constructor() {
-    super('CountryFacts');
+    super("CountryFacts");
   }
 
   create(data) {
     const selectedCountry = {
       name: `${data.countryinfo.countryname}`,
       badge: `badge-${data.countryinfo.countryname
-        .replace(/ /g, '')
+        .replace(/ /g, "")
         .toLowerCase()}`,
       facts: data.quizfacts,
     };
 
     //background
-    this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
+    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     //mascot
     this.mascot = this.add
-      .sprite(210, 700, 'mascot1')
+      .sprite(210, 700, "mascot1")
       .setDisplayOrigin(0, 1)
       .setScale(0.4)
       .setDepth(1)
-      .playAfterDelay('blink', Math.random() * 3000);
+      .playAfterDelay("blink", Math.random() * 3000);
 
     //card journal
     const screenHeight = this.scale.height;
@@ -46,18 +46,27 @@ export class CountryFacts extends Scene {
     );
 
     //username
-    const username = 'BOB';
+    // const username = 'BOB';
+    const userData = this.registry.get("currUserData");
+    const newUserData = this.registry.get("newUserData");
+
+    this.username = newUserData.newUsername || userData.username;
     const rectWidth = 220;
     const centerX = this.scale.width / 2;
 
     this.add
-      .text(centerX - rectWidth / 2 + 8, 90, `${username}'s Travel Journal`, {
-        fontSize: '22px',
-        fontFamily: 'Patrick Hand',
-        fill: '#2d2d2d',
-        wordWrap: { width: rectWidth },
-        align: 'center',
-      })
+      .text(
+        centerX - rectWidth / 2 + 8,
+        90,
+        `${this.username || "Stranger"}'s Travel Journal`,
+        {
+          fontSize: "22px",
+          fontFamily: "Patrick Hand",
+          fill: "#2d2d2d",
+          wordWrap: { width: rectWidth },
+          align: "center",
+        }
+      )
       .setOrigin(0, 0);
 
     //country detauls
@@ -84,9 +93,9 @@ export class CountryFacts extends Scene {
       positionY,
       country.name,
       {
-        fontSize: '22px',
-        fontFamily: 'Patrick Hand',
-        fill: '#2d2d2d',
+        fontSize: "22px",
+        fontFamily: "Patrick Hand",
+        fill: "#2d2d2d",
       }
     );
 
@@ -94,17 +103,21 @@ export class CountryFacts extends Scene {
     const factsStartY = positionY + 50;
     const factLineHeight = 90;
 
+    getUserProfile(this.username, country.name).then((result) => {
+      console.log(result);
+    });
     country.facts.forEach((fact, index) => {
+      // if results.travelJournal.THECURRENTCOUNTRY.isComplete === true
       this.add.text(
         centerX - rectWidth / 2 + marginLeft - 30,
         factsStartY + index * factLineHeight,
         `${index + 1}. ${fact}`,
         {
-          fontSize: '18px',
-          fontFamily: 'Patrick Hand',
-          fill: '#2d2d2d',
+          fontSize: "18px",
+          fontFamily: "Patrick Hand",
+          fill: "#2d2d2d",
           wordWrap: { width: this.cardWidth - 2 * marginLeft },
-          align: 'left',
+          align: "left",
         }
       );
     });
@@ -126,10 +139,10 @@ export class CountryFacts extends Scene {
     );
 
     this.add
-      .text(centerX, backButtonY + backButtonHeight / 2, 'BACK TO JOURNAL', {
-        fontSize: '16px',
-        fontFamily: 'Roboto',
-        fill: '#ffffff',
+      .text(centerX, backButtonY + backButtonHeight / 2, "BACK TO JOURNAL", {
+        fontSize: "16px",
+        fontFamily: "Roboto",
+        fill: "#ffffff",
       })
       .setOrigin(0.5, 0.5);
 
@@ -143,8 +156,8 @@ export class CountryFacts extends Scene {
       Phaser.Geom.Rectangle.Contains
     );
 
-    backButtonGraphics.on('pointerdown', () => {
-      this.scene.start('Journal');
+    backButtonGraphics.on("pointerdown", () => {
+      this.scene.start("Journal");
     });
   }
 }
