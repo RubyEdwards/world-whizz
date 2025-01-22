@@ -77,10 +77,12 @@ export class Journal extends Scene {
   countriesList(centerX, rectWidth, data) {
     const positionYStart = this.scale.height * 0.13;
     const lineHeight = 22;
+    let heightIndex = 0;
     getCountries().then((countries) => {
       countries.forEach((country, index) => {
         if (index >= data.startIndex && index <= data.endIndex) {
-          const positionY = positionYStart + index * lineHeight;
+          heightIndex++;
+          const positionY = positionYStart + heightIndex * lineHeight;
 
           //badge
           this.add
@@ -103,6 +105,41 @@ export class Journal extends Scene {
           countryText.on("pointerdown", () => {
             this.scene.start("CountryFacts", country);
           });
+
+          // back button
+
+          const backButtonY = this.scale.height * 0.48;
+          const backButtonWidth = 120;
+          const backButtonHeight = 40;
+          const backButtonRadius = 8;
+
+          const backButtonGraphics = this.add.graphics();
+          backButtonGraphics.fillStyle(0x884630, 1);
+          backButtonGraphics.fillRoundedRect(
+            centerX - backButtonWidth / 2,
+            backButtonY,
+            backButtonWidth,
+            backButtonHeight,
+            backButtonRadius
+          );
+
+          this.add
+            .text(centerX, backButtonY + backButtonHeight / 2, "< BACK", {
+              fontSize: "16px",
+              fontFamily: "Roboto",
+              fill: "#ffffff",
+            })
+            .setOrigin(0.5, 0.5);
+
+          backButtonGraphics.setInteractive(
+            new Phaser.Geom.Rectangle(
+              centerX - backButtonWidth / 2,
+              backButtonY,
+              backButtonWidth,
+              backButtonHeight
+            ),
+            Phaser.Geom.Rectangle.Contains
+          );
 
           //next button
 
@@ -141,11 +178,11 @@ export class Journal extends Scene {
 
           //click on button
           const gotoNextPage = () => {
-            console.log(data.startIndex, data.endIndex);
-            console.log("clicked");
             data.startIndex += 12;
             data.endIndex += 12;
-            console.log(data.startIndex, data.endIndex);
+            heightIndex -= 12;
+            nextButtonGraphics.setVisible(false);
+            backButtonGraphics.setVisible(true);
             this.scene.restart();
           };
           nextButtonGraphics.on("pointerdown", () => {
