@@ -27,7 +27,7 @@ export class Journal extends Scene {
       .playAfterDelay("blink", Math.random() * 3000);
 
     //page sound effect
-    const sfxjournalopen = this.sound.add("sfx-journalopen");
+    const sfxjournalopen = this.sound.add("sfx-journalopen", { volume: 0.5 });
     sfxjournalopen.play();
 
     //card journal

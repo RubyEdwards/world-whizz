@@ -14,10 +14,10 @@ export class Quiz extends Scene {
   graphics;
 
   create(data) {
-    const sfxcorrect = this.sound.add("sfx-correct");
-    const sfxwrong = this.sound.add("sfx-wrong");
-    const sfxapplause = this.sound.add("sfx-applause");
-    const sfxfail = this.sound.add("sfx-fail");
+    const sfxcorrect = this.sound.add("sfx-correct", { volume: 0.5 });
+    const sfxwrong = this.sound.add("sfx-wrong", { volume: 0.5 });
+    const sfxapplause = this.sound.add("sfx-applause", { volume: 0.5 });
+    const sfxfail = this.sound.add("sfx-fail", { volume: 0.5 });
 
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
