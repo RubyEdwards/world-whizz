@@ -114,7 +114,7 @@ export class Journal extends Scene {
           );
 
           //click on country name to go to country facts
-          countryText.setInteractive();
+          countryText.setInteractive({ useHandCursor: true });
           countryText.on("pointerdown", () => {
             this.scene.start("CountryFacts", country);
           });
@@ -161,26 +161,12 @@ export class Journal extends Scene {
 
     const changePage = () => {
       if (data.currentPage === 1) {
-        this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, "NEXT >", {
-            fontSize: "16px",
-            fontFamily: "Roboto",
-            fill: "#ffffff",
-          })
-          .setOrigin(0.5, 0.5);
         data.startIndex += 12;
         data.endIndex += 12;
         heightIndex -= 12;
         data.currentPage += 1;
         this.scene.restart();
       } else {
-        this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, "< BACK", {
-            fontSize: "16px",
-            fontFamily: "Roboto",
-            fill: "#ffffff",
-          })
-          .setOrigin(0.5, 0.5);
         data.startIndex -= 12;
         data.endIndex -= 12;
         heightIndex += 12;
@@ -189,7 +175,6 @@ export class Journal extends Scene {
       }
     };
     pageButtonGraphics.on("pointerdown", () => {
-      pageButtonGraphics.disableInteractive();
       changePage();
     });
     //back to map button
