@@ -25,9 +25,9 @@ router.get("/countries/:countrycode/quiz", getQuiz);
 // world-whizz/countries/IC/quiz - GETs the quiz for the country at specified code (Iceland).
 router.get("/journal", getJournal);
 // world-whizz/journal - currently GETs all country names.
-router.get("/journal/:countryname", getCountryQuizFacts);
-// world-whizz/journey/Iceland - GETs all quiz facts for specified country (Iceland).
-router.post("/signup", validateSignUpRequest, isRequestValidated, signUp);
+router.get('/journal/:countryname', getCountryQuizFacts);
+// world-whizz/journal/Iceland - GETs all quiz facts for specified country (Iceland).
+router.post('/signup', validateSignUpRequest, isRequestValidated, signUp);
 // world-whizz/signup - POSTs new user to the Users database after being given a body.
 router.post("/signin", validateSignInRequest, isRequestValidated, signIn);
 // world-whizz/signin - POSTs a request to sign into a user if their info is in the database already.
