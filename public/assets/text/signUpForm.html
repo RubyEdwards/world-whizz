@@ -4,9 +4,11 @@
         <input required placeholder="Write your username" type="text" name="newUsername" id="newUsername">
     </label>
   
-      <label for="newPassword">Password
+      <label  for="newPassword">Password
           <input required  placeholder="Write your password" type="password" name="newPassword" id="newPassword">
       </label>
+
+      <p id="passInstructions">Password must be 8 to 25 characters long, have one uppercase character, have one lowercase character, one digit, and one special character.</p>
 
       <label for="newPasswordConf">Confirm your password
         <input required  placeholder="Write your password" type="password" name="newPasswordConf" id="newPasswordConf">
@@ -71,6 +73,17 @@
       border:none;
       border-radius: 0.6em;
       
+      
+    }
 
+    #newPassword{
+      margin-bottom: 4em;
+    }
+
+    #passInstructions{
+      margin-top: -5em;
+      margin-bottom: 1em;
+      font-size: 0.7em;
+      text-align: left;
     }
   </style>

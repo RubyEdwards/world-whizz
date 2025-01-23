@@ -7,8 +7,6 @@ export class Login extends Scene {
   }
 
   create() {
-
-
     this.add.image(0, 0, "worldmapbkg").setOrigin(0);
 
     this.add
@@ -51,23 +49,21 @@ export class Login extends Scene {
       userData.password = inputPassword.value;
 
       this.registry.set("currUserData", userData);
-      const username = userData.username
-      const password = userData.password
+      const username = userData.username;
+      const password = userData.password;
 
-      const userInfo={
+      const userInfo = {
         username,
-        password
-      }
+        password,
+      };
       signIn(userInfo)
-      .then(()=>{
-        this.scene.start("Game");
-      })
-      .catch((err)=>{
-        alert(err.response.data.message)
-        
-      })
+        .then(() => {
+          this.scene.start("Game");
+        })
+        .catch((err) => {
+          alert(err.response.data.message || err.response.data.error);
+        });
       this.scale._resetZoom;
-      
     });
 
     const signUpButton = formHtml.getChildByName("signUpButton");
