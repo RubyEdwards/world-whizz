@@ -27,7 +27,7 @@ router.get('/countries/:countrycode/quiz', getQuiz);
 router.get('/journal', getJournal);
 // world-whizz/journal - currently GETs all country names.
 router.get('/journal/:countryname', getCountryQuizFacts);
-// world-whizz/journey/Iceland - GETs all quiz facts for specified country (Iceland).
+// world-whizz/journal/Iceland - GETs all quiz facts for specified country (Iceland).
 router.post('/signup', validateSignUpRequest, isRequestValidated, signUp);
 // world-whizz/signup - POSTs new user to the Users database after being given a body.
 router.post('/signin', validateSignInRequest, isRequestValidated, signIn);
