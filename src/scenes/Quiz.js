@@ -1,32 +1,32 @@
-import { Scene } from "phaser";
+import { Scene } from 'phaser';
 import {
   changeUserCountryStatus,
   changeUserQuestionStatus,
   getQuiz,
-} from "../api";
-import { checkAnswer } from "../../utils/util";
+} from '../api';
+import { checkAnswer } from '../../utils/util';
 
 export class Quiz extends Scene {
   constructor() {
-    super("Quiz");
+    super('Quiz');
   }
   init() {}
   graphics;
 
   create(data) {
-    const sfxcorrect = this.sound.add("sfx-correct", { volume: 0.5 });
-    const sfxwrong = this.sound.add("sfx-wrong", { volume: 0.5 });
-    const sfxapplause = this.sound.add("sfx-applause", { volume: 0.5 });
-    const sfxfail = this.sound.add("sfx-fail", { volume: 0.5 });
+    const sfxcorrect = this.sound.add('sfx-correct', { volume: 0.5 });
+    const sfxwrong = this.sound.add('sfx-wrong', { volume: 0.5 });
+    const sfxapplause = this.sound.add('sfx-applause', { volume: 0.5 });
+    const sfxfail = this.sound.add('sfx-fail', { volume: 0.5 });
 
-    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
+    this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
 
     this.mascot = this.add
-      .sprite(0, 700, "mascot1")
+      .sprite(0, 700, 'mascot1')
       .setDisplayOrigin(0, 1)
       .setScale(0.5)
       .setDepth(1)
-      .playAfterDelay("blink", Math.random() * 3000);
+      .playAfterDelay('blink', Math.random() * 3000);
 
     //quiz card
     const cardX = 32;
@@ -47,14 +47,14 @@ export class Quiz extends Scene {
     );
 
     //change to Game screen when clicked outside quiz card
-    this.input.on("pointerdown", (pointer) => {
+    this.input.on('pointerdown', (pointer) => {
       if (
         pointer.x < cardX ||
         pointer.x > cardX + cardWidth ||
         pointer.y < cardY ||
         pointer.y > cardY + cardHeight
       ) {
-        this.scene.start("Game");
+        this.scene.start('Game');
       }
     });
 
@@ -120,7 +120,7 @@ export class Quiz extends Scene {
       let info = {
         countryname: data.countryName,
         username: data.username,
-        question: "question1correct",
+        question: 'question1correct',
       };
       changeUserQuestionStatus(info);
     } else if (data.question1Correct === 1) {
@@ -154,44 +154,40 @@ export class Quiz extends Scene {
     const quizResults = () => {
       star.setFillStyle(0xfff700);
 
-      let resultsMessage = "";
+      let resultsMessage = '';
 
       if (data.totalCorrect >= 5) {
         sfxapplause.play();
-        console.log("Well done! You nailed it!");
-        resultsMessage = "You got 5/5 correct!\nWell done! You nailed it!";
+
+        resultsMessage = 'You got 5/5 correct!\nWell done! You nailed it!';
         let info = { countryname: data.countryName, username: data.username };
         changeUserCountryStatus(info);
       }
       if (data.totalCorrect === 4) {
-        console.log("Close but no cigar!");
-        resultsMessage = "You got 4/5 correct!\nClose but no cigar!";
+        resultsMessage = 'You got 4/5 correct!\nClose but no cigar!';
       }
       if (data.totalCorrect === 3) {
-        console.log("Middling!");
-        resultsMessage = "You got 3/5 correct!\nMiddling!";
+        resultsMessage = 'You got 3/5 correct!\nMiddling!';
       }
       if (data.totalCorrect === 2) {
-        console.log("Room for improvement!");
-        resultsMessage = "You got 2/5 correct!\nRoom for improvement!";
+        resultsMessage = 'You got 2/5 correct!\nRoom for improvement!';
       }
       if (data.totalCorrect === 1) {
-        console.log("Let's do better next time!");
         resultsMessage = "You got 1/5 correct!\nLet's do better next time!";
       }
       if (data.totalCorrect === 0) {
         sfxfail.play();
-        console.log("Oopsie!");
-        resultsMessage = "You got 0/5 correct!\nOopsie!";
+
+        resultsMessage = 'You got 0/5 correct!\nOopsie!';
       }
 
       const resultsText = this.add
         .text(75, 130, resultsMessage, {
-          fontSize: "24px",
-          fontFamily: "Roboto",
-          fill: "#2d2d2d",
+          fontSize: '24px',
+          fontFamily: 'Roboto',
+          fill: '#2d2d2d',
           wordWrap: { width: 220 },
-          align: "center",
+          align: 'center',
         })
         .setOrigin(0);
 
@@ -207,11 +203,11 @@ export class Quiz extends Scene {
       );
 
       const tryAgainText = this.add
-        .text(0, 13, "TRY AGAIN", {
-          fontSize: "20px",
-          fontFamily: "Roboto",
-          fill: "#ffffff",
-          align: "center",
+        .text(0, 13, 'TRY AGAIN', {
+          fontSize: '20px',
+          fontFamily: 'Roboto',
+          fill: '#ffffff',
+          align: 'center',
           fixedWidth: 210,
           fixedHeight: 50,
         })
@@ -224,7 +220,7 @@ export class Quiz extends Scene {
         [tryAgainButton, tryAgainText]
       );
 
-      tryAgainText.on("pointerdown", () => {
+      tryAgainText.on('pointerdown', () => {
         data.totalCorrect = 0;
         data.quizQuestionNum = 0;
         data.question1Correct = 0;
@@ -241,11 +237,11 @@ export class Quiz extends Scene {
       const toMapButton = toMapGraphics.fillRoundedRect(0, 0, 210, 50, 16);
 
       const toMapText = this.add
-        .text(0, 13, "TO MAP", {
-          fontSize: "20px",
-          fontFamily: "Roboto",
-          fill: "#ffffff",
-          align: "center",
+        .text(0, 13, 'TO MAP', {
+          fontSize: '20px',
+          fontFamily: 'Roboto',
+          fill: '#ffffff',
+          align: 'center',
           fixedWidth: 210,
           fixedHeight: 50,
         })
@@ -257,8 +253,8 @@ export class Quiz extends Scene {
         toMapText,
       ]);
 
-      toMapText.on("pointerdown", () => {
-        this.scene.start("Game");
+      toMapText.on('pointerdown', () => {
+        this.scene.start('Game');
       });
 
       //button to go to journal
@@ -273,11 +269,11 @@ export class Quiz extends Scene {
       );
 
       const toJournalText = this.add
-        .text(0, 13, "TO JOURNAL", {
-          fontSize: "20px",
-          fontFamily: "Roboto",
-          fill: "#ffffff",
-          align: "center",
+        .text(0, 13, 'TO JOURNAL', {
+          fontSize: '20px',
+          fontFamily: 'Roboto',
+          fill: '#ffffff',
+          align: 'center',
           fixedWidth: 210,
           fixedHeight: 50,
         })
@@ -290,8 +286,8 @@ export class Quiz extends Scene {
         [toJournalButton, toJournalText]
       );
 
-      toJournalText.on("pointerdown", () => {
-        this.scene.start("Journal");
+      toJournalText.on('pointerdown', () => {
+        this.scene.start('Journal');
       });
     };
 
@@ -303,9 +299,9 @@ export class Quiz extends Scene {
 
     //calling quiz from api
     this.quiz = {
-      question: "",
+      question: '',
       answers: [],
-      correctAnswer: "",
+      correctAnswer: '',
     };
     let countryId = data.countryId;
     let quizQuestionNum = data.quizQuestionNum;
@@ -331,11 +327,11 @@ export class Quiz extends Scene {
             130,
             `${quizQuestionNum}. ${this.quiz.question}`,
             {
-              fontSize: "18px",
-              fontFamily: "Roboto",
-              fill: "#2d2d2d",
+              fontSize: '18px',
+              fontFamily: 'Roboto',
+              fill: '#2d2d2d',
               wordWrap: { width: rectWidth },
-              align: "left",
+              align: 'left',
             }
           )
           .setOrigin(0, 0);
@@ -354,10 +350,10 @@ export class Quiz extends Scene {
 
           const answersText = this.add
             .text(0, 13, option, {
-              fontSize: "20px",
-              fontFamily: "Roboto",
-              fill: "#ffffff",
-              align: "center",
+              fontSize: '20px',
+              fontFamily: 'Roboto',
+              fill: '#ffffff',
+              align: 'center',
               fixedWidth: 220,
               fixedHeight: 50,
             })
@@ -372,14 +368,12 @@ export class Quiz extends Scene {
 
           questionContainer.name = option;
 
-          answersText.once("pointerdown", () => {
+          answersText.once('pointerdown', () => {
             if (quizButtonsToggle) {
               if (checkAnswer(quiz, questionContainer.name)) {
                 sfxcorrect.play();
-                console.log(quizButtonColour, "quizButtonColour");
-                console.log(quizButtonColour.id, "quizButtonColour");
+
                 data.totalCorrect += 1;
-                console.log(data.totalCorrect);
 
                 quizButtonColour = graphics.fillStyle(0x10c74d, 1);
                 quizButtons = graphics.fillRoundedRect(
@@ -463,10 +457,10 @@ export class Quiz extends Scene {
         );
 
         this.add
-          .text(centerX, nextButtonY + nextButtonHeight / 2, "NEXT >", {
-            fontSize: "16px",
-            fontFamily: "Roboto",
-            fill: "#ffffff",
+          .text(centerX, nextButtonY + nextButtonHeight / 2, 'NEXT >', {
+            fontSize: '16px',
+            fontFamily: 'Roboto',
+            fill: '#ffffff',
           })
           .setOrigin(0.5, 0.5);
 
@@ -484,7 +478,7 @@ export class Quiz extends Scene {
         const gotoNextQuestion = () => {
           this.scene.restart();
         };
-        nextButtonGraphics.on("pointerdown", () => {
+        nextButtonGraphics.on('pointerdown', () => {
           gotoNextQuestion();
         });
       });
