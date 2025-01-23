@@ -51,7 +51,7 @@ Start a quiz for the selected country:
 - `POST /user/country` - Updates the user's progress (countries completed).
 - `GET /user/:username/:countryname` - Checks the user's progress (countries completed).
 
-### Future Enhancements
+## Future Enhancements
 - Add more regions.
 - More quiz questions.
 - Share progress with other users.
