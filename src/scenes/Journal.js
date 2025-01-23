@@ -7,7 +7,7 @@ export class Journal extends Scene {
   }
 
   create(data) {
-    //rersize to client screen
+    //resize to client screen
     window.addEventListener('resize', () => {
       game.scale.resize(
         document.documentElement.clientWidth,
@@ -118,21 +118,20 @@ export class Journal extends Scene {
           );
 
           //click on country name to go to country facts
-          countryText.setInteractive();
-          countryText.on('pointerdown', () => {
-            this.scene.start('CountryFacts', country);
+          countryText.setInteractive({ useHandCursor: true });
+          countryText.on("pointerdown", () => {
+            this.scene.start("CountryFacts", country);
           });
         }
       });
     });
+    
     // shared button info
-
     const buttonWidth = 120;
     const buttonHeight = 40;
     const buttonRadius = 8;
 
     //page button
-
     const pageButtonY = this.scale.height * 0.67;
     const pageButtonGraphics = this.add.graphics();
     pageButtonGraphics.fillStyle(0x884630, 1);
@@ -162,29 +161,14 @@ export class Journal extends Scene {
     );
 
     //click on button
-
     const changePage = () => {
       if (data.currentPage === 1) {
-        this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, 'NEXT >', {
-            fontSize: '16px',
-            fontFamily: 'Roboto',
-            fill: '#ffffff',
-          })
-          .setOrigin(0.5, 0.5);
         data.startIndex += 12;
         data.endIndex += 12;
         heightIndex -= 12;
         data.currentPage += 1;
         this.scene.restart();
       } else {
-        this.add
-          .text(centerX, pageButtonY + buttonHeight / 2, '< BACK', {
-            fontSize: '16px',
-            fontFamily: 'Roboto',
-            fill: '#ffffff',
-          })
-          .setOrigin(0.5, 0.5);
         data.startIndex -= 12;
         data.endIndex -= 12;
         heightIndex += 12;
@@ -192,10 +176,10 @@ export class Journal extends Scene {
         this.scene.restart();
       }
     };
-    pageButtonGraphics.on('pointerdown', () => {
-      pageButtonGraphics.disableInteractive();
+    pageButtonGraphics.on("pointerdown", () => {
       changePage();
     });
+    
     //back to map button
     const mapButtonY = this.scale.height * 0.74;
     const mapButtonWidth = 160;
