@@ -1,9 +1,5 @@
 import { Scene } from 'phaser';
-import {
-  changeUserCountryStatus,
-  changeUserQuestionStatus,
-  getQuiz,
-} from '../api';
+import { changeUserCountryStatus, getQuiz } from '../api';
 import { checkAnswer } from '../../utils/util';
 
 export class Quiz extends Scene {
@@ -122,7 +118,6 @@ export class Quiz extends Scene {
         username: data.username,
         question: 'question1correct',
       };
-      changeUserQuestionStatus(info);
     } else if (data.question1Correct === 1) {
       quizPage1Bar.setFillStyle(0xf8b5b5);
     }
