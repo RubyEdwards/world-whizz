@@ -1,5 +1,5 @@
-import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcrypt";
+import mongoose, { Schema } from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const userSchema = new Schema(
   {
@@ -22,99 +22,99 @@ const userSchema = new Schema(
       type: Array,
       default: [
         {
-          countryname: "andorra",
+          countryname: 'andorra',
           isComplete: false,
         },
         {
-          countryname: "austria",
+          countryname: 'austria',
           isComplete: false,
         },
         {
-          countryname: "belgium",
+          countryname: 'belgium',
           isComplete: false,
         },
         {
-          countryname: "denmark",
+          countryname: 'denmark',
           isComplete: false,
         },
         {
-          countryname: "finland",
+          countryname: 'finland',
           isComplete: false,
         },
         {
-          countryname: "france",
+          countryname: 'france',
           isComplete: false,
         },
         {
-          countryname: "germany",
+          countryname: 'germany',
           isComplete: false,
         },
         {
-          countryname: "greece",
+          countryname: 'greece',
           isComplete: false,
         },
         {
-          countryname: "iceland",
+          countryname: 'iceland',
           isComplete: false,
         },
         {
-          countryname: "ireland",
+          countryname: 'ireland',
           isComplete: false,
         },
         {
-          countryname: "italy",
+          countryname: 'italy',
           isComplete: false,
         },
         {
-          countryname: "liechtenstein",
+          countryname: 'liechtenstein',
           isComplete: false,
         },
         {
-          countryname: "luxembourg",
+          countryname: 'luxembourg',
           isComplete: false,
         },
         {
-          countryname: "malta",
+          countryname: 'malta',
           isComplete: false,
         },
         {
-          countryname: "monaco",
+          countryname: 'monaco',
           isComplete: false,
         },
         {
-          countryname: "netherlands",
+          countryname: 'netherlands',
           isComplete: false,
         },
         {
-          countryname: "norway",
+          countryname: 'norway',
           isComplete: false,
         },
         {
-          countryname: "portugal",
+          countryname: 'portugal',
           isComplete: false,
         },
         {
-          countryname: "sanmarino",
+          countryname: 'sanmarino',
           isComplete: false,
         },
         {
-          countryname: "spain",
+          countryname: 'spain',
           isComplete: false,
         },
         {
-          countryname: "sweden",
+          countryname: 'sweden',
           isComplete: false,
         },
         {
-          countryname: "switzerland",
+          countryname: 'switzerland',
           isComplete: false,
         },
         {
-          countryname: "turkey",
+          countryname: 'turkey',
           isComplete: false,
         },
         {
-          countryname: "unitedkingdom",
+          countryname: 'unitedkingdom',
           isComplete: false,
         },
       ],
@@ -129,4 +129,4 @@ userSchema.method({
   },
 });
 
-export default mongoose.model("User", userSchema, "users");
+export default mongoose.model('User', userSchema, 'users');

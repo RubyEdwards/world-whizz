@@ -1,18 +1,18 @@
-import { Scene } from "phaser";
+import { Scene } from 'phaser';
 
 export class MainMenu extends Scene {
   constructor() {
-    super("MainMenu");
+    super('MainMenu');
   }
 
   create() {
     this.mascot = this.add
-      .sprite(0, 600, "mascot1")
+      .sprite(0, 600, 'mascot1')
       .setOrigin(0)
       .setDepth(1)
-      .playAfterDelay("blink", Math.random() * 3000);
+      .playAfterDelay('blink', Math.random() * 3000);
 
-    this.bkg = this.add.image(-4600, -370, "worldmap").setOrigin(0);
+    this.bkg = this.add.image(-4600, -370, 'worldmap').setOrigin(0);
 
     this.tweens.add({
       targets: this.bkg,
@@ -22,23 +22,23 @@ export class MainMenu extends Scene {
       yoyo: -1,
       hold: 500,
       repeatDelay: 0,
-      ease: "linear",
+      ease: 'linear',
     });
 
     this.add
-      .text(20, 10, "Almost Perfect presents...", {
-        fontFamily: "Roboto",
+      .text(20, 10, 'Almost Perfect presents...', {
+        fontFamily: 'Roboto',
         fontSize: 20,
-        color: "#ffffff",
-        stroke: "#127475",
+        color: '#ffffff',
+        stroke: '#127475',
         strokeThickness: 10,
-        align: "center",
+        align: 'center',
       })
       .setDepth(100)
       .setOrigin(0);
 
     this.wwLogo = this.add
-      .image(180, 220, "ww-logo")
+      .image(180, 220, 'ww-logo')
       .setOrigin(0.5)
       .setDepth(100)
       .setScale(0.7);
@@ -46,9 +46,8 @@ export class MainMenu extends Scene {
     this.wwLogo.preFX.setPadding(18);
     this.wwLogo.preFX.addGlow();
 
-    this.input.once("pointerdown", () => {
-    //  this.scene.start('Game');
-    this.scene.start("Login");
+    this.input.once('pointerdown', () => {
+      this.scene.start('Login');
     });
   }
 

@@ -1,4 +1,4 @@
-import { answerRandomiser, funFactRandomiser } from "../../../utils/util.js";
+import { answerRandomiser, funFactRandomiser } from '../../../utils/util.js';
 import {
   amendUserCountryStatus,
   amendUserQuestionStatus,
@@ -8,7 +8,7 @@ import {
   fetchJournal,
   fetchQuiz,
   fetchUser,
-} from "../models/index.model.js";
+} from '../models/index.model.js';
 
 export function getCountries(req, res) {
   fetchCountries().then((countries) => {
@@ -18,7 +18,7 @@ export function getCountries(req, res) {
 
 export function getCountry(req, res) {
   fetchCountry(req).then((country) => {
-    if (!country) res.status(404).send("Not found");
+    if (!country) res.status(404).send('Not found');
     else {
       let randomFact = funFactRandomiser(country);
       let updatedCountry = JSON.parse(JSON.stringify(country));
@@ -31,7 +31,7 @@ export function getCountry(req, res) {
 export function getQuiz(req, res) {
   const { question } = req.query;
   fetchQuiz(req).then((countryquiz) => {
-    if (!countryquiz) res.status(404).send("Not found");
+    if (!countryquiz) res.status(404).send('Not found');
     if (question) {
       const questionIndex = question - 1;
       const answersRandomOrder = answerRandomiser(
@@ -39,7 +39,6 @@ export function getQuiz(req, res) {
       );
       let updatedQuestion = JSON.parse(JSON.stringify(countryquiz));
       updatedQuestion.quiz.answers = answersRandomOrder;
-      // delete updatedQuestion.quiz[questionIndex].correctAnswer;
       res.status(200).send(updatedQuestion.quiz[questionIndex]);
     } else res.status(200).send(countryquiz);
   });
@@ -89,7 +88,6 @@ export function getUser(req, res) {
       if (travelJournal[i].countryname === countryname) {
         specificCountry = travelJournal[i].isComplete;
         res.status(200).send(specificCountry);
-        // return specificCountry;
       }
     }
   });
