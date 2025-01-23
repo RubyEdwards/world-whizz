@@ -57,14 +57,6 @@ const changeUserCountryStatus = (info) => {
   });
 };
 
-const changeUserQuestionStatus = (info) => {
-  return api
-    .post(`/user/questions?question=${info.question}`, info)
-    .then((result) => {
-      return result;
-    });
-};
-
 const getUserProfile = (username, countryname) => {
   return api
     .get(`/user/${username}/${countryname.replace(/ /g, '').toLowerCase()}`)
@@ -82,6 +74,5 @@ export {
   signUp,
   signIn,
   changeUserCountryStatus,
-  changeUserQuestionStatus,
   getUserProfile,
 };
