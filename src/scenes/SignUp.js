@@ -1,108 +1,104 @@
-import { Scene } from "phaser";
-import { signUp } from "../api";
+import { Scene } from 'phaser';
+import { signUp } from '../api';
 
 export class SignUp extends Scene {
   constructor() {
-    super("SignUp");
+    super('SignUp');
   }
 
   create() {
-  
-    this.add.image(0, 0, "worldmapbkg").setOrigin(0);
+    this.add.image(0, 0, 'worldmapbkg').setOrigin(0);
 
     this.add
-      .text(180, 40, "Sign Up", {
-        fontFamily: "Arial Black",
+      .text(180, 40, 'Sign Up', {
+        fontFamily: 'Arial Black',
         fontSize: 30,
-        color: "#ffffff",
-        stroke: "#127475",
+        color: '#ffffff',
+        stroke: '#127475',
         strokeThickness: 10,
       })
       .setDepth(100)
       .setOrigin(0.5);
 
     const graphics = this.add.graphics();
-    graphics.fillStyle(0xCFE795, 1);
+    graphics.fillStyle(0xcfe795, 1);
     graphics.fillRoundedRect(-150, -190, 300, 500);
 
     const border = this.add.graphics();
-    border.lineStyle(2, 0xA57261, 1);
-    border.strokeRoundedRect(-135, -175, 270, 470); 
+    border.lineStyle(2, 0xa57261, 1);
+    border.strokeRoundedRect(-135, -175, 270, 470);
 
-    const formHtml = this.add.dom(0, 50).createFromCache("signUpForm");
-   formHtml.setPerspective(800);
+    const formHtml = this.add.dom(0, 50).createFromCache('signUpForm');
+    formHtml.setPerspective(800);
 
-   
-    const container = this.add.container(180, 180, [graphics, border, formHtml]);
- 
-   formHtml.addListener("submit");
-   formHtml.on("submit",  (e)=> {
-      e.preventDefault()
-      
-      const inputNewUsername = formHtml.getChildByName("newUsername");
-      const inputNewPassword = formHtml.getChildByName("newPassword");
-      const inputNewPasswordConf= formHtml.getChildByName("newPasswordConf");
+    const container = this.add.container(180, 180, [
+      graphics,
+      border,
+      formHtml,
+    ]);
 
+    formHtml.addListener('submit');
+    formHtml.on('submit', (e) => {
+      e.preventDefault();
 
-      if (inputNewUsername.value !== "" &&
-          inputNewPassword.value !== "" &&
-          inputNewPasswordConf.val !== "" 
-        ) {
-      
-          formHtml.removeListener("submit");
-      
-        
-          const userData = this.registry.get("newUserData")
-          userData.newUsername= inputNewUsername.value
-          userData.newPassword=inputNewPassword.value
-          userData.newPasswordConf= inputNewPasswordConf.value
+      const inputNewUsername = formHtml.getChildByName('newUsername');
+      const inputNewPassword = formHtml.getChildByName('newPassword');
+      const inputNewPasswordConf = formHtml.getChildByName('newPasswordConf');
 
-          this.registry.set("newUserData", userData);
-          
-          const username = userData.newUsername
-          const password = userData.newPassword
-          const passwordConf = userData.newPasswordConf
+      if (
+        inputNewUsername.value !== '' &&
+        inputNewPassword.value !== '' &&
+        inputNewPasswordConf.val !== ''
+      ) {
+        formHtml.removeListener('submit');
 
-          const userInfo={
-            username,
-            password
-          }
+        const userData = this.registry.get('newUserData');
+        userData.newUsername = inputNewUsername.value;
+        userData.newPassword = inputNewPassword.value;
+        userData.newPasswordConf = inputNewPasswordConf.value;
 
-          if(password===passwordConf){
-            signUp(userInfo)
-            .then(()=>{
-              this.scene.start("Game");
+        this.registry.set('newUserData', userData);
+
+        const username = userData.newUsername;
+        const password = userData.newPassword;
+        const passwordConf = userData.newPasswordConf;
+
+        const userInfo = {
+          username,
+          password,
+        };
+
+        if (password === passwordConf) {
+          signUp(userInfo)
+            .then(() => {
+              this.scene.start('Game');
             })
-            .catch((err)=>{
-              alert(err.response.data.message)
-            })
-          }
-          else{
-            alert("Please enter matching passwords!")
-          }
-      } 
+            .catch((err) => {
+              alert(err.response.data.message);
+            });
+        } else {
+          alert('Please enter matching passwords!');
+        }
+      }
     });
 
-
-    const newLoginButton = formHtml.getChildByName("newLoginButton");
-    newLoginButton.addEventListener("click", () => {
-      this.scene.start("Login");
+    const newLoginButton = formHtml.getChildByName('newLoginButton');
+    newLoginButton.addEventListener('click', () => {
+      this.scene.start('Login');
     });
 
     this.tweens.add({
       targets: container,
-      y: 255, 
+      y: 255,
       duration: 1000,
-      ease: "Power3",
+      ease: 'Power3',
     });
 
-  
     this.mascot = this.add
-      .sprite(0, 650, "mascot1")
+      .sprite(0, 650, 'mascot1')
       .setDisplayOrigin(0)
       .setDepth(1)
-      .playAfterDelay("blink", Math.random() * 3000);
-
+      .playAfterDelay('blink', Math.random() * 3000);
   }
 
   update() {
@@ -113,5 +109,3 @@ export class SignUp extends Scene {
     }
   }
 }
-
-
